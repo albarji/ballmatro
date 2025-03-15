@@ -135,7 +135,7 @@ class HighCard(PokerHand):
 POKER_HANDS = [StraightFlush, FourOfAKind, FullHouse, Flush, Straight, ThreeOfAKind, TwoPair, Pair, HighCard]
 
 def find_hand(hand: List[Card]) -> PokerHand:
-    """Find which poker hand as been played. Returns the PokerHand object or None if no hand is found"""
+    """Find which poker hand has been played. Returns the PokerHand object or None if no hand is found"""
     for poker_hand in POKER_HANDS:
         if poker_hand.check(hand):
             return poker_hand
