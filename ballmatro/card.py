@@ -4,10 +4,14 @@ import re
 
 SUITS = ["♣️", "♦️", "♠️", "♥️"]
 RANKS = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
-MODIFIERS = ["+", "x", "*"]
+MODIFIERS = [
+    "+",  # Bonus card: +30 chips
+    "x",  # Mult card: +4 multiplier
+    "*",  # Wild card: can be used as a card from any suit
+]
 JOKER = "🃏"
 
-@dataclass
+@dataclass(frozen=True)
 class Card:
     """Class that represents a card"""
     txt: str  # Text representation of the card
