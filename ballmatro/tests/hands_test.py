@@ -47,5 +47,5 @@ def test_find_hand():
     assert find_hand([Card('10♥️'), Card('10♦️'), Card('K♠️'), Card('K♣️')]) == TwoPair
     assert find_hand([Card('10♥️'), Card('10♦️')]) == Pair
     assert find_hand([Card('A♥️')]) == HighCard
-    assert find_hand([]) == None
-    assert find_hand([Card('🃏')]) == None
+    assert find_hand([]) is None
+    assert find_hand([Card('🃏')]) is None
