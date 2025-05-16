@@ -132,6 +132,12 @@ class HighCard(PokerHand):
         # Just check that the card is not a joker
         return not hand[0].is_joker
     
+class InvalidHand(PokerHand):
+    """Special PokerHand for any kind of invalid hand"""
+    ncards = 0
+    chips = 0
+    multiplier = 0
+
 POKER_HANDS = [StraightFlush, FourOfAKind, FullHouse, Flush, Straight, ThreeOfAKind, TwoPair, Pair, HighCard]
 
 def find_hand(hand: List[Card]) -> PokerHand:
@@ -139,4 +145,4 @@ def find_hand(hand: List[Card]) -> PokerHand:
     for poker_hand in POKER_HANDS:
         if poker_hand.check(hand):
             return poker_hand
-    return None
+    return InvalidHand

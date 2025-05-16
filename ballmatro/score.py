@@ -4,7 +4,7 @@ from typing import List, Tuple
 
 
 from ballmatro.card import Card
-from ballmatro.hands import find_hand, PokerHand
+from ballmatro.hands import find_hand, PokerHand, InvalidHand
 
 
 CHIPS_PER_RANK = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "Q": 10, "K": 10, "A": 11}
@@ -13,17 +13,34 @@ CHIPS_PER_RANK = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9
 @dataclass
 class ScoreInfo:
     """Class that represents the score of a hand"""
+    played: List[Card]  # Cards played in the hand
+    remaining: List[Card]  # Unplayed cards
     hand: PokerHand  # Type of hand played
-    chips: int  # Value in chips of the hand
-    multiplier: int  # Multiplier for the chips value
-    score: int  # Total score of the hand
+    chips: int = 0  # Value in chips of the hand
+    multiplier: int = 0  # Multiplier for the chips value
+
+    @property
+    def score(self) -> int:
+        """Return the score of the hand"""
+        return self.chips * self.multiplier
 
     def __repr__(self):
         """Return a string representation of the score info"""
         if self.hand is None:
             return f"ScoreInfo(INVALID HAND, chips=0, multiplier=0, score=0)"
-        return f"ScoreInfo(hand={self.hand}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
+        return f"ScoreInfo(played={self.played}, remaining={self.remaining}, hand={self.hand}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
 
+
+def feasible_play(available: List[Card], played: List[Card]) -> bool:
+    """Checks whether the given list of played cards is a valid play from the available cards."""
+    remaining = available.copy()
+    for card in played:
+        # Check if the card is available
+        if card not in remaining:
+            return False
+        # Remove the card from the remaining cards
+        remaining.remove(card)
+    return True
 
 def score_played(available: List[Card], played: List[Card]) -> ScoreInfo:
     """Given a list of played cards, find their ballmatro score
@@ -31,12 +48,13 @@ def score_played(available: List[Card], played: List[Card]) -> ScoreInfo:
     A score of 0 is attained when the hand is not recognized or the list of played cards contains cards that are not available.
     """
     # Check if the played cards are available
-    if set(played) - set(available):
-        return ScoreInfo(None, 0, 0, 0)
+    remaining = [card for card in available if card not in played]
+    if not feasible_play(available, played):
+        return ScoreInfo(played, remaining, InvalidHand)
     # Find the hand type
     hand = find_hand(played)
     if hand is None:
-        return ScoreInfo(None, 0, 0, 0)
+        return ScoreInfo(played, remaining, InvalidHand)
     
     # Start scoring using the chips and multiplier of the hand type
     chips, multiplier = hand.chips, hand.multiplier
@@ -44,7 +62,7 @@ def score_played(available: List[Card], played: List[Card]) -> ScoreInfo:
     for card in played:
         chips, multiplier = score_card(card, chips, multiplier)
 
-    return ScoreInfo(hand, chips, multiplier, chips * multiplier)
+    return ScoreInfo(played, remaining, hand, chips, multiplier)
 
 def score_card(card: Card, chips: int, multiplier: int) -> Tuple[int, int]:
     """Applies the scoring of a single card to the current chips and multiplier"""

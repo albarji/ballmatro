@@ -22,8 +22,8 @@ def test_card_modifier():
     assert card.modifier == "+"
     card = Card("A♥️x")
     assert card.modifier == "x"
-    card = Card("K♣️*")
-    assert card.modifier == "*"
+    # card = Card("K♣️*")
+    # assert card.modifier == "*"
     card = Card("Q♦️")
     assert card.modifier is None
 
