@@ -1,26 +1,42 @@
 """Functions to score ballmatro hands"""
+from dataclasses import dataclass
 from typing import List, Tuple
 
 
 from ballmatro.card import Card
-from ballmatro.hands import find_hand
+from ballmatro.hands import find_hand, PokerHand
 
 
 CHIPS_PER_RANK = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "Q": 10, "K": 10, "A": 11}
 
 
-def score(available: List[Card], played: List[Card]) -> int:
+@dataclass
+class ScoreInfo:
+    """Class that represents the score of a hand"""
+    hand: PokerHand  # Type of hand played
+    chips: int  # Value in chips of the hand
+    multiplier: int  # Multiplier for the chips value
+    score: int  # Total score of the hand
+
+    def __repr__(self):
+        """Return a string representation of the score info"""
+        if self.hand is None:
+            return f"ScoreInfo(INVALID HAND, chips=0, multiplier=0, score=0)"
+        return f"ScoreInfo(hand={self.hand}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
+
+
+def score_played(available: List[Card], played: List[Card]) -> ScoreInfo:
     """Given a list of played cards, find their ballmatro score
     
     A score of 0 is attained when the hand is not recognized or the list of played cards contains cards that are not available.
     """
     # Check if the played cards are available
     if set(played) - set(available):
-        return 0
+        return ScoreInfo(None, 0, 0, 0)
     # Find the hand type
     hand = find_hand(played)
     if hand is None:
-        return 0
+        return ScoreInfo(None, 0, 0, 0)
     
     # Start scoring using the chips and multiplier of the hand type
     chips, multiplier = hand.chips, hand.multiplier
@@ -28,7 +44,7 @@ def score(available: List[Card], played: List[Card]) -> int:
     for card in played:
         chips, multiplier = score_card(card, chips, multiplier)
 
-    return chips * multiplier
+    return ScoreInfo(hand, chips, multiplier, chips * multiplier)
 
 def score_card(card: Card, chips: int, multiplier: int) -> Tuple[int, int]:
     """Applies the scoring of a single card to the current chips and multiplier"""
