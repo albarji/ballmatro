@@ -5,6 +5,8 @@ description = "A challenging task for LLMs in which they need to create high-sco
 authors = ["Álvaro Barbero Jiménez"]
 
 [tool.poetry.dependencies]
+datasets = "^3.6.0"
+huggingface_hub = "^0.31.2"
 python = "^3.13"
 pytest = "^8.3"
 

@@ -56,3 +56,7 @@ class Card:
         if self.is_joker:
             return self.txt[1:]
         return None
+
+    def __repr__(self) -> str:
+        """Return a string representation of the card"""
+        return self.txt
