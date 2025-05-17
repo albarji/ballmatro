@@ -11,6 +11,10 @@ test_data = [
         ScoreInfo(played=[Card('3♦️')], remaining=[], hand=HighCard, chips=8, multiplier=1)
     ),
     (
+        [Card(txt='K♥️x'), Card(txt='A♥️x')],
+        ScoreInfo(played=[Card(txt='A♥️x')], remaining=[Card(txt='K♥️x')], hand=HighCard, chips=16, multiplier=5)
+    ),
+    (
         [Card('2♥️'), Card('3♦️')],
         ScoreInfo(played=[Card('3♦️')], remaining=[Card('2♥️')], hand=HighCard, chips=8, multiplier=1)
     ),
@@ -45,7 +49,7 @@ test_data = [
     (
         [Card('2♥️'), Card('3♥️'), Card('4♥️'), Card('5♠️'), Card('5♥️'), Card('6♥️'), Card('7♠️')],
         ScoreInfo(played=[Card('2♥️'), Card('3♥️'), Card('4♥️'), Card('5♥️'), Card('6♥️')], remaining=[Card('5♠️'), Card('7♠️')], hand=StraightFlush, chips=120, multiplier=8)
-    )
+    ),
 ]
 
 @pytest.mark.parametrize("cards, expected_score_info", test_data)

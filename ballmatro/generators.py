@@ -1,12 +1,12 @@
 """Functions to generate datasets for LLM training with ballmatro hands"""
-from itertools import combinations
+from itertools import combinations_with_replacement
 from typing import List, Tuple
 
 from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
 from ballmatro.optimizer import brute_force_optimize
 from ballmatro.score import ScoreInfo
 
-def brute_force_generator(hand_size: int) -> List[Tuple[List[Card], ScoreInfo]]:
+def exhaustive_generator(hand_size: int) -> List[Tuple[List[Card], ScoreInfo]]:
     """Generate a dataset with all possible hands of a given size
     and their optimal plays using brute force optimization.
     Args:
@@ -18,8 +18,8 @@ def brute_force_generator(hand_size: int) -> List[Tuple[List[Card], ScoreInfo]]:
     cards = [Card(f"{rank}{suit}{modifier}") for suit in SUITS for rank in RANKS for modifier in MODIFIERS]
     
     # Generate all combinations of the given size
-    inputs = list(combinations(cards, hand_size))
+    inputs = [list(hand) for hand in combinations_with_replacement(cards, hand_size)]
     # Find optimal hands and scores for each combination
     optimal_plays = [brute_force_optimize(hand) for hand in inputs]
 
-    return zip(inputs, optimal_plays)
+    return list(zip(inputs, optimal_plays))

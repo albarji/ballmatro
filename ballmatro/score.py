@@ -54,7 +54,7 @@ def score_played(available: List[Card], played: List[Card]) -> ScoreInfo:
         return ScoreInfo(played, available, InvalidHand)
     # Find the hand type
     hand = find_hand(played)
-    if hand is None:
+    if hand == InvalidHand:
         return ScoreInfo(played, remaining, InvalidHand)
     
     # Start scoring using the chips and multiplier of the hand type
