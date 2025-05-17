@@ -44,4 +44,12 @@ def test_generator_to_dict():
 
 def test_hf_dataset():
     # Generate a Hugging Face dataset with a small generator
-    to_hf_dataset(exhaustive_generator(1))
+    dataset = to_hf_dataset(exhaustive_generator(1))
+    # Check that the dataset has the expected columns
+    assert "input" in dataset.column_names
+    assert "output" in dataset.column_names
+    assert "score" in dataset.column_names
+    assert "hand" in dataset.column_names
+    assert "chips" in dataset.column_names
+    assert "multiplier" in dataset.column_names
+    assert "remaining" in dataset.column_names

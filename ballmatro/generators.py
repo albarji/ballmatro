@@ -43,7 +43,7 @@ def generator_to_dict(generator: Generator[Tuple[List[Card], ScoreInfo]]) -> Dic
         "hand": [score.hand.__name__ for _, score in data],
         "chips": [score.chips for _, score in data],
         "multiplier": [score.multiplier for _, score in data],
-        "remaining": [score.remaining for _, score in data],
+        "remaining": [str(score.remaining) for _, score in data],
     }
     return dict_data
 
