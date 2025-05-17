@@ -1,8 +1,7 @@
 """Functions to generate datasets for LLM training with ballmatro hands"""
 from datasets import Dataset
 from itertools import combinations_with_replacement
-from functools import partial
-from typing import List, Tuple, Generator, Callable
+from typing import List, Tuple, Generator, Dict, Any
 
 from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
 from ballmatro.optimizer import brute_force_optimize
@@ -25,36 +24,37 @@ def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], ScoreInf
         optimal_play = brute_force_optimize(list(input))
         yield list(input), optimal_play
 
-def generator_to_dict(func):
-    """Decorator to convert a dataset generator to a dictionary generator, in a format suitable for Hugging Face datasets.
-    
-    Args:
-        func (Callable): A generator function that yields tuples of input cards and plays with those cards.
-    
-    Returns:
-        Callable: A generator function that yields dictionaries containing the input cards, played cards, and all the details of the score.
-    """
-    def wrapper(*args, **kwargs):
-        for cards, score in func(*args, **kwargs):
-            yield {
-                "input": str(cards), 
-                "output": str(score.played),
-                "score": score.score, 
-                "hand": score.hand.__name__, 
-                "chips": score.chips,
-                "multiplier": score.multiplier, 
-                "remaining": score.remaining,
-            }
-    return wrapper
+def generator_to_dict(generator: Generator[Tuple[List[Card], ScoreInfo]]) -> Dict[str, List[Any]]:
+    """Convert a generator of tuples to a generator of dictionaries.
 
-def to_hf_dataset(generating_function: Callable) -> Dataset:
+    Args:
+        generator (Generator[Tuple[List[Card], ScoreInfo]]): A generator that yields tuples of input cards and their corresponding ScoreInfo.
+
+    Returns:
+        Dict[str, List[Any]]: A dictionary where each key corresponds to a field in the ScoreInfo object.
+    """
+    # Get all the data into memory
+    data = list(generator)
+    # Create a dictionary with the data
+    dict_data = {
+        "input": [str(cards) for cards, _ in data],
+        "output": [str(score.played) for _, score in data],
+        "score": [score.score for _, score in data],
+        "hand": [score.hand.__name__ for _, score in data],
+        "chips": [score.chips for _, score in data],
+        "multiplier": [score.multiplier for _, score in data],
+        "remaining": [score.remaining for _, score in data],
+    }
+    return dict_data
+
+def to_hf_dataset(generator: Generator[Tuple[List[Card], ScoreInfo]]) -> Dataset:
     """Convert a dataset generator to a Hugging Face dataset format.
     
     Args:
-        generating_function (Callable): A generator function that yields tuples of input cards and plays with those cards.
+        generator (Generator[Tuple[List[Card], ScoreInfo]]): A generator that yields tuples of input cards and their corresponding ScoreInfo.
     
     Returns:
         Dataset: A Hugging Face dataset containing the generated data.
     """
     # Create a Hugging Face dataset from the generator
-    return Dataset.from_generator(generator_to_dict(generating_function))
+    return Dataset.from_dict(generator_to_dict(generator))

@@ -1,5 +1,3 @@
-from functools import partial
-
 from ballmatro.generators import exhaustive_generator, to_hf_dataset, generator_to_dict
 from ballmatro.score import ScoreInfo
 from ballmatro.hands import InvalidHand
@@ -34,17 +32,16 @@ def test_exhaustive_generator_size2():
 
 def test_generator_to_dict():
     # Generate a small dataset with a small generator
-    dict_generator = generator_to_dict(exhaustive_generator)(1)
+    dict_generator = generator_to_dict(exhaustive_generator(1))
     # Check that the dictionary has the expected keys
-    for d in dict_generator:
-        assert "input" in d
-        assert "output" in d
-        assert "score" in d
-        assert "hand" in d
-        assert "chips" in d
-        assert "multiplier" in d
-        assert "remaining" in d
+    assert "input" in dict_generator
+    assert "output" in dict_generator
+    assert "score" in dict_generator
+    assert "hand" in dict_generator
+    assert "chips" in dict_generator
+    assert "multiplier" in dict_generator
+    assert "remaining" in dict_generator
 
 def test_hf_dataset():
     # Generate a Hugging Face dataset with a small generator
-    hf_dataset = to_hf_dataset(partial(exhaustive_generator, 1))
+    to_hf_dataset(exhaustive_generator(1))
