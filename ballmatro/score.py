@@ -30,17 +30,16 @@ class ScoreInfo:
             return f"ScoreInfo(INVALID HAND, chips=0, multiplier=0, score=0)"
         return f"ScoreInfo(played={self.played}, remaining={self.remaining}, hand={self.hand}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
 
-
-def feasible_play(available: List[Card], played: List[Card]) -> bool:
-    """Checks whether the given list of played cards is a valid play from the available cards."""
+def remaining_cards(available: List[Card], played: List[Card]) -> List[Card]:
+    """Returns the remaining (not played) cards after playing a hand"""
     remaining = available.copy()
     for card in played:
         # Check if the card is available
         if card not in remaining:
-            return False
+            raise ValueError(f"Impossible play: card {card} not in available cards")
         # Remove the card from the remaining cards
         remaining.remove(card)
-    return True
+    return remaining
 
 def score_played(available: List[Card], played: List[Card]) -> ScoreInfo:
     """Given a list of played cards, find their ballmatro score
@@ -48,9 +47,11 @@ def score_played(available: List[Card], played: List[Card]) -> ScoreInfo:
     A score of 0 is attained when the hand is not recognized or the list of played cards contains cards that are not available.
     """
     # Check if the played cards are available
-    remaining = [card for card in available if card not in played]
-    if not feasible_play(available, played):
-        return ScoreInfo(played, remaining, InvalidHand)
+    try:
+        remaining = remaining_cards(available, played)
+    except ValueError:
+        # If the play is impossible, return a score of 0
+        return ScoreInfo(played, available, InvalidHand)
     # Find the hand type
     hand = find_hand(played)
     if hand is None:
