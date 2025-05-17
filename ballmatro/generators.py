@@ -7,7 +7,7 @@ from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
 from ballmatro.optimizer import brute_force_optimize
 from ballmatro.score import ScoreInfo
 
-def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], ScoreInfo]]:
+def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], ScoreInfo], None, None]:
     """Generator functions for a dataset with all possible hands of a given size
     and their optimal plays using brute force optimization.
     Args:
@@ -24,7 +24,7 @@ def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], ScoreInf
         optimal_play = brute_force_optimize(list(input))
         yield list(input), optimal_play
 
-def generator_to_dict(generator: Generator[Tuple[List[Card], ScoreInfo]]) -> Dict[str, List[Any]]:
+def generator_to_dict(generator: Generator[Tuple[List[Card], ScoreInfo], None, None]) -> Dict[str, List[Any]]:
     """Convert a generator of tuples to a generator of dictionaries.
 
     Args:
@@ -47,7 +47,7 @@ def generator_to_dict(generator: Generator[Tuple[List[Card], ScoreInfo]]) -> Dic
     }
     return dict_data
 
-def to_hf_dataset(generator: Generator[Tuple[List[Card], ScoreInfo]]) -> Dataset:
+def to_hf_dataset(generator: Generator[Tuple[List[Card], ScoreInfo], None, None]) -> Dataset:
     """Convert a dataset generator to a Hugging Face dataset format.
     
     Args:
