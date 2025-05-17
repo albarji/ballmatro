@@ -27,7 +27,7 @@ class ScoreInfo:
     def __repr__(self):
         """Return a string representation of the score info"""
         if self.hand is None:
-            return f"ScoreInfo(INVALID HAND, chips=0, multiplier=0, score=0)"
+            return "ScoreInfo(INVALID HAND, chips=0, multiplier=0, score=0)"
         return f"ScoreInfo(played={self.played}, remaining={self.remaining}, hand={self.hand}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
 
 def remaining_cards(available: List[Card], played: List[Card]) -> List[Card]:
