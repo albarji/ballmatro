@@ -1,13 +1,13 @@
 from ballmatro.generators import exhaustive_generator, to_hf_dataset, generator_to_dict
-from ballmatro.score import ScoreInfo
+from ballmatro.score import Score
 from ballmatro.hands import InvalidHand
 
 def test_exhaustive_generator_size1():
     # Use a small hand size for tractable test
     results = list(exhaustive_generator(1))
-    # Each result is a tuple: (hand, ScoreInfo)
+    # Each result is a tuple: (hand, Score)
     assert all(isinstance(hand, list) for hand, _ in results)
-    assert all(isinstance(score_info, ScoreInfo) for _, score_info in results)
+    assert all(isinstance(score_info, Score) for _, score_info in results)
     # Check that the number of generated hands matches the expected count
     # There are 4 suits, 13 ranks, 2 modifiers, so 4*13*3 = 156 possible cards
     assert len(results) == 156

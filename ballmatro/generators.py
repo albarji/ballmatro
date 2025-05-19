@@ -5,15 +5,15 @@ from typing import List, Tuple, Generator, Dict, Any
 
 from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
 from ballmatro.optimizer import brute_force_optimize
-from ballmatro.score import ScoreInfo
+from ballmatro.score import Score
 
-def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], ScoreInfo], None, None]:
+def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], Score], None, None]:
     """Generator functions for a dataset with all possible hands of a given size
     and their optimal plays using brute force optimization.
     Args:
         hand_size (int): The size of the hands to generate.
     Returns:
-        List[Tuple[List[Card], ScoreInfo]]: A list of tuples, each containing a hand and its optimal play in the form of a ScoreInfo object.
+        List[Tuple[List[Card], Score]]: A list of tuples, each containing a hand and its optimal play in the form of a Score object.
     """
     # Generate all possible cards
     cards = [Card(f"{rank}{suit}{modifier}") for suit in SUITS for rank in RANKS for modifier in [""] + MODIFIERS]
@@ -24,14 +24,14 @@ def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], ScoreInf
         optimal_play = brute_force_optimize(list(input))
         yield list(input), optimal_play
 
-def generator_to_dict(generator: Generator[Tuple[List[Card], ScoreInfo], None, None]) -> Dict[str, List[Any]]:
+def generator_to_dict(generator: Generator[Tuple[List[Card], Score], None, None]) -> Dict[str, List[Any]]:
     """Convert a generator of tuples to a generator of dictionaries.
 
     Args:
-        generator (Generator[Tuple[List[Card], ScoreInfo]]): A generator that yields tuples of input cards and their corresponding ScoreInfo.
+        generator (Generator[Tuple[List[Card], Score]]): A generator that yields tuples of input cards and their corresponding Score.
 
     Returns:
-        Dict[str, List[Any]]: A dictionary where each key corresponds to a field in the ScoreInfo object.
+        Dict[str, List[Any]]: A dictionary where each key corresponds to a field in the Score object.
     """
     # Get all the data into memory
     data = list(generator)
@@ -47,11 +47,11 @@ def generator_to_dict(generator: Generator[Tuple[List[Card], ScoreInfo], None, N
     }
     return dict_data
 
-def to_hf_dataset(generator: Generator[Tuple[List[Card], ScoreInfo], None, None]) -> Dataset:
+def to_hf_dataset(generator: Generator[Tuple[List[Card], Score], None, None]) -> Dataset:
     """Convert a dataset generator to a Hugging Face dataset format.
     
     Args:
-        generator (Generator[Tuple[List[Card], ScoreInfo]]): A generator that yields tuples of input cards and their corresponding ScoreInfo.
+        generator (Generator[Tuple[List[Card], Score]]): A generator that yields tuples of input cards and their corresponding Score.
     
     Returns:
         Dataset: A Hugging Face dataset containing the generated data.
