@@ -32,7 +32,13 @@ jobs:
       run: poetry install
 
     - name: Run Ruff
-      run: poetry run ruff .
+      run: poetry run ruff .  # This will fail if there are Ruff errors
 
-    - name: Run tests
-      run: poetry run pytest --cov=ballmatro
+    - name: Run tests with coverage
+      run: poetry run pytest --cov=ballmatro --cov-report=xml
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        file: ./coverage.xml
+        fail_ci_if_error: true
