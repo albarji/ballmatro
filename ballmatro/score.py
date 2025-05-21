@@ -31,7 +31,7 @@ class Score:
 
     def __repr__(self):
         """Return a string representation of the score info"""
-        return f"Score(input={self.input}, played={self.played}, remaining={self.remaining}, pokerhand={self.hand}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
+        return f"Score(input={self.input}, played={self.played}, remaining={self.remaining}, hand={self.hand.__name__}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
     
     def _remaining_cards(self, available: List[Card], played: List[Card]) -> List[Card]:
         """Returns the remaining (not played) cards after playing a hand"""
