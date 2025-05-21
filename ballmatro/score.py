@@ -1,9 +1,10 @@
 """Functions to score ballmatro hands"""
 from dataclasses import dataclass
+from datasets import Dataset
 from typing import List, Tuple
 
 
-from ballmatro.card import Card
+from ballmatro.card import Card, parse_card_list
 from ballmatro.hands import find_hand, InvalidHand
 
 
@@ -20,10 +21,11 @@ class Score:
         # Find cards that were not played
         try:
             self.remaining = self._remaining_cards(self.input, self.played)
+            # Find the hand that was played
+            self.hand = find_hand(self.played)
         except ValueError:
             self.remaining = None
-        # Find the hand that was played
-        self.hand = find_hand(self.played)
+            self.hand = InvalidHand
         # Score the played cards
         self._score_played()
 
@@ -72,3 +74,30 @@ def _score_card(card: Card, chips: int, multiplier: int) -> Tuple[int, int]:
     elif card.modifier == "x":
         multiplier += 4
     return chips, multiplier
+
+@dataclass
+class ScoreDataset:
+    """Class that represents the scores obtained over a whole Ballmatro dataset"""
+    dataset: Dataset  # Dataset containing the hands and optimal plays
+    plays: List[List[Card]]  # List of plays (hands) carried out for the dataset
+    scores: List[Score] = None  # Detailed Score objects for each play
+    total_score: int = 0  # Total score of the plays over the whole dataset
+    normalized_score: float = 0.0  # Normalized score [0,1] of the plays over the whole dataset
+    invalid_hands: int = 0  # Number of invalid hands played
+    normalized_invalid_hands: float = 0.0  # Fraction of invalid hands played [0,1]
+
+    def __post_init__(self):
+        # Check inputs
+        if len(self.dataset) != len(self.plays):
+            raise ValueError("Dataset and plays must have the same length")
+        # Score the plays
+        self.scores = [Score(parse_card_list(input), played) for input, played in zip(self.dataset["input"], self.plays)]
+        # Compute statistics
+        self.total_score = sum(score.score for score in self.scores)
+        self.normalized_score = self.total_score / sum(self.dataset["score"])
+        self.invalid_hands = sum(1 for score in self.scores if score.hand == InvalidHand)
+        self.normalized_invalid_hands = self.invalid_hands / len(self.scores)
+
+    def __repr__(self):
+        """Return a string representation of the score info"""
+        return f"ScoreDataset(total_score={self.total_score}, normalized_score={self.normalized_score}, invalid_hands={self.invalid_hands}, normalized_invalid_hands={self.normalized_invalid_hands})"

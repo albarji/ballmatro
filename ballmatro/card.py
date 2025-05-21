@@ -1,5 +1,6 @@
 """Class that represents a card, and associated functions"""
 from dataclasses import dataclass
+from typing import List
 import re
 
 SUITS = ["♣", "♦", "♠", "♥"]
@@ -60,3 +61,19 @@ class Card:
     def __repr__(self) -> str:
         """Return a string representation of the card"""
         return self.txt
+
+def parse_card_list(txt: str) -> List[Card]:
+    """Transforms a list of cards in text form into a list of Card objects.
+
+    Example input: "[♣2, ♠3, ♥4]"
+    Example output: [Card("♣2"), Card("♠3"), Card("♥4")]
+    """
+    # Remove opening and closing brackets
+    txt = txt[1:-1]
+    # Remove blanks
+    txt = txt.replace(" ","")
+    # No cards border case
+    if len(txt) == 0:
+        return []
+    # Split by cards
+    return [Card(cardtxt) for cardtxt in txt.split(",")]

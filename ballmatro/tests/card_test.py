@@ -1,5 +1,5 @@
 """Tests for the card module."""
-from ballmatro.card import Card
+from ballmatro.card import Card, parse_card_list
 
 def test_card_suit():
     card = Card("10♠")
@@ -38,3 +38,19 @@ def test_card_joker_rule():
     assert card.joker_rule == "Straights cannot be played"
     card = Card("10♠")
     assert card.joker_rule is None
+
+def test_parse_card_list_basic():
+    cards = parse_card_list("[2♣,3♠,4♥]")
+    assert cards == [Card("2♣"), Card("3♠"), Card("4♥")]
+
+def test_parse_card_list_with_spaces():
+    cards = parse_card_list("[ 2♣ , 3♠ , 4♥ ]")
+    assert cards == [Card("2♣"), Card("3♠"), Card("4♥")]
+
+def test_parse_card_list_single_card():
+    cards = parse_card_list("[A♦]")
+    assert cards == [Card("A♦")]
+
+def test_parse_card_list_empty():
+    cards = parse_card_list("[]")
+    assert cards == []

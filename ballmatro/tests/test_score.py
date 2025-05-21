@@ -1,5 +1,6 @@
 from ballmatro.card import Card
-from ballmatro.score import Score, _score_card
+from ballmatro.score import Score, _score_card, ScoreDataset
+from datasets import Dataset
 
 def test_score_invalid_hand():
     available = [Card(txt="2♥"), Card(txt="3♦"), Card(txt="A♠")]
@@ -64,3 +65,50 @@ def test_score_card_mult():
     card = Card(txt="K♠x")
     chips, multiplier = _score_card(card, 0, 1)
     assert (chips, multiplier) == (10, 5)
+
+def test_scoredataset_all_valid():
+    data = {
+        "input": ["[3♥,3♦]", "[2♥,3♦]"],
+        "score": [32, 8],
+    }
+    ds = Dataset.from_dict(data)
+    plays = [
+        [Card("3♥"), Card("3♦")],  # valid pair
+        [Card("3♦")],              # high card
+    ]
+    score_dataset = ScoreDataset(dataset=ds, plays=plays)
+    assert score_dataset.total_score == 32 + 8
+    assert score_dataset.normalized_score == 1.0
+    assert score_dataset.invalid_hands == 0
+    assert score_dataset.normalized_invalid_hands == 0.0
+
+def test_scoredataset_with_invalid_hand():
+    data = {
+        "input": ["[3♥,3♦]"],
+        "score": [32],
+    }
+    ds = Dataset.from_dict(data)
+    plays = [
+        [Card("A♠")],  # not available, should be invalid
+    ]
+    score_dataset = ScoreDataset(dataset=ds, plays=plays)
+    assert score_dataset.total_score == 0
+    assert score_dataset.normalized_score == 0.0
+    assert score_dataset.invalid_hands == 1
+    assert score_dataset.normalized_invalid_hands == 1.0
+
+def test_scoredataset_mixed_valid_invalid():
+    data = {
+        "input": ["[3♥,3♦]", "[2♥,3♦]"],
+        "score": [32, 8],
+    }
+    ds = Dataset.from_dict(data)
+    plays = [
+        [Card("3♥"), Card("3♦")],  # valid
+        [Card("A♠")],              # invalid
+    ]
+    score_dataset = ScoreDataset(dataset=ds, plays=plays)
+    assert score_dataset.total_score == 32
+    assert score_dataset.invalid_hands == 1
+    assert score_dataset.normalized_invalid_hands == 0.5
+    assert score_dataset.normalized_score == 32/40
