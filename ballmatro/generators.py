@@ -1,4 +1,5 @@
 """Functions to generate datasets for LLM training with ballmatro hands"""
+import random
 from datasets import Dataset
 from itertools import combinations_with_replacement
 from typing import List, Tuple, Generator, Dict, Any
@@ -23,6 +24,31 @@ def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], Score], 
         # Find optimal play for this input
         optimal_play = brute_force_optimize(list(input))
         yield list(input), optimal_play
+
+def random_generator(max_hand_size: int, n: int, modifiers: List[str] = None, seed: int = 42) -> Generator[Tuple[List[Card], Score], None, None]:
+    """Generator function for a dataset with random hands and their optimal plays.
+
+    Args:
+        max_hand_size (int): The maximum size of the hands to generate.
+        n (int): The number of random hands to generate.
+        modifiers (List[str]): A list of modifiers to apply to the cards.
+
+    Yields:
+        Tuple[List[Card], Score]: A tuple containing a hand and its optimal play in the form of a Score object.
+    """
+    # Set the random seed for reproducibility
+    random.seed(seed)
+    # Ensure modifiers are set correctly
+    modifiers = _get_modifiers(modifiers)
+    # Find maximum ID for list of cards of size at most max_hand_size
+    ncards = len(RANKS) * len(SUITS) * len(modifiers)
+    max_id = sum([ncards**i for i in range(1, max_hand_size + 1)])
+    for _ in range(n):
+        # Generate a random hand
+        input = int2cards(random.randint(1, max_id))
+        # Find optimal play for this input
+        optimal_play = brute_force_optimize(input)
+        yield input, optimal_play
 
 def generator_to_dict(generator: Generator[Tuple[List[Card], Score], None, None]) -> Dict[str, List[Any]]:
     """Convert a generator of tuples to a generator of dictionaries.
@@ -80,11 +106,7 @@ def int2cards(i: int, modifiers: List[str] = None) -> List[Card]:
     """
     if i < 0:
         raise ValueError("Input integer must be non-negative")
-    if modifiers is None:
-        modifiers = [""] + MODIFIERS  # Include empty modifier by default
-    else:
-        if "" not in modifiers:
-            modifiers = [""] + modifiers
+    modifiers = _get_modifiers(modifiers)
     ncards = len(RANKS) * len(SUITS) * len(modifiers)
 
     # Find number of cards in the list to be generated
@@ -122,3 +144,12 @@ def _int2card(i: int, modifiers: List[str]) -> Card:
     modifier = modifiers[(i // (len(SUITS) * len(RANKS))) % len(modifiers)]
 
     return Card(f"{rank}{suit}{modifier}")
+
+def _get_modifiers(modifiers: List[str] = None) -> List[str]:
+    """Get the list of modifiers, ensuring the empty modifier is included."""
+    if modifiers is None:
+        return [""] + MODIFIERS  # Include empty modifier by default
+    else:
+        if "" not in modifiers:
+            return [""] + modifiers
+        return modifiers

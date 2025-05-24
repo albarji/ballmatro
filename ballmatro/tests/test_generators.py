@@ -1,5 +1,5 @@
 from ballmatro.card import Card, RANKS, SUITS, MODIFIERS
-from ballmatro.generators import exhaustive_generator, to_hf_dataset, generator_to_dict, int2cards
+from ballmatro.generators import exhaustive_generator, random_generator, to_hf_dataset, generator_to_dict, int2cards
 from ballmatro.score import Score
 from ballmatro.hands import InvalidHand
 
@@ -30,6 +30,30 @@ def test_exhaustive_generator_size2():
     assert len({tuple(hand) for hand, _ in results}) == len(results)
     # Check no invalid hands
     assert all(result.hand != InvalidHand for _, result in results)
+
+def test_random_generator_size4():
+    results = list(random_generator(max_hand_size=4, n=100))
+    assert len(results) == 100
+    assert all(len(result[0]) <= 4 for result in results)
+
+def test_random_generator_size8():
+    results = list(random_generator(max_hand_size=8, n=123))
+    assert len(results) == 123
+    assert all(len(result[0]) <= 8 for result in results)
+
+def test_random_generator_random_seed():
+    results = list(random_generator(max_hand_size=5, n=150, seed=12345))
+    results2 = list(random_generator(max_hand_size=5, n=150, seed=12345))
+    assert results == results2  # Ensure reproducibility with the same seed
+
+def test_random_generator_modifiers():
+    # Test with modifiers
+    results = list(random_generator(max_hand_size=1, n=100, modifiers=["+"]))
+    assert len(results) == 100
+    # Check that the cards have the expected modifiers
+    for hand, _ in results:
+        for card in hand:
+            assert card.modifier in [None, "+"]
 
 def test_generator_to_dict():
     # Generate a small dataset with a small generator
