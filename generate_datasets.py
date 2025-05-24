@@ -21,8 +21,8 @@ def main(algorithm: str, hand_size: int, n: int, rng: int):
     dataset = dataset.train_test_split(test_size=0.5, seed=rng)
 
     # Save the dataset to compressed CSV files
-    dataset["train"].to_parquet(f"train.parquet")
-    dataset["test"].to_parquet(f"test.parquet")
+    dataset["train"].to_parquet("train.parquet")
+    dataset["test"].to_parquet("test.parquet")
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate datasets of Ballmatro hands and plays")
