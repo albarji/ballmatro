@@ -58,3 +58,67 @@ def to_hf_dataset(generator: Generator[Tuple[List[Card], Score], None, None]) ->
     """
     # Create a Hugging Face dataset from the generator
     return Dataset.from_dict(generator_to_dict(generator))
+
+def int2cards(i: int, modifiers: List[str] = None) -> List[Card]:
+    """Map from the space of integers to the space of all possible lists of cards.
+
+    Useful for generating random datasets from a list of random integers.
+
+    0: empty list of cards
+    [1, ncards]: all possible single cards
+    [1+ncards, ncards+ncards**2]: all possible pairs of cards
+    [1+ncards+ncards**2, ncards+ncards**2+ncards**3]: all possible triplets of cards
+    ... and so on.
+
+    Args:
+        i (int): non-negative integer to convert.
+        modifiers (List[str], optional): A list of modifiers to apply to the cards. Defaults to None, which uses the global MODIFIERS.
+            An empty modifier is always included.
+
+    Returns:
+        List[Card]: A list of Card objects representing the integer.
+    """
+    if i < 0:
+        raise ValueError("Input integer must be non-negative")
+    if modifiers is None:
+        modifiers = [""] + MODIFIERS  # Include empty modifier by default
+    else:
+        if "" not in modifiers:
+            modifiers = [""] + modifiers
+    ncards = len(RANKS) * len(SUITS) * len(modifiers)
+
+    # Find number of cards in the list to be generated
+    lenlist = 0
+    while i - ncards**lenlist >= 0:
+        i -= ncards**lenlist
+        lenlist += 1
+
+    # Generate the list of cards
+    cards = []
+    for _ in range(lenlist):
+        cards.append(_int2card(i % ncards, modifiers))
+        i //= ncards
+    return list(reversed(cards))
+
+def _int2card(i: int, modifiers: List[str]) -> Card:
+    """Map from the space of integers to the space of all possible cards.
+
+    Useful for generating a random card from a random integer..
+
+    Args:
+        i (int): non-negative integer to convert from 0 to total number of possible cards (minus 1).
+
+    Returns:
+        Card: A Card object representing the integer.
+    """
+    if i < 0:
+        raise ValueError("Input integer must be non-negative")
+    ncards = len(RANKS) * len(SUITS) * len(modifiers)
+    if i > ncards:
+        raise ValueError(f"Input integer {i} exceeds maximum value {ncards-1}")
+
+    suit = SUITS[i % len(SUITS)]
+    rank = RANKS[(i // len(SUITS)) % len(RANKS)]
+    modifier = modifiers[(i // (len(SUITS) * len(RANKS))) % len(modifiers)]
+
+    return Card(f"{rank}{suit}{modifier}")

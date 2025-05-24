@@ -1,4 +1,5 @@
-from ballmatro.generators import exhaustive_generator, to_hf_dataset, generator_to_dict
+from ballmatro.card import Card, RANKS, SUITS, MODIFIERS
+from ballmatro.generators import exhaustive_generator, to_hf_dataset, generator_to_dict, int2cards
 from ballmatro.score import Score
 from ballmatro.hands import InvalidHand
 
@@ -53,3 +54,72 @@ def test_hf_dataset():
     assert "chips" in dataset.column_names
     assert "multiplier" in dataset.column_names
     assert "remaining" in dataset.column_names
+
+def test_int2cards():
+    # Test conversion of integer to cards
+    ncards = len(SUITS) * len(RANKS) * (len(MODIFIERS) + 1)
+
+    cards = int2cards(0)
+    assert len(cards) == 0
+
+    cards = int2cards(1)
+    assert len(cards) == 1
+    assert cards[0] == Card("2♣")
+
+    cards = int2cards(2)
+    assert len(cards) == 1
+    assert cards[0] == Card("2♦")
+
+    cards = int2cards(5)
+    assert len(cards) == 1
+    assert cards[0] == Card("3♣")
+
+    cards = int2cards(52)
+    assert len(cards) == 1
+    assert cards[0] == Card("A♥")
+
+    cards = int2cards(53)
+    assert len(cards) == 1
+    assert cards[0] == Card("2♣+")
+
+    cards = int2cards(ncards)
+    assert len(cards) == 1
+    assert cards[0] == Card("A♥x")
+
+    cards = int2cards(ncards+1)
+    assert len(cards) == 2
+    assert cards[0] == Card("2♣")
+    assert cards[1] == Card("2♣")
+
+    cards = int2cards(ncards+2)
+    assert len(cards) == 2
+    assert cards[0] == Card("2♣")
+    assert cards[1] == Card("2♦")
+
+    cards = int2cards(2*ncards)
+    assert len(cards) == 2
+    assert cards[0] == Card("2♣")
+    assert cards[1] == Card("A♥x")
+
+    cards = int2cards(ncards+ncards**2)
+    assert len(cards) == 2
+    assert cards[0] == Card("A♥x")
+    assert cards[1] == Card("A♥x")
+
+    cards = int2cards(1+ncards+ncards**2)
+    assert len(cards) == 3
+    assert cards[0] == Card("2♣")
+    assert cards[1] == Card("2♣")
+    assert cards[2] == Card("2♣")
+
+    # Now test with modifiers
+
+    ncards = len(SUITS) * len(RANKS) * 2
+
+    cards = int2cards(1, modifiers=["+"])
+    assert len(cards) == 1
+    assert cards[0] == Card("2♣")
+
+    cards = int2cards(ncards)
+    assert len(cards) == 1
+    assert cards[0] == Card("A♥+")
