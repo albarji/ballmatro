@@ -8,11 +8,11 @@ from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
 from ballmatro.optimizer import brute_force_optimize
 from ballmatro.score import Score
 
-def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], Score], None, None]:
+def exhaustive_generator(max_hand_size: int, seed: int = 42) -> Generator[Tuple[List[Card], Score], None, None]:
     """Generator functions for a dataset with all possible hands of a given size
     and their optimal plays using brute force optimization.
     Args:
-        hand_size (int): The size of the hands to generate.
+        max_hand_size (int): The size of the hands to generate.
     Returns:
         List[Tuple[List[Card], Score]]: A list of tuples, each containing a hand and its optimal play in the form of a Score object.
     """
@@ -20,7 +20,7 @@ def exhaustive_generator(hand_size: int) -> Generator[Tuple[List[Card], Score], 
     cards = [Card(f"{rank}{suit}{modifier}") for suit in SUITS for rank in RANKS for modifier in [""] + MODIFIERS]
     
     # Generate all combinations of the given size
-    for input in combinations_with_replacement(cards, hand_size):
+    for input in combinations_with_replacement(cards, max_hand_size):
         # Find optimal play for this input
         optimal_play = brute_force_optimize(list(input))
         yield list(input), optimal_play
@@ -49,6 +49,11 @@ def random_generator(max_hand_size: int, n: int, modifiers: List[str] = None, se
         # Find optimal play for this input
         optimal_play = brute_force_optimize(input)
         yield input, optimal_play
+
+GENERATION_ALGORITHMS = {
+    "exhaustive": exhaustive_generator,
+    "random": random_generator,
+}
 
 def generator_to_dict(generator: Generator[Tuple[List[Card], Score], None, None]) -> Dict[str, List[Any]]:
     """Convert a generator of tuples to a generator of dictionaries.
