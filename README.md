@@ -5,7 +5,7 @@
 ![Ruff](https://img.shields.io/badge/Ruff-passing-success?logo=ruff&logoColor=white)
 
 <div align="center">
-    <img src="docs/ballmatroLogo.png" width="512"><br>
+    <img src="docs/ballmatroLogo.png" width="800"><br>
 </div>
 
 A challenging task for LLMs in which they need to create high-scoring Ballatro-like hands.
