@@ -112,3 +112,20 @@ def test_scoredataset_mixed_valid_invalid():
     assert score_dataset.invalid_hands == 1
     assert score_dataset.normalized_invalid_hands == 0.5
     assert score_dataset.normalized_score == 32/40
+
+def test_scoredataset_strings():
+    """Test ScoreDataset with string inputs for plays."""
+    data = {
+        "input": ["[3♥,3♦]", "[2♥,3♦]"],
+        "score": [32, 8],
+    }
+    ds = Dataset.from_dict(data)
+    plays = [
+        "[3♥,3♦]",  # valid pair
+        "[3♦]"      # high card
+    ]
+    score_dataset = ScoreDataset(dataset=ds, plays=plays)
+    assert score_dataset.total_score == 32 + 8
+    assert score_dataset.normalized_score == 1.0
+    assert score_dataset.invalid_hands == 0
+    assert score_dataset.normalized_invalid_hands == 0.0

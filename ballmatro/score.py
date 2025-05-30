@@ -1,7 +1,7 @@
 """Functions to score ballmatro hands"""
 from dataclasses import dataclass
 from datasets import Dataset
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 
 from ballmatro.card import Card, parse_card_list
@@ -79,7 +79,7 @@ def _score_card(card: Card, chips: int, multiplier: int) -> Tuple[int, int]:
 class ScoreDataset:
     """Class that represents the scores obtained over a whole Ballmatro dataset"""
     dataset: Dataset  # Dataset containing the hands and optimal plays
-    plays: List[List[Card]]  # List of plays (hands) carried out for the dataset
+    plays: List[Union[str, List[Card]]]  # List of plays (hands) carried out for the dataset
     scores: List[Score] = None  # Detailed Score objects for each play
     total_score: int = 0  # Total score of the plays over the whole dataset
     normalized_score: float = 0.0  # Normalized score [0,1] of the plays over the whole dataset
@@ -90,6 +90,8 @@ class ScoreDataset:
         # Check inputs
         if len(self.dataset) != len(self.plays):
             raise ValueError("Dataset and plays must have the same length")
+        # Format plays
+        self.plays = [parse_card_list(play) if isinstance(play, str) else play for play in self.plays]
         # Score the plays
         self.scores = [Score(parse_card_list(input), played) for input, played in zip(self.dataset["input"], self.plays)]
         # Compute statistics
