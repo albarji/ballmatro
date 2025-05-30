@@ -112,3 +112,7 @@ BaLLMatro datasets are available through [Hugging Face datasets](https://hugging
 |Level 2|All inputs contain a two cards. The agent must identify whether to play both cards (Pair) if possible, or play the best single card (High Card)|Simple heuristics (`O(1)`)|
 |Level 3|All inputs contain 1-4 cards. All poker hands are possible|Brute-force search (`O(4!)`)|
 |Level 4|All inputs contain 1-8 cards. All poker hands are possible|Brute-force search (`O(8!)`)|
+
+All levels are provided as two folds, a train and a test fold. A fair use of this dataset involves using the test folds only for testing the LLM peformance, which means:
+* Not using test data to fine-tune the model in any way.
+* Not using test data as few-shot examples, or any other kind of in-context learning or prompting approach that makes use of test examples or informacion about the distribution or nature of test examples.
