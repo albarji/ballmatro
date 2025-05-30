@@ -3,6 +3,7 @@ name = "ballmatro"
 version = "0.1.2"
 description = "A challenging task for LLMs in which they need to create high-scoring Ballatro-like hands"
 authors = ["Álvaro Barbero Jiménez"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 datasets = "^3.6.0"
