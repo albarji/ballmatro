@@ -10,7 +10,7 @@ A challenging task for LLMs in which they need to create high-scoring Ballatro-l
 
 ## What is BaLLMatro?
 
-BaLLMatro is a portmanteu of "LLM" (Large Language Model) and "Ballatro", the critically acclaimed [videogame](https://www.playbalatro.com/). Inspired by the layers of complexity of such game, this project provides datasets and tools to test the ability of LLMs in finding high-scoring poker hands, under increasingly complex scoring rules. Thus, the objective of the project is to find the generalization abilities of LLMs, in a task where both humans and AI models can measure their performance.
+BaLLMatro is a portmanteu of "LLM" (Large Language Model) and "Ballatro", the critically acclaimed [videogame](https://www.playbalatro.com/). Inspired by the layers of complexity of such game, this project provides datasets and tools to test the ability of LLMs in finding high-scoring "augmented" poker hands, under increasingly complex scoring rules. Thus, the objective of the project is to find the generalization abilities of LLMs, in a task where both humans and AI models can measure their performance.
 
 ## The rules of BaLLMatro
 
@@ -49,9 +49,9 @@ The way to score points in a BaLLMatro game is to select a subset of cards that 
 
 These poker hands are sorted from highest priority to lowest. When a set of cards is played, the highest priority poker hand will be used for computing the score.
 
-> Example: when playing [2♣, 2♦, 2♥, 3♠, 3♥] the score of a Full House will be used, even though the played cards also contain a Three of a Kind and a Pair.
+> Example: when playing [2♣, 2♦, 2♥, 3♠, 3♥] it will be considered a Full House, even though the played cards also contain a Three of a Kind and a Pair.
 
-If the played cards do not form any poker hand, its chips and multiplier will be 0x0
+If the played cards do not form any poker hand, or if the played cards were not contained in the input cards, the play will be regarded as an **Invalid Hand**, and its chips and multiplier will be 0x0.
 
 > Example: [2♦, A♠] -> 0 chips x 0.
 
@@ -59,16 +59,16 @@ If the played cards do not form any poker hand, its chips and multiplier will be
 
 After determining the poker hand that has been played, the total score is computed in three steps.
 
-**Step one**: the number of chips and value of the multiplier are initialized with the corresponding values of the played hand.
+**Step one**: the number of chips and value of the multiplier are initialized with the corresponding values of the played hand. If an Invalid Hand was obtained, the process stops and a final score of 0 is returned.
 
 **Step two**: the specific cards used to build the poker hand are checked in order (from left to right), as they can increase the chips of the played hand:
-* Cards with ranks from 2 to 10 add the same value in chips as their number.
+* Cards with ranks from 2 to 10 add a value chips equal as their rank value.
 * Face cards (J, Q, K) are valued 10 chips.
 * An ace (A) is valued 11 chips.
 
 If any played card has a modifier, it will also affect the number of chips or the multiplier:
-* [+] Bonus cards: +30 chips (on top of those awarded normally by the card).
-* [x] Mult card: +4 multiplier.
+* `+` Bonus cards: +30 chips (on top of those awarded normally by the card rank).
+* `x` Mult card: +4 multiplier.
 
 **Step three**: the total number of chips is multiplied by the value of the multiplier, producing the final score.
 
@@ -101,3 +101,14 @@ Some examples of inputs and outputs are:
 
 Your objective is to output the highest scoring hand possible.
 Do not generate any other output apart from the list of cards played.
+
+## Datasets and difficulty levels
+
+BaLLMatro datasets are available through [Hugging Face datasets](https://huggingface.co/datasets/albarji/ballmatro), and arranged in difficulty levels that vary the number of available cards and the computational resources required for finding the optimal play:
+
+|Level|Arrangement|Simplest possible solution|
+|-----|-----------|--------------------------|
+|Level 1|All inputs contain a single card. The task can be reduced to outputting the card present at the input (play as High Card)|Regular expression / Finite automata (`O(1)`)|
+|Level 2|All inputs contain a two cards. The agent must identify whether to play both cards (Pair) if possible, or play the best single card (High Card)|Simple heuristics (`O(1)`)|
+|Level 3|All inputs contain 1-4 cards. All poker hands are possible|Brute-force search (`O(4!)`)|
+|Level 4|All inputs contain 1-8 cards. All poker hands are possible|Brute-force search (`O(8!)`)|
