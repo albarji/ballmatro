@@ -66,6 +66,15 @@ def test_score_card_mult():
     chips, multiplier = _score_card(card, 0, 1)
     assert (chips, multiplier) == (10, 5)
 
+def test_score_string_input():
+    """Test Score with string inputs for available and played cards."""
+    available = "[2♥,3♦,A♠]"
+    played = "[3♦]"
+    score = Score(available, played)
+    assert score.score == 8
+    assert score.hand.__name__ == "HighCard"
+    assert score.remaining == [Card(txt="2♥"), Card(txt="A♠")]
+
 def test_scoredataset_all_valid():
     data = {
         "input": ["[3♥,3♦]", "[2♥,3♦]"],

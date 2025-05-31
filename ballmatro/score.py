@@ -14,10 +14,15 @@ CHIPS_PER_RANK = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9
 @dataclass
 class Score:
     """Class that represents the score and details of a played hand"""
-    input: List[Card]  # Cards that were available for play
-    played: List[Card]  # Cards played in the hand
+    input: Union[List[Card], str]  # Cards that were available for play
+    played: Union[List[Card], str]  # Cards played in the hand
 
     def __post_init__(self):
+        # Parse the input and played cards
+        if isinstance(self.input, str):
+            self.input = parse_card_list(self.input)
+        if isinstance(self.played, str):
+            self.played = parse_card_list(self.played)
         # Find cards that were not played
         try:
             self.remaining = self._remaining_cards(self.input, self.played)
@@ -90,10 +95,8 @@ class ScoreDataset:
         # Check inputs
         if len(self.dataset) != len(self.plays):
             raise ValueError("Dataset and plays must have the same length")
-        # Format plays
-        self.plays = [parse_card_list(play) if isinstance(play, str) else play for play in self.plays]
         # Score the plays
-        self.scores = [Score(parse_card_list(input), played) for input, played in zip(self.dataset["input"], self.plays)]
+        self.scores = [Score(input, played) for input, played in zip(self.dataset["input"], self.plays)]
         # Compute statistics
         self.total_score = sum(score.score for score in self.scores)
         self.normalized_score = self.total_score / sum(self.dataset["score"])

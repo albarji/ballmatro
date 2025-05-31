@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="docs/ballmatroLogo.png" width="800"><br>
+    <img src="https://github.com/albarji/ballmatro/blob/master/docs/ballmatroLogo.png?raw=true" width="800"><br>
 </div>
 
 [![Unit Tests](https://github.com/albarji/ballmatro/actions/workflows/python-tests.yml/badge.svg)](https://github.com/albarji/ballmatro/actions/workflows/python-tests.yml)
