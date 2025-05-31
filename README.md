@@ -14,7 +14,7 @@ BaLLMatro is a portmanteu of "LLM" (Large Language Model) and "Ballatro", the cr
 
 ## The rules of BaLLMatro
 
-In each game of BaLLMatro you will get a list of cards as a list, and you will have to decide which cards from these list to play. The objective of the game is to play the subset cards that maximizes the score.
+In each game of BaLLMatro you will get a list of cards, and you will have to decide which cards from these list to play. The objective of the game is to play the subset cards that maximizes the score.
 
 ### Cards
 
