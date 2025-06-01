@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ballmatro"
-version = "0.1.4"
+version = "0.1.5"
 description = "A challenging task for LLMs in which they need to create high-scoring Ballatro-like hands"
 authors = ["Álvaro Barbero Jiménez"]
 readme = "README.md"
