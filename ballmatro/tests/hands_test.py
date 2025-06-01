@@ -1,5 +1,5 @@
 from ballmatro.card import Card
-from ballmatro.hands import StraightFlush, FourOfAKind, FullHouse, Flush, Straight, ThreeOfAKind, TwoPair, Pair, HighCard, InvalidHand, find_hand
+from ballmatro.hands import StraightFlush, FourOfAKind, FullHouse, Flush, Straight, ThreeOfAKind, TwoPair, Pair, HighCard, NoPokerHand, find_hand
 
 def test_straight_flush():
     cards = [Card('10♥'), Card('J♥'), Card('Q♥'), Card('K♥'), Card('A♥')]
@@ -47,5 +47,5 @@ def test_find_hand():
     assert find_hand([Card('10♥'), Card('10♦'), Card('K♠'), Card('K♣')]) == TwoPair
     assert find_hand([Card('10♥'), Card('10♦')]) == Pair
     assert find_hand([Card('A♥')]) == HighCard
-    assert find_hand([]) == InvalidHand
-    assert find_hand([Card('🂿')]) == InvalidHand
+    assert find_hand([]) == NoPokerHand
+    assert find_hand([Card("🂿 Double Double: Cards with rank 2 provide double chips")]) == NoPokerHand

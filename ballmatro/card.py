@@ -8,7 +8,6 @@ RANKS = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
 MODIFIERS = [
     "+",  # Bonus card: +30 chips
     "x",  # Mult card: +4 multiplier
-    # "*",  # Wild card: can be used as a card from any suit
 ]
 JOKER = "🂿"
 
@@ -16,6 +15,23 @@ JOKER = "🂿"
 class Card:
     """Class that represents a card"""
     txt: str  # Text representation of the card
+
+    def __post_init__(self):
+        """Validate the card text representation"""
+        if not isinstance(self.txt, str):
+            raise TypeError("Card text must be a string")
+        if self.suit is None and not self.is_joker:
+            raise ValueError("Card must contain a suit or be a joker")
+        if self.rank is None and not self.is_joker:
+            raise ValueError("Card must contain a rank or be a joker")
+        # For non-joker cards, check correct format with a regex
+        if not self.is_joker:
+            if not re.match(r"^(10|[2-9]|J|Q|K|A)[♣♦♠♥]([+x])?$", self.txt):
+                raise ValueError(f"Invalid card format: {self.txt}")
+        else:
+            # For joker cards, check the format
+            if not re.match(r"^🂿[^:]+:[^:]+$", self.txt):
+                raise ValueError(f"Invalid joker format: {self.txt}")
 
     @property
     def suit(self) -> str:
@@ -52,10 +68,17 @@ class Card:
         return self.txt[0] == JOKER
     
     @property
+    def joker_name(self) -> str:
+        """Return the name of the joker card, or None if the card is not a joker"""
+        if self.is_joker:
+            return self.txt[1:].split(":")[0].strip()
+        return None
+
+    @property
     def joker_rule(self) -> str:
         """Return the joker rule of the card, or None if the card is not a joker"""
         if self.is_joker:
-            return self.txt[1:]
+            return self.txt[1:].split(":")[1].strip()
         return None
 
     def __repr__(self) -> str:
@@ -67,8 +90,12 @@ def parse_card_list(txt: str) -> List[Card]:
 
     Example input: "[♣2, ♠3, ♥4]"
     Example output: [Card("♣2"), Card("♠3"), Card("♥4")]
+
+    Raises a ValueError if the input is not a valid card list format, or if any card is invalid.
     """
     # Remove opening and closing brackets
+    if not (txt.startswith("[") and txt.endswith("]")):
+        raise ValueError("Input must start with '[' and end with ']'")
     txt = txt[1:-1]
     # Remove blanks
     txt = txt.replace(" ","")

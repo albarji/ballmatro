@@ -1,4 +1,3 @@
-
 """baLLMatro possible hands and functions to identify them"""
 from collections import Counter
 from dataclasses import dataclass
@@ -132,8 +131,14 @@ class HighCard(PokerHand):
         # Just check that the card is not a joker
         return not hand[0].is_joker
     
-class InvalidHand(PokerHand):
-    """Special PokerHand for any kind of invalid hand"""
+class NoPokerHand(PokerHand):
+    """Special PokerHand to represent the played cards form no poker hand"""
+    ncards = 0
+    chips = 0
+    multiplier = 0
+
+class InvalidPlay(PokerHand):
+    """Special PokerHand to represent a played set of cards that are wrongly formatted or invalid"""
     ncards = 0
     chips = 0
     multiplier = 0
@@ -145,4 +150,4 @@ def find_hand(hand: List[Card]) -> PokerHand:
     for poker_hand in POKER_HANDS:
         if poker_hand.check(hand):
             return poker_hand
-    return InvalidHand
+    return NoPokerHand

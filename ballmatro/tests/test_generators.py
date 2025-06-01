@@ -1,7 +1,7 @@
 from ballmatro.card import Card, RANKS, SUITS, MODIFIERS
 from ballmatro.generators import exhaustive_generator, random_generator, to_hf_dataset, generator_to_dict, int2cards
 from ballmatro.score import Score
-from ballmatro.hands import InvalidHand
+from ballmatro.hands import NoPokerHand
 
 def test_exhaustive_generator_size1():
     # Use a small hand size for tractable test
@@ -15,7 +15,7 @@ def test_exhaustive_generator_size1():
     # Check no repetitions in the generated hands
     assert len({tuple(hand) for hand, _ in results}) == len(results)
     # Check no invalid hands
-    assert all(result.hand != InvalidHand for _, result in results)
+    assert all(result.hand != NoPokerHand for _, result in results)
 
 def test_exhaustive_generator_size2():
     # Use a small hand size for tractable test
@@ -29,7 +29,7 @@ def test_exhaustive_generator_size2():
     # Check no repetitions in the generated hands
     assert len({tuple(hand) for hand, _ in results}) == len(results)
     # Check no invalid hands
-    assert all(result.hand != InvalidHand for _, result in results)
+    assert all(result.hand != NoPokerHand for _, result in results)
 
 def test_random_generator_size4():
     results = list(random_generator(max_hand_size=4, n=100))

@@ -5,7 +5,7 @@ from typing import List, Tuple, Union
 
 
 from ballmatro.card import Card, parse_card_list
-from ballmatro.hands import find_hand, InvalidHand
+from ballmatro.hands import find_hand, NoPokerHand, InvalidPlay
 
 
 CHIPS_PER_RANK = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "Q": 10, "K": 10, "A": 11}
@@ -18,19 +18,19 @@ class Score:
     played: Union[List[Card], str]  # Cards played in the hand
 
     def __post_init__(self):
-        # Parse the input and played cards
-        if isinstance(self.input, str):
-            self.input = parse_card_list(self.input)
-        if isinstance(self.played, str):
-            self.played = parse_card_list(self.played)
-        # Find cards that were not played
         try:
+            # Parse the input and played cards
+            if isinstance(self.input, str):
+                self.input = parse_card_list(self.input)
+            if isinstance(self.played, str):
+                self.played = parse_card_list(self.played)
+            # Find cards that were not played
             self.remaining = self._remaining_cards(self.input, self.played)
             # Find the hand that was played
             self.hand = find_hand(self.played)
         except ValueError:
             self.remaining = None
-            self.hand = InvalidHand
+            self.hand = InvalidPlay
         # Score the played cards
         self._score_played()
 
@@ -55,7 +55,7 @@ class Score:
         A score of 0 is attained when the hand is not recognized or the list of played cards contains cards that are not available.
         """
         # Check if the played cards were really available
-        if self.remaining is None or self.hand == InvalidHand:
+        if self.remaining is None or self.hand in [NoPokerHand, InvalidPlay]:
             self.chips = 0
             self.multiplier = 0
             self.score = 0
@@ -100,7 +100,7 @@ class ScoreDataset:
         # Compute statistics
         self.total_score = sum(score.score for score in self.scores)
         self.normalized_score = self.total_score / sum(self.dataset["score"])
-        self.invalid_hands = sum(1 for score in self.scores if score.hand == InvalidHand)
+        self.invalid_hands = sum(1 for score in self.scores if score.hand in [NoPokerHand, InvalidPlay])
         self.normalized_invalid_hands = self.invalid_hands / len(self.scores)
 
     def __repr__(self):

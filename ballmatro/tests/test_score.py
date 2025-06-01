@@ -1,4 +1,5 @@
 from ballmatro.card import Card
+from ballmatro.hands import InvalidPlay
 from ballmatro.score import Score, _score_card, ScoreDataset
 from datasets import Dataset
 
@@ -91,7 +92,7 @@ def test_scoredataset_all_valid():
     assert score_dataset.invalid_hands == 0
     assert score_dataset.normalized_invalid_hands == 0.0
 
-def test_scoredataset_with_invalid_hand():
+def test_scoredataset_with_invalid_play():
     data = {
         "input": ["[3♥,3♦]"],
         "score": [32],
@@ -105,6 +106,7 @@ def test_scoredataset_with_invalid_hand():
     assert score_dataset.normalized_score == 0.0
     assert score_dataset.invalid_hands == 1
     assert score_dataset.normalized_invalid_hands == 1.0
+    assert score_dataset.scores[0].hand == InvalidPlay
 
 def test_scoredataset_mixed_valid_invalid():
     data = {
@@ -121,6 +123,7 @@ def test_scoredataset_mixed_valid_invalid():
     assert score_dataset.invalid_hands == 1
     assert score_dataset.normalized_invalid_hands == 0.5
     assert score_dataset.normalized_score == 32/40
+    assert score_dataset.scores[1].hand == InvalidPlay
 
 def test_scoredataset_strings():
     """Test ScoreDataset with string inputs for plays."""
