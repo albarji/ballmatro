@@ -13,7 +13,14 @@ CHIPS_PER_RANK = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9
 
 @dataclass
 class Score:
-    """Class that represents the score and details of a played hand"""
+    """Class that represents the score and details of a played hand.
+
+    The scoring procedure is as follows:
+    1. Check if the played hand is valid (i.e., all cards were available).
+    2. Find the type of hand played (e.g., Straight Flush, Four of a Kind, etc.), and initialize the chips and multiplier based on that hand.
+    3. Go over each card and apply its rank and multipliers to the current chips and multiplier.
+    4. The final score is the product of the chips and multiplier.
+    """
     input: Union[List[Card], str]  # Cards that were available for play
     played: Union[List[Card], str]  # Cards played in the hand
 
