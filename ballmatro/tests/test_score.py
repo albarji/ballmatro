@@ -73,7 +73,7 @@ def test_score_string_input():
     played = "[3♦]"
     score = Score(available, played)
     assert score.score == 8
-    assert score.hand.__name__ == "HighCard"
+    assert score.hand.name == "High Card"
     assert score.remaining == [Card(txt="2♥"), Card(txt="A♠")]
 
 def test_scoredataset_all_valid():

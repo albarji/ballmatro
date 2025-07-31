@@ -43,7 +43,7 @@ class Score:
 
     def __repr__(self):
         """Return a string representation of the score info"""
-        return f"Score(input={self.input}, played={self.played}, remaining={self.remaining}, hand={self.hand.__name__}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
+        return f"Score(input={self.input}, played={self.played}, remaining={self.remaining}, hand={self.hand.name}, chips={self.chips}, multiplier={self.multiplier}, score={self.score})"
     
     def _remaining_cards(self, available: List[Card], played: List[Card]) -> List[Card]:
         """Returns the remaining (not played) cards after playing a hand"""
@@ -62,7 +62,7 @@ class Score:
         A score of 0 is attained when the hand is not recognized or the list of played cards contains cards that are not available.
         """
         # Check if the played cards were really available
-        if self.remaining is None or self.hand in [NoPokerHand, InvalidPlay]:
+        if self.remaining is None or isinstance(self.hand, (NoPokerHand, InvalidPlay)):
             self.chips = 0
             self.multiplier = 0
             self.score = 0

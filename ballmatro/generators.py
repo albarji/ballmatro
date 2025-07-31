@@ -71,7 +71,7 @@ def generator_to_dict(generator: Generator[Tuple[List[Card], Score], None, None]
         "input": [str(cards) for cards, _ in data],
         "output": [str(score.played) for _, score in data],
         "score": [score.score for _, score in data],
-        "hand": [score.hand.__name__ for _, score in data],
+        "hand": [score.hand.name for _, score in data],
         "chips": [score.chips for _, score in data],
         "multiplier": [score.multiplier for _, score in data],
         "remaining": [str(score.remaining) for _, score in data],

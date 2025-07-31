@@ -38,14 +38,14 @@ def test_high_card():
     assert HighCard.check(cards)
 
 def test_find_hand():
-    assert find_hand([Card('10♥'), Card('J♥'), Card('Q♥'), Card('K♥'), Card('A♥')]) == StraightFlush
-    assert find_hand([Card('10♥'), Card('10♦'), Card('10♠'), Card('10♣')]) == FourOfAKind
-    assert find_hand([Card('10♥'), Card('10♦'), Card('10♠'), Card('K♣'), Card('K♦')]) == FullHouse
-    assert find_hand([Card('2♥'), Card('4♥'), Card('6♥'), Card('8♥'), Card('10♥')]) == Flush
-    assert find_hand([Card('10♥'), Card('J♦'), Card('Q♠'), Card('K♣'), Card('A♦')]) == Straight
-    assert find_hand([Card('10♥'), Card('10♦'), Card('10♠')]) == ThreeOfAKind
-    assert find_hand([Card('10♥'), Card('10♦'), Card('K♠'), Card('K♣')]) == TwoPair
-    assert find_hand([Card('10♥'), Card('10♦')]) == Pair
-    assert find_hand([Card('A♥')]) == HighCard
-    assert find_hand([]) == NoPokerHand
-    assert find_hand([Card("🂿 Double Double: Cards with rank 2 provide double chips")]) == NoPokerHand
+    assert find_hand([Card('10♥'), Card('J♥'), Card('Q♥'), Card('K♥'), Card('A♥')]) == StraightFlush()
+    assert find_hand([Card('10♥'), Card('10♦'), Card('10♠'), Card('10♣')]) == FourOfAKind()
+    assert find_hand([Card('10♥'), Card('10♦'), Card('10♠'), Card('K♣'), Card('K♦')]) == FullHouse()
+    assert find_hand([Card('2♥'), Card('4♥'), Card('6♥'), Card('8♥'), Card('10♥')]) == Flush()
+    assert find_hand([Card('10♥'), Card('J♦'), Card('Q♠'), Card('K♣'), Card('A♦')]) == Straight()
+    assert find_hand([Card('10♥'), Card('10♦'), Card('10♠')]) == ThreeOfAKind()
+    assert find_hand([Card('10♥'), Card('10♦'), Card('K♠'), Card('K♣')]) == TwoPair()
+    assert find_hand([Card('10♥'), Card('10♦')]) == Pair()
+    assert find_hand([Card('A♥')]) == HighCard()
+    assert find_hand([]) == NoPokerHand()
+    assert find_hand([Card("🂿 Double Double: Cards with rank 2 provide double chips")]) == NoPokerHand()

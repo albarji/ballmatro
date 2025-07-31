@@ -4,7 +4,7 @@ from ballmatro.hands import HighCard, Pair, TwoPair, ThreeOfAKind, Straight, Flu
 
 """Module for testing the planet joker cards."""
 @pytest.mark.parametrize(
-    "planet_cls,hand,multiplier",
+    "planet_cls,hand_cls,multiplier",
     [
         (planets.Pluto, HighCard, 2),
         (planets.Mercury, Pair, 2),
@@ -35,8 +35,9 @@ from ballmatro.hands import HighCard, Pair, TwoPair, ThreeOfAKind, Straight, Flu
         (planets.NeptunePlusPlus, StraightFlush, 10),
     ]
 )
-def test_planet_card_applies_multiplier(planet_cls, hand, multiplier):
+def test_planet_card_applies_multiplier(planet_cls, hand_cls, multiplier):
     # Create a dummy hand of the correct type
+    hand = hand_cls()
     planet = planet_cls()
     modified = planet.played_hand_callback(hand)
     if hand == planet.target_hand:
@@ -48,7 +49,7 @@ def test_planet_card_applies_multiplier(planet_cls, hand, multiplier):
 
 def test_planet_card_does_not_apply_to_other_hand_types():
     # Pluto targets HighCard, so test with Pair
-    hand = Pair
+    hand = Pair()
     planet = planets.Pluto()
     modified = planet.played_hand_callback(hand)
     assert modified.chips == hand.chips
