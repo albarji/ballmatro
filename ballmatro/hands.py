@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from typing import List
 
 from ballmatro.card import Card
-from abc import ABC, abstractmethod
+from abc import ABC
 
 class PokerHand(ABC):
     """Abstract class with general methods for Poker Hands scoring"""

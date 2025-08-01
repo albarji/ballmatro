@@ -2,7 +2,6 @@
 
 import pytest
 
-from ballmatro.jokers.factory import find_joker, BlankJoker
 from ballmatro.jokers.factory import find_joker, JOKERS
 from ballmatro.jokers.joker import BlankJoker
 

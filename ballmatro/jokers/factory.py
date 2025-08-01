@@ -1,7 +1,9 @@
 """Module to list all joker cards available, and a factory to create them from their names."""
 
 from ballmatro.jokers.joker import Joker, BlankJoker
-from ballmatro.jokers.planets import *
+from ballmatro.jokers.planets import Pluto, Mercury, Uranus, Venus, Saturn, Jupiter, Mars, Neptune, Earth
+from ballmatro.jokers.planets import PlutoPlus, MercuryPlus, UranusPlus, VenusPlus, SaturnPlus, JupiterPlus, MarsPlus, NeptunePlus, EarthPlus
+from ballmatro.jokers.planets import MarsPlusPlus, VenusPlusPlus, JupiterPlusPlus, SaturnPlusPlus, UranusPlusPlus, MercuryPlusPlus, PlutoPlusPlus, EarthPlusPlus, NeptunePlusPlus
 
 JOKERS = [
     BlankJoker,
