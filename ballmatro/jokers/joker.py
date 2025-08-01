@@ -20,6 +20,8 @@ class Joker:
         """
         return hand
 
+    def __str__(self):
+        return f"Joker(name={self.name})"
 
 class BlankJoker(Joker):
     """A joker that does not have any effect at all."""

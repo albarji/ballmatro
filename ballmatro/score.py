@@ -6,6 +6,8 @@ from typing import List, Tuple, Union
 
 from ballmatro.card import Card, parse_card_list
 from ballmatro.hands import find_hand, NoPokerHand, InvalidPlay
+from ballmatro.jokers.factory import find_joker_card
+from ballmatro.jokers.joker import Joker
 
 
 CHIPS_PER_RANK = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "Q": 10, "K": 10, "A": 11}
@@ -33,8 +35,13 @@ class Score:
                 self.played = parse_card_list(self.played)
             # Find cards that were not played
             self.remaining = self._remaining_cards(self.input, self.played)
+            # Find jokers in the remaining cards
+            self.jokers = self._find_jokers()
             # Find the hand that was played
             self.hand = find_hand(self.played)
+            # Apply the jokers to the hand if any
+            for joker in self.jokers:
+                self.hand = joker.played_hand_callback(self.hand)
         except ValueError:
             self.remaining = None
             self.hand = InvalidPlay
@@ -55,6 +62,10 @@ class Score:
             # Remove the card from the remaining cards
             remaining.remove(card)
         return remaining
+
+    def _find_jokers(self) -> List[Joker]:
+        """Find jokers in the remaining cards"""
+        return [find_joker_card(card) for card in self.remaining if card.is_joker]
 
     def _score_played(self):
         """Given a list of played cards, find their ballmatro score

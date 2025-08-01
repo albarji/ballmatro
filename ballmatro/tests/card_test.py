@@ -30,6 +30,8 @@ def test_card_is_joker():
     assert card.is_joker is True
     card = Card("10♠")
     assert card.is_joker is False
+    card = Card("🂿 Diamond Crack")
+    assert card.is_joker is True
 
 def test_card_joker_rule():
     card = Card("🂿 Oblique: Straights cannot be played")
@@ -42,6 +44,8 @@ def test_card_joker_name():
     assert card.joker_name == "Double Double"
     card = Card("10♠")
     assert card.joker_name is None
+    card = Card("🂿 Double Double")
+    assert card.joker_name == "Double Double"
 
 def test_parse_card_list_basic():
     cards = parse_card_list("[2♣,3♠,4♥]")

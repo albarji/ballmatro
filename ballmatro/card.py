@@ -30,7 +30,7 @@ class Card:
                 raise ValueError(f"Invalid card format: {self.txt}")
         else:
             # For joker cards, check the format
-            if not re.match(r"^🂿[^:]+:[^:]+$", self.txt):
+            if not re.match(r"^🂿[^:$]+(:[^:]+)?$", self.txt):
                 raise ValueError(f"Invalid joker format: {self.txt}")
 
     @property
@@ -97,10 +97,8 @@ def parse_card_list(txt: str) -> List[Card]:
     if not (txt.startswith("[") and txt.endswith("]")):
         raise ValueError("Input must start with '[' and end with ']'")
     txt = txt[1:-1]
-    # Remove blanks
-    txt = txt.replace(" ","")
     # No cards border case
     if len(txt) == 0:
         return []
     # Split by cards
-    return [Card(cardtxt) for cardtxt in txt.split(",")]
+    return [Card(cardtxt.strip()) for cardtxt in txt.split(",")]

@@ -21,7 +21,7 @@ class PlanetCard(Joker):
 
     def played_hand_callback(self, hand: PokerHand) -> PokerHand:
         """Callback that modifies the played hand when this planet card is present."""
-        if hand == self.target_hand:
+        if isinstance(hand, self.target_hand):
             hand = deepcopy(hand)
             hand.chips *= self.multiplier
             hand.multiplier *= self.multiplier

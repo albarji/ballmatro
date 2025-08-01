@@ -40,7 +40,7 @@ def test_planet_card_applies_multiplier(planet_cls, hand_cls, multiplier):
     hand = hand_cls()
     planet = planet_cls()
     modified = planet.played_hand_callback(hand)
-    if hand == planet.target_hand:
+    if isinstance(hand, planet.target_hand):
         assert modified.chips == hand.chips * multiplier
         assert modified.multiplier == hand.multiplier * multiplier
     else:

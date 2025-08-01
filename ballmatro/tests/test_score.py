@@ -76,6 +76,20 @@ def test_score_string_input():
     assert score.hand.name == "High Card"
     assert score.remaining == [Card(txt="2♥"), Card(txt="A♠")]
 
+def test_score_joker_pluto():
+    """Test Score with a Pluto joker card."""
+    available = "[2♥,3♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand]"
+    played = "[3♦]"
+    score = Score(available, played)
+    assert score.score == 26
+
+def test_score_joker_venus_plus_plus():
+    """Test Score with a Venus Plus Plus joker card."""
+    available = "[2♥,2♦,2♠,3♦,A♠,🂿 Venus++: multiplies by 10 the chips and multiplier of the Three of a Kind hand]"
+    played = "[2♥,2♦,2♠]"
+    score = Score(available, played)
+    assert score.score == 9180
+
 def test_scoredataset_all_valid():
     data = {
         "input": ["[3♥,3♦]", "[2♥,3♦]"],
