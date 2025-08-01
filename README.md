@@ -55,6 +55,10 @@ If the played cards do not form any poker hand, or if the played cards were not 
 
 > Example: [2♦, A♠] -> 0 chips x 0.
 
+All the played cards must form part of a poker hand, or equivalently, the set of played cards must not contain cards that will not form part of the poker hand.
+
+> Example: [2♣, 2♦, 2♥, 6♠] -> 0 chips x 0, as even though the first three cards form a Three of a Kind, an extra 6♠ card has been played that does not form part of the poker hand.
+
 ### Scoring hands
 
 After determining the poker hand that has been played, the total score is computed in three steps.
