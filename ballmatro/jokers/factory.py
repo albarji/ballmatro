@@ -7,34 +7,34 @@ from ballmatro.jokers.planets import PlutoPlus, MercuryPlus, UranusPlus, VenusPl
 from ballmatro.jokers.planets import MarsPlusPlus, VenusPlusPlus, JupiterPlusPlus, SaturnPlusPlus, UranusPlusPlus, MercuryPlusPlus, PlutoPlusPlus, EarthPlusPlus, NeptunePlusPlus
 
 JOKERS = [
-    BlankJoker,
-    Pluto,
-    Mercury,
-    Uranus,
-    Venus,
-    Saturn,
-    Jupiter,
-    Mars,
-    Neptune,
-    Earth,
-    PlutoPlus,
-    MercuryPlus,
-    UranusPlus,
-    VenusPlus,
-    SaturnPlus,
-    JupiterPlus,
-    MarsPlus,
-    NeptunePlus,
-    EarthPlus,
-    MarsPlusPlus,
-    VenusPlusPlus,
-    JupiterPlusPlus,
-    SaturnPlusPlus,
-    UranusPlusPlus,
-    MercuryPlusPlus,
-    PlutoPlusPlus,
-    EarthPlusPlus,
-    NeptunePlusPlus,
+    BlankJoker,         # 000
+    Pluto,              # 001
+    Mercury,            # 002
+    Uranus,             # 003
+    Venus,              # 004
+    Saturn,             # 005
+    Jupiter,            # 006
+    Mars,               # 007
+    Neptune,            # 008
+    Earth,              # 009
+    PlutoPlus,          # 010
+    MercuryPlus,        # 011
+    UranusPlus,         # 012
+    VenusPlus,          # 013
+    SaturnPlus,         # 014
+    JupiterPlus,        # 015
+    MarsPlus,           # 016
+    NeptunePlus,        # 017
+    EarthPlus,          # 018
+    MarsPlusPlus,       # 019
+    VenusPlusPlus,      # 020
+    JupiterPlusPlus,    # 021
+    SaturnPlusPlus,     # 022
+    UranusPlusPlus,     # 023
+    MercuryPlusPlus,    # 024
+    PlutoPlusPlus,      # 025
+    EarthPlusPlus,      # 026
+    NeptunePlusPlus,    # 027
 ]
 
 # Dictionary from joker names to their classes
