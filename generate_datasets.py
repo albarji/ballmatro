@@ -26,9 +26,9 @@ def main(algorithm: str, hand_size: int, n: int, rng: int):
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate datasets of Ballmatro hands and plays")
-    parser.add_argument("alg", type=str, help=f"Algortithm to use for generating the dataset, must be one of {list(GENERATION_ALGORITHMS.keys())}")
+    parser.add_argument("alg", type=str, help=f"Algorithm to use for generating the dataset, must be one of {list(GENERATION_ALGORITHMS.keys())}")
     parser.add_argument("len", type=int, help="Maximum number of cards in the hands. For exhaustive generation, this is always the hand size.")
     parser.add_argument("n", type=int, help="Number of hands to generate. For exhaustive generation, this is ignored.")
-    parser.add_argument("--rng", type=int, help="Random seed for reproducibility", default=42)
+    parser.add_argument("--rng", type=int, help="Random seed for reproducibility. For exhaustive generation, this is ignored.", default=42)
     args = parser.parse_args()
     main(args.alg, args.len, args.n, args.rng)

@@ -8,7 +8,7 @@ from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
 from ballmatro.optimizer import brute_force_optimize
 from ballmatro.score import Score
 
-def exhaustive_generator(max_hand_size: int, seed: int = 42) -> Generator[Tuple[List[Card], Score], None, None]:
+def exhaustive_generator(max_hand_size: int) -> Generator[Tuple[List[Card], Score], None, None]:
     """Generator functions for a dataset with all possible hands of a given size
     and their optimal plays using brute force optimization.
     Args:
