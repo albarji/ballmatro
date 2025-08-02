@@ -58,6 +58,6 @@ def test_planet_card_does_not_apply_to_other_hand_types():
 def test_planet_card_repr_and_attributes():
     planet = planets.MarsPlusPlus()
     assert planet.name == "Mars++"
-    assert "multiplies by 10" in planet.description
+    assert "Multiplies by 10" in planet.description
     assert planet.multiplier == 10
     assert planet.target_hand == FourOfAKind
