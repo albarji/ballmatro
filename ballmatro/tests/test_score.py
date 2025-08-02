@@ -90,6 +90,32 @@ def test_score_joker_venus_plus_plus():
     score = Score(available, played)
     assert score.score == 9180
 
+def test_score_asdict():
+    available = [Card(txt="2♥"), Card(txt="3♦"), Card(txt="A♠")]
+    played = [Card(txt="3♦")]
+    score = Score(available, played)
+    score_dict = score.asdict()
+    assert score_dict["input"] == ["2♥", "3♦", "A♠"]
+    assert score_dict["played"] == ["3♦"]
+    assert score_dict["remaining"] == ["2♥", "A♠"]
+    assert score_dict["hand"] == "High Card"
+    assert score_dict["chips"] == 8
+    assert score_dict["multiplier"] == 1
+    assert score_dict["score"] == 8
+
+def test_score_asdict_invalid_play():
+    available = [Card(txt="2♥"), Card(txt="3♦"), Card(txt="A♠")]
+    played = [Card(txt="K♠")]  # not available
+    score = Score(available, played)
+    score_dict = score.asdict()
+    assert score_dict["input"] == ["2♥", "3♦", "A♠"]
+    assert score_dict["played"] == ["K♠"]
+    assert score_dict["remaining"] is None
+    assert score_dict["hand"] == "Invalid Play"
+    assert score_dict["chips"] == 0
+    assert score_dict["multiplier"] == 0
+    assert score_dict["score"] == 0
+
 def test_scoredataset_all_valid():
     data = {
         "input": ["[3♥,3♦]", "[2♥,3♦]"],
@@ -155,3 +181,23 @@ def test_scoredataset_strings():
     assert score_dataset.normalized_score == 1.0
     assert score_dataset.invalid_hands == 0
     assert score_dataset.normalized_invalid_hands == 0.0
+
+def test_scoredataset_asdict():
+    data = {
+        "input": ["[3♥,3♦]", "[2♥,3♦]"],
+        "score": [32, 8],
+    }
+    ds = Dataset.from_dict(data)
+    plays = [
+        [Card("3♥"), Card("3♦")],
+        [Card("3♦")],
+    ]
+    score_dataset = ScoreDataset(dataset=ds, plays=plays)
+    d = score_dataset.asdict()
+    assert d["total_score"] == 40
+    assert d["normalized_score"] == 1.0
+    assert d["invalid_hands"] == 0
+    assert d["normalized_invalid_hands"] == 0.0
+    assert isinstance(d["scores"], list)
+    assert d["scores"][0]["score"] == 32
+    assert d["scores"][1]["score"] == 8

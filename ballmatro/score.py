@@ -87,6 +87,18 @@ class Score:
 
         self.score = self.chips * self.multiplier
 
+    def asdict(self) -> dict:
+        """Return the score as a dictionary"""
+        return {
+            "input": [card.txt for card in self.input],
+            "played": [card.txt for card in self.played],
+            "remaining": [card.txt for card in self.remaining] if self.remaining else None,
+            "hand": self.hand.name,
+            "chips": self.chips,
+            "multiplier": self.multiplier,
+            "score": self.score
+        }
+
 def _score_card(card: Card, chips: int, multiplier: int) -> Tuple[int, int]:
     """Applies the scoring of a single card to the current chips and multiplier"""
     # Add the chips of the card rank to the current chips
@@ -124,3 +136,13 @@ class ScoreDataset:
     def __repr__(self):
         """Return a string representation of the score info"""
         return f"ScoreDataset(total_score={self.total_score}, normalized_score={self.normalized_score}, invalid_hands={self.invalid_hands}, normalized_invalid_hands={self.normalized_invalid_hands})"
+
+    def asdict(self) -> dict:
+        """Return the score dataset as a dictionary"""
+        return {
+            "total_score": self.total_score,
+            "normalized_score": self.normalized_score,
+            "invalid_hands": self.invalid_hands,
+            "normalized_invalid_hands": self.normalized_invalid_hands,
+            "scores": [score.asdict() for score in self.scores],
+        }

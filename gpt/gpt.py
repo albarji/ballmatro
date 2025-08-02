@@ -1,0 +1,56 @@
+"""Functions to try to solve a Ballmatro dataset using a GPT model."""
+
+from ballmatro.score import ScoreDataset
+
+from openai import OpenAI
+
+README_PATH = "README.md"
+
+def gpt_attempt_ballmatro_dataset(dataset: list[dict], model: str = "gpt-4o") -> list[str]:
+    """Use a GPT model to attempt to solve a Ballmatro dataset.
+    
+    Returns a list of responses from the model for each item in the dataset.
+    """
+    openai = OpenAI()
+    system_prompt = build_system_prompt()
+    responses = []
+    for data in dataset:
+        response = openai.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": data["input"]}
+            ]
+        )
+        responses.append(response.choices[0].message.content)
+    return ScoreDataset(dataset, responses)
+
+def build_system_prompt() -> str:
+    """Build the system prompt for the GPT model, making use of the README file."""
+    # Read contents of the README file
+    with open(README_PATH, "r", encoding="utf-8") as readme_file:
+        readme_content = readme_file.read()
+    # Extract the section for the rules
+    sections = markdown_to_sections(readme_content)
+    if "The rules of BaLLMatro" not in sections:
+        raise ValueError("README file does not contain the rules section.")
+    # Use the rules section to build the system prompt
+    return sections["The rules of BaLLMatro"]
+
+def markdown_to_sections(markdown: str) -> dict[str, str]:
+    """Convert a markdown string into a dictionary from section titles to content."""
+    sections = {}
+    current_title = None
+    current_content = []
+    for line in markdown.splitlines():
+        line = line.strip()
+        if line.startswith("## "):
+            if current_title:
+                sections[current_title] = "\n".join(current_content)
+            current_title = line[3:]
+            current_content = []
+        elif current_title:
+            current_content.append(line)
+    if current_title:
+        sections[current_title] = "\n".join(current_content)
+    return sections
