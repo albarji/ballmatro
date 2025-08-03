@@ -127,22 +127,25 @@ class ScoreDataset:
             raise ValueError("Dataset and plays must have the same length")
         # Score the plays
         self.scores = [Score(input, played) for input, played in zip(self.dataset["input"], self.plays)]
+        # Compute normalized scores
+        self.normalized_scores = [score.score / reference_score for score, reference_score in zip(self.scores, self.dataset["score"])]
         # Compute statistics
         self.total_score = sum(score.score for score in self.scores)
-        self.normalized_score = self.total_score / sum(self.dataset["score"])
+        self.total_normalized_score = sum(self.normalized_scores) / len(self.normalized_scores)
         self.invalid_hands = sum(1 for score in self.scores if score.hand in [NoPokerHand, InvalidPlay])
         self.normalized_invalid_hands = self.invalid_hands / len(self.scores)
 
     def __repr__(self):
         """Return a string representation of the score info"""
-        return f"ScoreDataset(total_score={self.total_score}, normalized_score={self.normalized_score}, invalid_hands={self.invalid_hands}, normalized_invalid_hands={self.normalized_invalid_hands})"
+        return f"ScoreDataset(total_score={self.total_score}, total_normalized_score={self.total_normalized_score}, invalid_hands={self.invalid_hands}, normalized_invalid_hands={self.normalized_invalid_hands})"
 
     def asdict(self) -> dict:
         """Return the score dataset as a dictionary"""
         return {
             "total_score": self.total_score,
-            "normalized_score": self.normalized_score,
+            "total_normalized_score": self.total_normalized_score,
             "invalid_hands": self.invalid_hands,
             "normalized_invalid_hands": self.normalized_invalid_hands,
             "scores": [score.asdict() for score in self.scores],
+            "normalized_scores": self.normalized_scores,
         }

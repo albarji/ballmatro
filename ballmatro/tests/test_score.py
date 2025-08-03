@@ -137,7 +137,7 @@ def test_scoredataset_all_valid():
     ]
     score_dataset = ScoreDataset(dataset=ds, plays=plays)
     assert score_dataset.total_score == 32 + 8
-    assert score_dataset.normalized_score == 1.0
+    assert score_dataset.total_normalized_score == 1.0
     assert score_dataset.invalid_hands == 0
     assert score_dataset.normalized_invalid_hands == 0.0
 
@@ -171,7 +171,7 @@ def test_scoredataset_mixed_valid_invalid():
     assert score_dataset.total_score == 32
     assert score_dataset.invalid_hands == 1
     assert score_dataset.normalized_invalid_hands == 0.5
-    assert score_dataset.normalized_score == 32/40
+    assert score_dataset.total_normalized_score == 0.5
     assert score_dataset.scores[1].hand == InvalidPlay
 
 def test_scoredataset_strings():
@@ -187,7 +187,7 @@ def test_scoredataset_strings():
     ]
     score_dataset = ScoreDataset(dataset=ds, plays=plays)
     assert score_dataset.total_score == 32 + 8
-    assert score_dataset.normalized_score == 1.0
+    assert score_dataset.total_normalized_score == 1.0
     assert score_dataset.invalid_hands == 0
     assert score_dataset.normalized_invalid_hands == 0.0
 
@@ -204,7 +204,7 @@ def test_scoredataset_asdict():
     score_dataset = ScoreDataset(dataset=ds, plays=plays)
     d = score_dataset.asdict()
     assert d["total_score"] == 40
-    assert d["normalized_score"] == 1.0
+    assert d["total_normalized_score"] == 1.0
     assert d["invalid_hands"] == 0
     assert d["normalized_invalid_hands"] == 0.0
     assert isinstance(d["scores"], list)
