@@ -125,7 +125,7 @@ Some examples of inputs and outputs are:
 </pre>
 
 Your objective is to output the highest scoring hand possible.
-Do not generate any other output apart from the list of cards played.
+Do not generate any other output apart from the list of cards played. Do not generate any formatting text, such as backticks or markdown fenced blocks.
 
 ## Datasets and difficulty levels
 
