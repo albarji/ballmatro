@@ -28,23 +28,23 @@ Optionally, each card might include a modifier that changes its scoring rules, a
 
 The way to score points in a BaLLMatro game is to select a subset of cards that make up a **poker hand**. Each poker hand has a specific value in **chips** and a **multiplier** that will count towards the final score.
 
-- **Straight Flush** (100 chips, 8 multiplier): 5 cards from the same suit, in consecutive order.
+- **Straight Flush**: 5 cards from the same suit, in consecutive order. 100 chips, 8 multiplier.
 > Example: [2♣, 3♣, 4♣, 5♣, 6♣]
-- **Four of a Kind** (60 chips, 7 multiplier): 4 cards of the same number.
+- **Four of a Kind**: 4 cards of the same number. 60 chips, 7 multiplier.
 > Example: [2♣, 2♦, 2♥, 2♠]
-- **Full House** (40 chips, 4 multiplier): 3 cards of the same number, and 2 cards of another.
+- **Full House**: 3 cards of the same number, and 2 cards of another. 40 chips, 4 multiplier.
 > Example: [2♣, 2♦, 2♥, 3♠, 3♥]
-- **Flush** (35 chips, 4 multiplier): 5 cards from the same suit.
+- **Flush**: 5 cards from the same suit. 35 chips, 4 multiplier.
 > Example: [2♣, 3♣, 5♣, 7♣, J♣]
-- **Straight** (30 chips, 4 multiplier): 5 cards in consecutive order, regardless of suit.
+- **Straight**: 5 cards in consecutive order, regardless of suit. 30 chips, 4 multiplier.
 > Example: [2♣, 3♥, 4♣, 5♦, 6♠]
-- **Three of a Kind** (30 chips, 3 multiplier): 3 cards of the same number.
+- **Three of a Kind**: 3 cards of the same number. 30 chips, 3 multiplier.
 > Example: [2♣, 2♦, 2♥]
-- **Two Pair** (20 chips, 2 multiplier): 2 pairs of cards of the same number.
+- **Two Pair**: 2 pairs of cards of the same number. 20 chips, 2 multiplier.
 > Example: [2♣, 2♦, 3♥, 3♠]
-- **Pair** (10 chips, 2 multiplier): 2 cards of the same number.
+- **Pair**: 2 cards of the same number. 10 chips, 2 multiplier.
 > Example: [2♣, 2♦]
-- **High Card** (5 chips, 1 multiplier): a single card.
+- **High Card**: a single card. 5 chips, 1 multiplier.
 > Example: [A♠]
 
 These poker hands are sorted from highest priority to lowest. When a set of cards is played, the highest priority poker hand will be used for computing the score.
@@ -90,9 +90,11 @@ Joker cards must not be used as part of the selected cards to be played. Playing
 
 Even if not played, joker cards modify the scoring rules following the description of the joker card. Therefore, the presence of a joker might have an impact on which is the best subset of cards that can be played.
 
-> Example: the hand [2♥,2♦,A♠] attains the highest score when playing [2♥,2♦], which results in a Pair scoring 14 chips x 2 = 28. However, when introducing a joker in the list as [2♥,2♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand] the best play now is [A♠], which results in a High Card scoring 21 chips x 2 = 42.
+> Example: the hand [2♥,2♦,A♠] attains the highest score when playing [2♥,2♦], which results in a Pair scoring 14 chips x 2 = 28. However, when receiving a joker in the list as [2♥,2♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand] the best play now is [A♠], which results in a High Card scoring 21 chips x 2 = 42.
 
 Multiple joker cards may appear in the input list of cards. If two jokers modify the same scoring rule or step of the scoring process, their modifications are applied in the same order as they were presented in the input list of cards.
+
+> Example: the input list of cards [🂿 Mars: multiplies by 2 the chips and multiplier of the Four of a Kind hand,🂿 Mars Shard: adds 1 to the chips and multiplier of the Four of a Kind hand,2♥,2♦,2♠,2♣], when played as [2♥,2♦,2♠,2♣], results in a score of 1935. However, the input list of cards [🂿 Mars Shard: adds 1 to the chips and multiplier of the Four of a Kind hand,🂿 Mars: multiplies by 2 the chips and multiplier of the Four of a Kind hand,2♥,2♦,2♠,2♣], when played as [2♥,2♦,2♠,2♣], results in a score of 2080.
 
 ### Input/output format
 

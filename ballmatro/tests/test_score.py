@@ -89,6 +89,16 @@ def test_score_joker_venus_plus_plus():
     score = Score(available, played)
     assert score.score == 9180
 
+def test_score_jokers_mars_and_shard():
+    """Test Score with Mars and Mars Shard joker cards, in both orders"""
+    available = "[🂿 Mars: multiplies by 2 the chips and multiplier of the Four of a Kind hand,🂿 Mars Shard: adds 1 to the chips and multiplier of the Four of a Kind hand,2♥,2♦,2♠,2♣]"
+    played = "[2♥,2♦,2♠,2♣]"
+    score = Score(available, played).score == 1935
+    available = "[🂿 Mars Shard: adds 1 to the chips and multiplier of the Four of a Kind hand,🂿 Mars: multiplies by 2 the chips and multiplier of the Four of a Kind hand,2♥,2♦,2♠,2♣]"
+    played = "[2♥,2♦,2♠,2♣]"
+    score = Score(available, played)
+    assert score.score == 2080
+
 def test_score_asdict():
     available = [Card(txt="2♥"), Card(txt="3♦"), Card(txt="A♠")]
     played = [Card(txt="3♦")]

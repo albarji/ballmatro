@@ -47,6 +47,24 @@ def test_planet_card_applies_multiplier(planet_cls, hand_cls, multiplier):
         assert modified.chips == hand.chips
         assert modified.multiplier == hand.multiplier
 
+def test_planet_shard():
+    # Test a planet shard
+    planet = planets.PlutoShard()
+    hand = HighCard()
+    modified = planet.played_hand_callback(hand)
+    assert modified.chips == hand.chips + 1
+    assert modified.multiplier == hand.multiplier + 1
+
+def test_planet_and_shard():
+    """Tests a combination of a planet and a shard."""
+    planet = planets.MarsPlus()
+    shard = planets.MarsShard()
+    hand = FourOfAKind()
+    modified = planet.played_hand_callback(hand)
+    modified = shard.played_hand_callback(modified)
+    assert modified.chips == (hand.chips * 5) + 1
+    assert modified.multiplier == (hand.multiplier * 5) + 1
+
 def test_planet_card_does_not_apply_to_other_hand_types():
     # Pluto targets HighCard, so test with Pair
     hand = Pair()
@@ -59,5 +77,5 @@ def test_planet_card_repr_and_attributes():
     planet = planets.MarsPlusPlus()
     assert planet.name == "Mars++"
     assert "Multiplies by 10" in planet.description
-    assert planet.multiplier == 10
+    assert planet.product == 10
     assert planet.target_hand == FourOfAKind

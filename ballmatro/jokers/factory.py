@@ -2,9 +2,10 @@
 
 from ballmatro.card import Card
 from ballmatro.jokers.joker import Joker, BlankJoker
-from ballmatro.jokers.planets import Pluto, Mercury, Uranus, Venus, Saturn, Jupiter, Mars, Neptune, Earth
+from ballmatro.jokers.planets import Pluto, Mercury, Uranus, Venus, Saturn, Jupiter, Earth, Mars, Neptune
 from ballmatro.jokers.planets import PlutoPlus, MercuryPlus, UranusPlus, VenusPlus, SaturnPlus, JupiterPlus, MarsPlus, NeptunePlus, EarthPlus
 from ballmatro.jokers.planets import MarsPlusPlus, VenusPlusPlus, JupiterPlusPlus, SaturnPlusPlus, UranusPlusPlus, MercuryPlusPlus, PlutoPlusPlus, EarthPlusPlus, NeptunePlusPlus
+from ballmatro.jokers.planets import PlutoShard, MercuryShard, UranusShard, VenusShard, SaturnShard, JupiterShard, EarthShard, MarsShard, NeptuneShard
 
 JOKERS = [
     BlankJoker,         # 000
@@ -35,6 +36,15 @@ JOKERS = [
     PlutoPlusPlus,      # 025
     EarthPlusPlus,      # 026
     NeptunePlusPlus,    # 027
+    PlutoShard,         # 028
+    MercuryShard,       # 029
+    UranusShard,        # 030
+    VenusShard,         # 031
+    SaturnShard,        # 032
+    JupiterShard,       # 033
+    EarthShard,         # 034
+    MarsShard,          # 035
+    NeptuneShard        # 036
 ]
 
 # Dictionary from joker names to their classes
