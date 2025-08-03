@@ -28,42 +28,42 @@ Optionally, each card might include a modifier that changes its scoring rules, a
 
 The way to score points in a BaLLMatro game is to select a subset of cards that make up a **poker hand**. Each poker hand has a specific value in **chips** and a **multiplier** that will count towards the final score.
 
-- **Straight Flush**: 5 cards from the same suit, in consecutive order.
-> Example: [2♣, 3♣, 4♣, 5♣, 6♣] -> 100 chips x 8.
-- **Four of a Kind**: 4 cards of the same number.
-> Example: [2♣, 2♦, 2♥, 2♠] -> 60 chips x 7.
-- **Full House**: 3 cards of the same number, and 2 cards of another.
-> Example: [2♣, 2♦, 2♥, 3♠, 3♥] -> 40 chips x 4.
-- **Flush**: 5 cards from the same suit.
-> Example: [2♣, 3♣, 5♣, 7♣, J♣] -> 35 chips x 4.
-- **Straight**: 5 cards in consecutive order, regardless of suit.
-> Example: [2♣, 3♥, 4♣, 5♦, 6♠] -> 30 chips x 4.
-- **Three of a Kind**: 3 cards of the same number.
-> Example: [2♣, 2♦, 2♥] -> 30 chips x 3.
-- **Two Pair**: 2 pairs of cards of the same number.
-> Example: [2♣, 2♦, 3♥, 3♠] -> 20 chips x 2.
-- **Pair**: 2 cards of the same number.
-> Example: [2♣, 2♦] -> 10 chips x 2.
-- **High Card**: a single card.
-> Example: [A♠] -> 5 chips x 1.
+- **Straight Flush** (100 chips, 8 multiplier): 5 cards from the same suit, in consecutive order.
+> Example: [2♣, 3♣, 4♣, 5♣, 6♣]
+- **Four of a Kind** (60 chips, 7 multiplier): 4 cards of the same number.
+> Example: [2♣, 2♦, 2♥, 2♠]
+- **Full House** (40 chips, 4 multiplier): 3 cards of the same number, and 2 cards of another.
+> Example: [2♣, 2♦, 2♥, 3♠, 3♥]
+- **Flush** (35 chips, 4 multiplier): 5 cards from the same suit.
+> Example: [2♣, 3♣, 5♣, 7♣, J♣]
+- **Straight** (30 chips, 4 multiplier): 5 cards in consecutive order, regardless of suit.
+> Example: [2♣, 3♥, 4♣, 5♦, 6♠]
+- **Three of a Kind** (30 chips, 3 multiplier): 3 cards of the same number.
+> Example: [2♣, 2♦, 2♥]
+- **Two Pair** (20 chips, 2 multiplier): 2 pairs of cards of the same number.
+> Example: [2♣, 2♦, 3♥, 3♠]
+- **Pair** (10 chips, 2 multiplier): 2 cards of the same number.
+> Example: [2♣, 2♦]
+- **High Card** (5 chips, 1 multiplier): a single card.
+> Example: [A♠]
 
 These poker hands are sorted from highest priority to lowest. When a set of cards is played, the highest priority poker hand will be used for computing the score.
 
 > Example: when playing [2♣, 2♦, 2♥, 3♠, 3♥] it will be considered a Full House, even though the played cards also contain a Three of a Kind and a Pair.
 
-If the played cards do not form any poker hand, or if the played cards were not contained in the input cards, the play will be regarded as an **Invalid Hand**, and its chips and multiplier will be 0x0.
+If the played cards do not form any poker hand, the play will be regarded as a **No Poker Hand**, with 0 chips and 0 multiplier. Similarly, if the played cards were not contained in the input cards, the play will be regarded as an **Invalid Hand**, with 0 chips and 0 multiplier.
 
-> Example: [2♦, A♠] -> 0 chips x 0.
+> Example: [2♦, A♠] -> 0 chips x 0 multiplier.
 
-All the played cards must form part of a poker hand, or equivalently, the set of played cards must not contain cards that will not form part of the poker hand.
+All the played cards must form part of a poker hand, or equivalently, the set of played cards must not contain cards that will not form part of the poker hand. If this is not met, the play will also be considered a **No Poker Hand**.
 
-> Example: [2♣, 2♦, 2♥, 6♠] -> 0 chips x 0, as even though the first three cards form a Three of a Kind, an extra 6♠ card has been played that does not form part of the poker hand.
+> Example: [2♣, 2♦, 2♥, 6♠] ->  0 chips x 0 multiplier, as even though the first three cards form a Three of a Kind, an extra 6♠ card has been played that does not form part of the poker hand.
 
 ### Scoring hands
 
 After determining the poker hand that has been played, the total score is computed in three steps.
 
-**Step one**: the number of chips and value of the multiplier are initialized with the corresponding values of the played hand. If an Invalid Hand was obtained, the process stops and a final score of 0 is returned.
+**Step one**: the number of chips and value of the multiplier are initialized with the corresponding values of the played hand. If an Invalid Hand or No Poker Hand was obtained, the process stops and a final score of 0 is returned.
 
 **Step two**: the specific cards used to build the poker hand are checked in order (from left to right), as they can increase the chips of the played hand:
 * Cards with ranks from 2 to 10 add a value chips equal as their rank value.
@@ -79,6 +79,20 @@ If any played card has a modifier, it will also affect the number of chips or th
 > Example: the hand [8♣, 9♥, 10♣, J♦, Q♠] is a Straight that has a base value of as 30 chips x 4, and the value of the cards add 8+9+10+10+10 chips, resulting in a total of 47 addicional chips. Thus, the hand score would be (30 + 47) x 4 = 308 points.
 
 > Example: the hand [2♣+, 3♣, 5♣, 7♣, J♣x] is a Flush. A Flush is valued 35 chips x 4, the value of the cards add 2+3+5+7+10, the bonus modifier (+) in 2♣+ adds 30 more chips, and the mult modifier (x) in J♣x adds 4 to the multiplier. This results in (35+2+3+5+7+10+30) x (4+4) = 736 points.
+
+### Jokers
+
+The input list of cards may also contain special joker cards, which are noted by the 🂿 symbol. These cards have neither rank nor suit, instead they feature a name and a description of the joker effect as text.
+
+> Example: a possible input list of cards might be [2♥,3♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand]
+
+Joker cards must not be used as part of the selected cards to be played. Playing a joker card will always result in an Invalid Hand.
+
+Even if not played, joker cards modify the scoring rules following the description of the joker card. Therefore, the presence of a joker might have an impact on which is the best subset of cards that can be played.
+
+> Example: the hand [2♥,2♦,A♠] attains the highest score when playing [2♥,2♦], which results in a Pair scoring 14 chips x 2 = 28. However, when introducing a joker in the list as [2♥,2♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand] the best play now is [A♠], which results in a High Card scoring 21 chips x 2 = 42.
+
+Multiple joker cards may appear in the input list of cards. If two jokers modify the same scoring rule or step of the scoring process, their modifications are applied in the same order as they were presented in the input list of cards.
 
 ### Input/output format
 
@@ -100,6 +114,11 @@ Some examples of inputs and outputs are:
 
 <pre>
 [2♦, 3♥, 7♠, 10♥, A♠]
+[A♠]
+</pre>
+
+<pre>
+[2♥,2♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand]
 [A♠]
 </pre>
 

@@ -78,10 +78,9 @@ def test_score_string_input():
 
 def test_score_joker_pluto():
     """Test Score with a Pluto joker card."""
-    available = "[2♥,3♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand]"
-    played = "[3♦]"
-    score = Score(available, played)
-    assert score.score == 26
+    available = "[2♥,2♦,A♠,🂿 Pluto: multiplies by 2 the chips and multiplier of the High Card hand]"
+    assert Score(available, "[2♥,2♦]").score == 28  # Pair without Pluto joker effect
+    assert Score(available, "[A♠]").score == 42  # High Card with Pluto joker
 
 def test_score_joker_venus_plus_plus():
     """Test Score with a Venus Plus Plus joker card."""

@@ -45,7 +45,7 @@ class Score:
         except ValueError:
             self.remaining = None
             self.hand = InvalidPlay
-        # Score the played cards
+        # Score the played cards to compute the final score
         self._score_played()
 
     def __repr__(self):
