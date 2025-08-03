@@ -1,8 +1,15 @@
 """Functions to try to solve a Ballmatro dataset using a GPT model."""
 
+import logging
+import os
+
 from ballmatro.score import ScoreDataset
 
 from openai import OpenAI
+
+
+logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
+LOGGER = logging.getLogger(__name__)
 
 README_PATH = "README.md"
 
@@ -14,7 +21,7 @@ def gpt_attempt_ballmatro_dataset(dataset: list[dict], model: str = "gpt-4o") ->
     openai = OpenAI()
     system_prompt = build_system_prompt()
     responses = []
-    for data in dataset:
+    for i, data in enumerate(dataset):
         response = openai.chat.completions.create(
             model=model,
             messages=[
@@ -22,7 +29,10 @@ def gpt_attempt_ballmatro_dataset(dataset: list[dict], model: str = "gpt-4o") ->
                 {"role": "user", "content": data["input"]}
             ]
         )
-        responses.append(response.choices[0].message.content)
+        content = response.choices[0].message.content
+        LOGGER.info(f"({i+1}/{len(dataset)}): {data['input']} -> {content}")
+        # Append the response content to the list
+        responses.append(content)
     return ScoreDataset(dataset, responses)
 
 def build_system_prompt() -> str:

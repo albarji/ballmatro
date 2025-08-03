@@ -90,8 +90,8 @@ class Score:
     def asdict(self) -> dict:
         """Return the score as a dictionary"""
         return {
-            "input": [card.txt for card in self.input],
-            "played": [card.txt for card in self.played],
+            "input": [card.txt for card in self.input] if isinstance(self.input, list) else self.input,
+            "played": [card.txt for card in self.played] if isinstance(self.played, list) else self.played,
             "remaining": [card.txt for card in self.remaining] if self.remaining else None,
             "hand": self.hand.name,
             "chips": self.chips,

@@ -1,8 +1,8 @@
 {
-    "total_score": 2757,
-    "normalized_score": 0.9714587737843552,
-    "invalid_hands": 0,
-    "normalized_invalid_hands": 0.0,
+    "total_score": 2196,
+    "total_normalized_score": 0.8589743589743589,
+    "invalid_hands": 9,
+    "normalized_invalid_hands": 0.11538461538461539,
     "scores": [
         {
             "input": [
@@ -100,13 +100,13 @@
                 "K\u2665x"
             ],
             "played": [
-                "K\u2665x"
+                "K\u2665"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 15,
-            "multiplier": 5,
-            "score": 75
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -230,13 +230,13 @@
                 "9\u2660x"
             ],
             "played": [
-                "9\u2660x"
+                "9\u2660"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 14,
-            "multiplier": 5,
-            "score": 70
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -295,13 +295,13 @@
                 "A\u2663x"
             ],
             "played": [
-                "A\u2663x"
+                "A\u2663"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 16,
-            "multiplier": 5,
-            "score": 80
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -320,14 +320,14 @@
             "input": [
                 "3\u2663+"
             ],
-            "played": [
+            "played": [],
+            "remaining": [
                 "3\u2663+"
             ],
-            "remaining": null,
-            "hand": "High Card",
-            "chips": 38,
-            "multiplier": 1,
-            "score": 38
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -347,13 +347,13 @@
                 "7\u2666x"
             ],
             "played": [
-                "7\u2666x"
+                "7\u2666"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 12,
-            "multiplier": 5,
-            "score": 60
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -372,14 +372,14 @@
             "input": [
                 "4\u2665"
             ],
-            "played": [],
-            "remaining": [
+            "played": [
                 "4\u2665"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 9,
+            "multiplier": 1,
+            "score": 9
         },
         {
             "input": [
@@ -437,14 +437,14 @@
             "input": [
                 "6\u2660"
             ],
-            "played": [],
-            "remaining": [
+            "played": [
                 "6\u2660"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 11,
+            "multiplier": 1,
+            "score": 11
         },
         {
             "input": [
@@ -463,14 +463,14 @@
             "input": [
                 "7\u2660"
             ],
-            "played": [],
-            "remaining": [
+            "played": [
                 "7\u2660"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 12,
+            "multiplier": 1,
+            "score": 12
         },
         {
             "input": [
@@ -502,14 +502,14 @@
             "input": [
                 "6\u2663"
             ],
-            "played": [],
-            "remaining": [
+            "played": [
                 "6\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 11,
+            "multiplier": 1,
+            "score": 11
         },
         {
             "input": [
@@ -568,26 +568,26 @@
                 "8\u2660x"
             ],
             "played": [
-                "8\u2660x"
+                "8\u2660"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 13,
-            "multiplier": 5,
-            "score": 65
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
                 "5\u2660x"
             ],
             "played": [
-                "5\u2660x"
+                "5\u2660"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 10,
-            "multiplier": 5,
-            "score": 50
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -697,14 +697,14 @@
             "input": [
                 "7\u2665"
             ],
-            "played": [],
-            "remaining": [
+            "played": [
                 "7\u2665"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 12,
+            "multiplier": 1,
+            "score": 12
         },
         {
             "input": [
@@ -737,13 +737,13 @@
                 "A\u2665x"
             ],
             "played": [
-                "A\u2665x"
+                "A\u2665"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 16,
-            "multiplier": 5,
-            "score": 80
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -775,14 +775,14 @@
             "input": [
                 "2\u2660"
             ],
-            "played": [],
-            "remaining": [
+            "played": [
                 "2\u2660"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 7,
+            "multiplier": 1,
+            "score": 7
         },
         {
             "input": [
@@ -814,14 +814,14 @@
             "input": [
                 "5\u2663"
             ],
-            "played": [],
-            "remaining": [
+            "played": [
                 "5\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 10,
+            "multiplier": 1,
+            "score": 10
         },
         {
             "input": [
@@ -893,13 +893,13 @@
                 "7\u2660x"
             ],
             "played": [
-                "7\u2660x"
+                "7\u2660"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 12,
-            "multiplier": 5,
-            "score": 60
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -932,13 +932,13 @@
                 "6\u2660x"
             ],
             "played": [
-                "6\u2660x"
+                "6\u2660"
             ],
             "remaining": null,
-            "hand": "High Card",
-            "chips": 11,
-            "multiplier": 5,
-            "score": 55
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -1018,5 +1018,85 @@
             "multiplier": 1,
             "score": 38
         }
+    ],
+    "normalized_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
     ]
 }

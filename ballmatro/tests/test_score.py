@@ -3,6 +3,8 @@ from ballmatro.hands import InvalidPlay
 from ballmatro.score import Score, _score_card, ScoreDataset
 from datasets import Dataset
 
+### Score Tests
+
 def test_score_invalid_hand():
     available = [Card(txt="2♥"), Card(txt="3♦"), Card(txt="A♠")]
     played = [Card(txt="2♥"), Card(txt="A♠")]
@@ -124,6 +126,38 @@ def test_score_asdict_invalid_play():
     assert score_dict["chips"] == 0
     assert score_dict["multiplier"] == 0
     assert score_dict["score"] == 0
+
+def test_score_asdict_invalid_format_backticks():
+    available = [Card(txt="2♠x"), Card(txt="3♦"), Card(txt="A♠")]
+    played = """```
+        [2♠x]
+    ```"""  # Invalid format
+    score = Score(available, played)
+    score_dict = score.asdict()
+    assert score_dict["input"] == ["2♠x", "3♦", "A♠"]
+    assert score_dict["played"] == played
+    assert score_dict["remaining"] is None
+    assert score_dict["hand"] == "Invalid Play"
+    assert score_dict["chips"] == 0
+    assert score_dict["multiplier"] == 0
+    assert score_dict["score"] == 0
+
+def test_score_asdict_invalid_format_backticks_plaintext():
+    available = [Card(txt="2♥"), Card(txt="8♠"), Card(txt="A♠")]
+    played = """```plaintext
+        [8♠]
+    ````"""  # Invalid format
+    score = Score(available, played)
+    score_dict = score.asdict()
+    assert score_dict["input"] == ["2♥", "8♠", "A♠"]
+    assert score_dict["played"] == played
+    assert score_dict["remaining"] is None
+    assert score_dict["hand"] == "Invalid Play"
+    assert score_dict["chips"] == 0
+    assert score_dict["multiplier"] == 0
+    assert score_dict["score"] == 0
+
+### ScoreDataset Tests
 
 def test_scoredataset_all_valid():
     data = {
