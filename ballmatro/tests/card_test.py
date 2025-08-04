@@ -47,6 +47,12 @@ def test_card_joker_name():
     card = Card("🂿 Double Double")
     assert card.joker_name == "Double Double"
 
+def test_card_empty_string():
+    try:
+        Card("")
+    except TypeError as e:
+        assert str(e) == "Card text must be a non-empty string"
+
 def test_parse_card_list_basic():
     cards = parse_card_list("[2♣,3♠,4♥]")
     assert cards == [Card("2♣"), Card("3♠"), Card("4♥")]
