@@ -2,6 +2,7 @@
 
 import logging
 import os
+import re
 
 from ballmatro.score import ScoreDataset
 
@@ -51,6 +52,7 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str) -> list[s
         "text-generation",
         model=model,
         tokenizer=tokenizer,
+        max_new_tokens=4096,
     )
 
     system_prompt = build_system_prompt()
@@ -61,6 +63,8 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str) -> list[s
             {"role": "user", "content": data["input"]}
         ]
         result = generation_pipeline(messages)[0]["generated_text"][-1]["content"]
+        # Remove <think></think> section from the result (if present)
+        result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL).strip()
         LOGGER.info(f"({i+1}/{len(dataset)}): {data['input']} -> {result}")
         # Append the response content to the list
         responses.append(result)
