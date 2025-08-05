@@ -6,6 +6,7 @@ import os
 from ballmatro.score import ScoreDataset
 
 from openai import OpenAI
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
@@ -33,6 +34,36 @@ def gpt_attempt_ballmatro_dataset(dataset: list[dict], model: str = "gpt-4o") ->
         LOGGER.info(f"({i+1}/{len(dataset)}): {data['input']} -> {content}")
         # Append the response content to the list
         responses.append(content)
+    return ScoreDataset(dataset, responses)
+
+def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str) -> list[str]:
+    """Use a Hugging Face model to attempt to solve a Ballmatro dataset.
+
+    Returns a list of responses from the model for each item in the dataset.
+    """
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        device_map="auto",  # Automatically loads the model into the GPU, if one is available
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    generation_pipeline = pipeline(
+        "text-generation",
+        model=model,
+        tokenizer=tokenizer,
+    )
+
+    system_prompt = build_system_prompt()
+    responses = []
+    for i, data in enumerate(dataset):
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": data["input"]}
+        ]
+        result = generation_pipeline(messages)[0]["generated_text"][-1]["content"]
+        LOGGER.info(f"({i+1}/{len(dataset)}): {data['input']} -> {result}")
+        # Append the response content to the list
+        responses.append(result)
     return ScoreDataset(dataset, responses)
 
 def build_system_prompt() -> str:
