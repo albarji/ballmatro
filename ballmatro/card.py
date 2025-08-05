@@ -19,7 +19,7 @@ class Card:
     def __post_init__(self):
         """Validate the card text representation"""
         if not isinstance(self.txt, str) or len(self.txt) == 0:
-            raise TypeError("Card text must be a non-empty string")
+            raise ValueError("Card text must be a non-empty string")
         if self.suit is None and not self.is_joker:
             raise ValueError("Card must contain a suit or be a joker")
         if self.rank is None and not self.is_joker:

@@ -50,7 +50,7 @@ def test_card_joker_name():
 def test_card_empty_string():
     try:
         Card("")
-    except TypeError as e:
+    except ValueError as e:
         assert str(e) == "Card text must be a non-empty string"
 
 def test_parse_card_list_basic():
