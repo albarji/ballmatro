@@ -1,0 +1,962 @@
+{
+    "total_score": 205,
+    "total_normalized_score": 0.07692307692307693,
+    "invalid_hands": 72,
+    "normalized_invalid_hands": 0.9230769230769231,
+    "scores": [
+        {
+            "input": [
+                "6\u2666+"
+            ],
+            "played": [
+                "6\u2666+"
+            ],
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 41,
+            "multiplier": 1,
+            "score": 41
+        },
+        {
+            "input": [
+                "4\u2665+"
+            ],
+            "played": "4\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "K\u2663"
+            ],
+            "played": "K\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "5\u2666x"
+            ],
+            "played": "5\u2666x",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "4\u2663+"
+            ],
+            "played": "4\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "Q\u2660"
+            ],
+            "played": "Q\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "A\u2660+"
+            ],
+            "played": [
+                "A\u2660"
+            ],
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "K\u2665x"
+            ],
+            "played": "K\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "Q\u2665+"
+            ],
+            "played": "Q\u2665+",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "Q\u2665"
+            ],
+            "played": "Q\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "4\u2663x"
+            ],
+            "played": "4\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "3\u2665x"
+            ],
+            "played": "3\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "A\u2660"
+            ],
+            "played": [
+                "A\u2660"
+            ],
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 16,
+            "multiplier": 1,
+            "score": 16
+        },
+        {
+            "input": [
+                "10\u2663"
+            ],
+            "played": "10\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "3\u2660"
+            ],
+            "played": "3\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "K\u2665"
+            ],
+            "played": "K\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "J\u2660x"
+            ],
+            "played": "J\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "9\u2660x"
+            ],
+            "played": "9\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "7\u2665x"
+            ],
+            "played": "7\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "3\u2663"
+            ],
+            "played": "3\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "10\u2663+"
+            ],
+            "played": "10\u2663+",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "2\u2665"
+            ],
+            "played": "2\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "A\u2663x"
+            ],
+            "played": "A\u2663x",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "J\u2666x"
+            ],
+            "played": "J\u2666x",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "3\u2663+"
+            ],
+            "played": "3\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "A\u2663+"
+            ],
+            "played": [
+                "A\u2663+"
+            ],
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 46,
+            "multiplier": 1,
+            "score": 46
+        },
+        {
+            "input": [
+                "7\u2666x"
+            ],
+            "played": "7\u2666",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "8\u2663x"
+            ],
+            "played": "8\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "4\u2665"
+            ],
+            "played": "4\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "4\u2666+"
+            ],
+            "played": "4\u2666",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "7\u2666"
+            ],
+            "played": "7\u2666",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "9\u2666x"
+            ],
+            "played": "9\u2666x",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "2\u2663x"
+            ],
+            "played": "2\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "6\u2660"
+            ],
+            "played": "6\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "J\u2666"
+            ],
+            "played": "J\u2666",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "7\u2660"
+            ],
+            "played": "7\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "K\u2660"
+            ],
+            "played": "K\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "8\u2660"
+            ],
+            "played": "8\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "6\u2663"
+            ],
+            "played": "6\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "5\u2660+"
+            ],
+            "played": "5\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "2\u2665+"
+            ],
+            "played": "2\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "Q\u2665x"
+            ],
+            "played": "Q\u2665x",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "2\u2663"
+            ],
+            "played": "2\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "8\u2660x"
+            ],
+            "played": "8\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "5\u2660x"
+            ],
+            "played": "5\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "J\u2663"
+            ],
+            "played": "J\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "Q\u2666+"
+            ],
+            "played": "Q\u2666+",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "5\u2665+"
+            ],
+            "played": "5\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "A\u2665+"
+            ],
+            "played": [
+                "A\u2665"
+            ],
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "6\u2666"
+            ],
+            "played": "6\u2666",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "2\u2660+"
+            ],
+            "played": "2\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "J\u2665x"
+            ],
+            "played": "J\u2665x",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "6\u2663+"
+            ],
+            "played": "6\u2663+",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "7\u2665"
+            ],
+            "played": "7\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "A\u2666"
+            ],
+            "played": [
+                "A\u2666"
+            ],
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 16,
+            "multiplier": 1,
+            "score": 16
+        },
+        {
+            "input": [
+                "J\u2663+"
+            ],
+            "played": "J\u2663+",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "A\u2665x"
+            ],
+            "played": "A\u2665x",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "3\u2663x"
+            ],
+            "played": "3\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "9\u2660+"
+            ],
+            "played": "9\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "2\u2660"
+            ],
+            "played": "2\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "4\u2665x"
+            ],
+            "played": "4\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "8\u2665"
+            ],
+            "played": "8\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "5\u2663"
+            ],
+            "played": "5\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "6\u2660+"
+            ],
+            "played": [
+                "6\u2660+"
+            ],
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 41,
+            "multiplier": 1,
+            "score": 41
+        },
+        {
+            "input": [
+                "10\u2660+"
+            ],
+            "played": [
+                "10\u2660+"
+            ],
+            "remaining": null,
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
+        },
+        {
+            "input": [
+                "7\u2660+"
+            ],
+            "played": "7\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "5\u2660"
+            ],
+            "played": "5\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "6\u2665x"
+            ],
+            "played": "6\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "7\u2660x"
+            ],
+            "played": "7\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "4\u2666"
+            ],
+            "played": "4\u2666",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "8\u2663"
+            ],
+            "played": "8\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "6\u2660x"
+            ],
+            "played": "6\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "K\u2666"
+            ],
+            "played": "K\u2666",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "K\u2660+"
+            ],
+            "played": "K\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "K\u2666+"
+            ],
+            "played": "K\u2666+",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "8\u2665x"
+            ],
+            "played": "8\u2665",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "9\u2663"
+            ],
+            "played": "9\u2663",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        },
+        {
+            "input": [
+                "3\u2660+"
+            ],
+            "played": "3\u2660",
+            "remaining": null,
+            "hand": "Invalid Play",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
+        }
+    ],
+    "normalized_scores": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ]
+}
