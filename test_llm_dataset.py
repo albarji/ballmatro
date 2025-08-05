@@ -15,7 +15,7 @@ def main(dataset: str, model: str, output: str = None):
         raise ValueError(f"Dataset {dataset} does not contain a 'test' partition.")
 
     # Run the model on the test set
-    if model.startswith("gpt-"):
+    if model.startswith("gpt-") or model.startswith("o3-") or model.startswith("o4-"):
         results = gpt_attempt_ballmatro_dataset(ds["test"], model)
     else:
         results = hf_attempt_ballmatro_dataset(ds["test"], model)
