@@ -133,11 +133,14 @@ BaLLMatro datasets are available through [Hugging Face datasets](https://hugging
 
 |Level|Arrangement|Simplest possible solution|
 |-----|-----------|--------------------------|
-|Level 1|All inputs contain a single card. The task can be reduced to outputting the card present at the input (play as High Card)|Regular expression / Finite automata (`O(1)`)|
-|Level 2|All inputs contain a two cards. The agent must identify whether to play both cards (Pair) if possible, or play the best single card (High Card)|Simple heuristics (`O(1)`)|
-|Level 3|All inputs contain 1-4 cards. All poker hands are possible|Brute-force search (`O(4!)`)|
-|Level 4|All inputs contain 1-8 cards. All poker hands are possible|Brute-force search (`O(8!)`)|
+|1|All inputs contain a single card. The task can be reduced to outputting the card present at the input (play as High Card).|Regular expression / Finite automata (`O(1)`)|
+|2|All inputs contain a two cards. The agent must identify whether to play both cards (Pair) if possible, or play the best single card (High Card).|Simple heuristics (`O(1)`)|
+|3|All inputs contain 1-4 cards. All poker hands are possible.|Brute-force search (`O(4!)`)|
+|4|All inputs contain 1-8 cards. All poker hands are possible.|Brute-force search (`O(8!)`)|
+|5|All inputs contain 1-8 cards. All poker hands are possible. Each hand may include a joker from a pool of 10.|Unknown|
+|6|All inputs contain 1-8 cards. All poker hands are possible. Each hand may include up to 2 jokers from a pool of 37.|Unknown|
 
 All levels are provided as two folds, a train and a test fold. A fair use of this dataset involves using the test folds only for testing the LLM peformance, which means:
 * Not using test data to fine-tune the model in any way.
 * Not using test data as few-shot examples, or any other kind of in-context learning or prompting approach that makes use of test examples or informacion about the distribution or nature of test examples.
+* Not using the source of this repository to provided context, prompt, or train the LLM in any way. Only the section "The rules of BaLLMatro" can be used as a prompt to explain the LLM the rules of the game, but making use of source code or a list of jokers is not considered a fair use.
