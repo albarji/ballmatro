@@ -1,11 +1,11 @@
 from ballmatro.card import Card, RANKS, SUITS, MODIFIERS
-from ballmatro.generators import exhaustive_generator, random_generator, to_hf_dataset, generator_to_dict, int2cards, _generate_jokers
+from ballmatro.generators import exhaustive_generator, random_generator, add_optimal_plays, to_hf_dataset, generator_to_dict, int2cards, _random_jokers
 from ballmatro.score import Score
 from ballmatro.hands import NoPokerHand
 
 def test_exhaustive_generator_size1():
     # Use a small hand size for tractable test
-    results = list(exhaustive_generator(1))
+    results = list(add_optimal_plays(exhaustive_generator(1)))
     # Each result is a tuple: (hand, Score)
     assert all(isinstance(hand, list) for hand, _ in results)
     assert all(isinstance(score_info, Score) for _, score_info in results)
@@ -19,7 +19,7 @@ def test_exhaustive_generator_size1():
 
 def test_exhaustive_generator_size2():
     # Use a small hand size for tractable test
-    results = list(exhaustive_generator(2))
+    results = list(add_optimal_plays(exhaustive_generator(2)))
     # Check that the number of generated hands matches the expected count
     # There are 4 suits, 13 ranks, 2 modifiers, so 4*13*3 = 156 possible cards
     # The number of combinations with replacement is (n + r - 1)
@@ -34,12 +34,12 @@ def test_exhaustive_generator_size2():
 def test_random_generator_size4():
     results = list(random_generator(max_hand_size=4, n=100))
     assert len(results) == 100
-    assert all(len(result[0]) <= 4 for result in results)
+    assert all(len(result) <= 4 for result in results)
 
 def test_random_generator_size8():
     results = list(random_generator(max_hand_size=8, n=123))
     assert len(results) == 123
-    assert all(len(result[0]) <= 8 for result in results)
+    assert all(len(result) <= 8 for result in results)
 
 def test_random_generator_random_seed():
     results = list(random_generator(max_hand_size=5, n=150, seed=12345))
@@ -51,13 +51,13 @@ def test_random_generator_modifiers():
     results = list(random_generator(max_hand_size=1, n=100, modifiers=["+"]))
     assert len(results) == 100
     # Check that the cards have the expected modifiers
-    for hand, _ in results:
+    for hand in results:
         for card in hand:
             assert card.modifier in [None, "+"]
 
 def test_generator_to_dict():
     # Generate a small dataset with a small generator
-    dict_generator = generator_to_dict(exhaustive_generator(1))
+    dict_generator = generator_to_dict(add_optimal_plays(exhaustive_generator(1)))
     # Check that the dictionary has the expected keys
     assert "input" in dict_generator
     assert "output" in dict_generator
@@ -69,7 +69,7 @@ def test_generator_to_dict():
 
 def test_hf_dataset():
     # Generate a Hugging Face dataset with a small generator
-    dataset = to_hf_dataset(exhaustive_generator(1))
+    dataset = to_hf_dataset(add_optimal_plays(exhaustive_generator(1)))
     # Check that the dataset has the expected columns
     assert "input" in dataset.column_names
     assert "output" in dataset.column_names
@@ -150,9 +150,8 @@ def test_int2cards():
 
 def test_generate_jokers():
     """Test the generation of jokers"""
-    available_joker_ids = [0, 1, 2]  # Assuming we have 3 jokers available
     for _ in range(10):  # Test multiple times to ensure randomness
-        jokers = _generate_jokers(available_joker_ids, max_jokers=3)
+        jokers = _random_jokers(max_n_jokers=3, max_joker_id=2)
         assert len(jokers) <= 3
         for joker_card in jokers:
             assert joker_card.is_joker, "Generated card should be a joker"

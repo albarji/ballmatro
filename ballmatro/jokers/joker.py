@@ -31,4 +31,4 @@ class Joker:
 class BlankJoker(Joker):
     """A joker that does not have any effect at all."""
     name = "Blank"
-    description = "Does nothing at all."
+    description = "Does nothing at all"

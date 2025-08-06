@@ -5,7 +5,7 @@ from itertools import combinations_with_replacement
 from typing import List, Tuple, Generator, Dict, Any
 
 from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
-from ballmatro.jokers import JOKERS
+from ballmatro.jokers.factory import JOKERS
 from ballmatro.optimizer import brute_force_optimize
 from ballmatro.score import Score
 
@@ -22,9 +22,7 @@ def exhaustive_generator(max_hand_size: int) -> Generator[Tuple[List[Card], Scor
     
     # Generate all combinations of the given size
     for input in combinations_with_replacement(cards, max_hand_size):
-        # Find optimal play for this input
-        optimal_play = brute_force_optimize(list(input))
-        yield list(input), optimal_play
+        yield list(input)
 
 def random_generator(max_hand_size: int, n: int, modifiers: List[str] = None, seed: int = 42) -> Generator[Tuple[List[Card], Score], None, None]:
     """Generator function for a dataset with random hands and their optimal plays.
@@ -46,10 +44,28 @@ def random_generator(max_hand_size: int, n: int, modifiers: List[str] = None, se
     max_id = sum([ncards**i for i in range(1, max_hand_size + 1)])
     for _ in range(n):
         # Generate a random hand
-        input = int2cards(random.randint(1, max_id))
-        # Find optimal play for this input
-        optimal_play = brute_force_optimize(input)
-        yield input, optimal_play
+        yield int2cards(random.randint(1, max_id))
+
+def add_jokers(generator: Generator[List[Card], None, None], max_n_jokers: int, max_joker_id: int) -> Generator[List[Card], None, None]:
+    """Add a random number of jokers to each hand in the generator.
+
+    Args:
+        generator (Generator[List[Card], None, None]): A generator that yields hands.
+        available_joker_ids (List[int]): A list of available joker IDs to add.
+        max_n_jokers (int): The maximum number of jokers to generate.
+        max_joker_id (int): The maximum ID (included) of the joker to generate.
+
+    Yields:
+        List[Card]: A list of cards representing the hand with added jokers.
+    """
+    for hand in generator:
+        jokers = _random_jokers(max_n_jokers, max_joker_id)
+        yield jokers + hand
+
+def add_optimal_plays(generator: Generator[List[Card], None, None]) -> Generator[Tuple[List[Card], Score], None, None]:
+    """Wraps a generator of hands to add optimal plays using brute force optimization."""
+    for hand in generator:
+        yield hand, brute_force_optimize(hand)
 
 GENERATION_ALGORITHMS = {
     "exhaustive": exhaustive_generator,
@@ -160,11 +176,19 @@ def _get_modifiers(modifiers: List[str] = None) -> List[str]:
             return [""] + modifiers
         return modifiers
 
-def _generate_jokers(available_joker_ids: List[int], max_jokers: int) -> List[Card]:
-    """Generate a list of joker cards based on available joker IDs.
+def _random_jokers(max_n_jokers: int, max_joker_id: int) -> List[Card]:
+    """Generate a random list of joker cards.
 
-    The number of jokers is chosen from 0 to max_jokers, with equal probability for each number.
+    The number of jokers is chosen from 0 to max_n_jokers, with equal probability for each number.
+
+    Args:
+        max_n_jokers (int): The maximum number of jokers to generate.
+        max_joker_id (int): The maximum ID (included) of the joker to generate.
+
+    Returns:
+        List[Card]: A list of randomly generated joker cards.
+
     Repeated jokers might appear.
     """
-    njokers = random.randint(0, max_jokers)
-    return [JOKERS[available_joker_ids[random.randint(0, len(available_joker_ids)-1)]]().to_card() for _ in range(njokers)]
+    njokers = random.randint(0, max_n_jokers)
+    return [JOKERS[random.randint(0, max_joker_id)]().to_card() for _ in range(njokers)]

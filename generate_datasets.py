@@ -1,9 +1,10 @@
 """Main function to generate datasets of Ballmatro hands and plays"""
 import argparse
 
-from ballmatro.generators import GENERATION_ALGORITHMS, to_hf_dataset
+from ballmatro.jokers.factory import JOKERS
+from ballmatro.generators import GENERATION_ALGORITHMS, add_jokers, add_optimal_plays, to_hf_dataset
 
-def main(algorithm: str, hand_size: int, n: int, rng: int):
+def main(algorithm: str, hand_size: int, n: int, rng: int, n_jokers: int, jokers_max_id: int):
     """Main function to generate datasets of Ballmatro hands and plays"""
     # Check inputs
     if algorithm not in GENERATION_ALGORITHMS:
@@ -15,7 +16,12 @@ def main(algorithm: str, hand_size: int, n: int, rng: int):
     else:
         params = {"max_hand_size": hand_size, "n": n, "seed": rng}
     # Generate the dataset
-    dataset = to_hf_dataset(GENERATION_ALGORITHMS[algorithm](**params))
+    generator = GENERATION_ALGORITHMS[algorithm](**params)
+    # Add jokers if specified
+    if n_jokers > 0:
+        generator = add_jokers(generator, n_jokers, jokers_max_id)
+    generator = add_optimal_plays(generator)
+    dataset = to_hf_dataset(generator)
 
     # Split dataset evenly into train and test sets
     dataset = dataset.train_test_split(test_size=0.5, seed=rng)
@@ -30,5 +36,7 @@ if __name__ == "__main__":
     parser.add_argument("len", type=int, help="Maximum number of cards in the hands. For exhaustive generation, this is always the hand size.")
     parser.add_argument("n", type=int, help="Number of hands to generate. For exhaustive generation, this is ignored.")
     parser.add_argument("--rng", type=int, help="Random seed for reproducibility. For exhaustive generation, this is ignored.", default=42)
+    parser.add_argument("--n_jokers", type=int, help="Maximum number of jokers to add to each hand", default=0)
+    parser.add_argument("--jokers_max_id", type=int, help="Limit range of jokers to include in the generation to include only jokers with IDs between 0 and the given number (inclusive).", default=len(JOKERS)-1)
     args = parser.parse_args()
-    main(args.alg, args.len, args.n, args.rng)
+    main(args.alg, args.len, args.n, args.rng, args.n_jokers, args.jokers_max_id)
