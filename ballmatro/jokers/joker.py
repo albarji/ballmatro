@@ -1,5 +1,6 @@
 """Abstract class for joker cards"""
 
+from ballmatro.card import Card, JOKER
 from ballmatro.hands import PokerHand
 
 
@@ -22,6 +23,10 @@ class Joker:
 
     def __str__(self):
         return f"Joker(name={self.name})"
+
+    def to_card(self) -> Card:
+        """Returns a Card representation of the joker."""
+        return Card(f"{JOKER}{self.name}: {self.description}")
 
 class BlankJoker(Joker):
     """A joker that does not have any effect at all."""

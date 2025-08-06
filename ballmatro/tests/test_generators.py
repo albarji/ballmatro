@@ -1,5 +1,5 @@
 from ballmatro.card import Card, RANKS, SUITS, MODIFIERS
-from ballmatro.generators import exhaustive_generator, random_generator, to_hf_dataset, generator_to_dict, int2cards
+from ballmatro.generators import exhaustive_generator, random_generator, to_hf_dataset, generator_to_dict, int2cards, _generate_jokers
 from ballmatro.score import Score
 from ballmatro.hands import NoPokerHand
 
@@ -147,3 +147,12 @@ def test_int2cards():
     cards = int2cards(ncards)
     assert len(cards) == 1
     assert cards[0] == Card("A♥+")
+
+def test_generate_jokers():
+    """Test the generation of jokers"""
+    available_joker_ids = [0, 1, 2]  # Assuming we have 3 jokers available
+    for _ in range(10):  # Test multiple times to ensure randomness
+        jokers = _generate_jokers(available_joker_ids, max_jokers=3)
+        assert len(jokers) <= 3
+        for joker_card in jokers:
+            assert joker_card.is_joker, "Generated card should be a joker"

@@ -5,6 +5,7 @@ from itertools import combinations_with_replacement
 from typing import List, Tuple, Generator, Dict, Any
 
 from ballmatro.card import Card, SUITS, RANKS, MODIFIERS
+from ballmatro.jokers import JOKERS
 from ballmatro.optimizer import brute_force_optimize
 from ballmatro.score import Score
 
@@ -158,3 +159,12 @@ def _get_modifiers(modifiers: List[str] = None) -> List[str]:
         if "" not in modifiers:
             return [""] + modifiers
         return modifiers
+
+def _generate_jokers(available_joker_ids: List[int], max_jokers: int) -> List[Card]:
+    """Generate a list of joker cards based on available joker IDs.
+
+    The number of jokers is chosen from 0 to max_jokers, with equal probability for each number.
+    Repeated jokers might appear.
+    """
+    njokers = random.randint(0, max_jokers)
+    return [JOKERS[available_joker_ids[random.randint(0, len(available_joker_ids)-1)]]().to_card() for _ in range(njokers)]
