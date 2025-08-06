@@ -17,7 +17,7 @@ README_PATH = "README.md"
 
 def gpt_attempt_ballmatro_dataset(dataset: list[dict], model: str = "gpt-4o") -> list[str]:
     """Use a GPT model to attempt to solve a Ballmatro dataset.
-    
+
     Returns a list of responses from the model for each item in the dataset.
     """
     openai = OpenAI()
@@ -63,8 +63,10 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str) -> list[s
             {"role": "user", "content": data["input"]}
         ]
         result = generation_pipeline(messages)[0]["generated_text"][-1]["content"]
-        # Remove <think></think> section from the result (if present)
+        # Remove <think></think> section from the result, if present (Qwen 3 models)
         result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL).strip()
+        # Remove analysis-assistantfinal section from the result, if present (gpt-oss models)
+        result = re.sub(r"^analysis.*?assistantfinal", "", result, flags=re.DOTALL).strip()
         LOGGER.info(f"({i+1}/{len(dataset)}): {data['input']} -> {result}")
         # Append the response content to the list
         responses.append(result)
