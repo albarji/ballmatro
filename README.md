@@ -36,7 +36,7 @@ The way to score points in a BaLLMatro game is to select a subset of cards that 
 > Example: [2♣, 2♦, 2♥, 3♠, 3♥]
 - **Flush**: 5 cards from the same suit. 35 chips, 4 multiplier.
 > Example: [2♣, 3♣, 5♣, 7♣, J♣]
-- **Straight**: 5 cards in consecutive order, regardless of suit. 30 chips, 4 multiplier.
+- **Straight**: 5 cards in consecutive order (order is 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A), regardless of suit. 30 chips, 4 multiplier.
 > Example: [2♣, 3♥, 4♣, 5♦, 6♠]
 - **Three of a Kind**: 3 cards of the same number. 30 chips, 3 multiplier.
 > Example: [2♣, 2♦, 2♥]
