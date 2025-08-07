@@ -83,7 +83,7 @@ class Score:
         self.chips, self.multiplier = self.hand.chips, self.hand.multiplier
         # Now iterate over the cards in the order played, and score each card individually
         for card in self.played:
-            self.chips, self.multiplier = _score_card(card, self.chips, self.multiplier)
+            self.chips, self.multiplier = self._score_card(card, self.chips, self.multiplier)
 
         self.score = self.chips * self.multiplier
 
@@ -99,16 +99,21 @@ class Score:
             "score": self.score
         }
 
-def _score_card(card: Card, chips: int, multiplier: int) -> Tuple[int, int]:
-    """Applies the scoring of a single card to the current chips and multiplier"""
-    # Add the chips of the card rank to the current chips
-    chips += CHIPS_PER_RANK.get(card.rank, 0)
-    # Apply modifiers
-    if card.modifier == "+":
-        chips += 30
-    elif card.modifier == "x":
-        multiplier += 4
-    return chips, multiplier
+    def _score_card(self, card: Card, chips: int, multiplier: int) -> Tuple[int, int]:
+        """Applies the scoring of a single card to the current chips and multiplier"""
+        # Add the chips of the card rank to the current chips
+        extra_chips = CHIPS_PER_RANK.get(card.rank, 0)
+        extra_multiplier = 0
+        # Apply modifiers
+        if card.modifier == "+":
+            extra_chips += 30
+        elif card.modifier == "x":
+            extra_multiplier += 4
+        # Apply jokers to the card score
+        for joker in self.jokers:
+            extra_chips, extra_multiplier = joker.card_score_callback(card, chips, multiplier, extra_chips, extra_multiplier)
+        # Return the new chips and multiplier
+        return chips + extra_chips, multiplier + extra_multiplier
 
 @dataclass
 class ScoreDataset:

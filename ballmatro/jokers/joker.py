@@ -21,6 +21,25 @@ class Joker:
         """
         return hand
 
+    def card_score_callback(self, card: Card, chips: int, multiplier: int, added_chips: int = 0, added_multiplier: int = 0) -> tuple[int, int]:
+        """Callback that modifies the score of a card when this joker is present.
+
+        Can be used to modify the score of a card based on the joker's rules.
+
+        Args:
+            card (Card): The card being scored.
+            chips (int): chips score previous to scoring this card.
+            multiplier (int): multiplier score previous to scoring this card.
+            added_chips (int): additional chips that would normally be added to the score.
+            added_multiplier (int): additional multiplier that would normally be added to the score.
+
+        Returns:
+            tuple[int, int]: the modified chips and multiplier values that will be added to the score due to this card.
+
+        This method should be overridden by specific joker implementations.
+        """
+        return added_chips, added_multiplier
+
     def __str__(self):
         return f"Joker(name={self.name})"
 

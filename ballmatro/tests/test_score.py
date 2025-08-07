@@ -1,6 +1,6 @@
 from ballmatro.card import Card
 from ballmatro.hands import InvalidPlay
-from ballmatro.score import Score, _score_card, ScoreDataset
+from ballmatro.score import Score, ScoreDataset
 from datasets import Dataset
 
 ### Score Tests
@@ -56,17 +56,20 @@ def test_score_straight_flush():
 
 def test_score_card_two_hearts():
     card = Card(txt="2♥")
-    chips, multiplier = _score_card(card, 0, 1)
+    score = Score(input=[card], played=[card])
+    chips, multiplier = score._score_card(card, 0, 1)
     assert (chips, multiplier) == (2, 1)
 
 def test_score_card_bonus():
     card = Card(txt="A♠+")
-    chips, multiplier = _score_card(card, 0, 1)
+    score = Score(input=[card], played=[card])
+    chips, multiplier = score._score_card(card, 0, 1)
     assert (chips, multiplier) == (41, 1)
 
 def test_score_card_mult():
     card = Card(txt="K♠x")
-    chips, multiplier = _score_card(card, 0, 1)
+    score = Score(input=[card], played=[card])
+    chips, multiplier = score._score_card(card, 0, 1)
     assert (chips, multiplier) == (10, 5)
 
 def test_score_string_input():
