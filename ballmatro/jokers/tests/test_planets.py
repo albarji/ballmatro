@@ -79,3 +79,11 @@ def test_planet_card_repr_and_attributes():
     assert "Multiplies by 10" in planet.description
     assert planet.product == 10
     assert planet.target_hand == FourOfAKind
+
+def test_barren_planet():
+    """Tests the barren planet set all chips and multipliers to 1"""
+    hand = Pair()
+    planet = planets.BarrenMercury()
+    modified = planet.played_hand_callback(hand)
+    assert modified.chips == 1
+    assert modified.multiplier == 1

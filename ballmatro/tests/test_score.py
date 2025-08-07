@@ -101,6 +101,25 @@ def test_score_jokers_mars_and_shard():
     score = Score(available, played)
     assert score.score == 2080
 
+def test_score_jokers_barren_planets():
+    """Test Score with barren planet jokers that set chips and multipliers to 1"""
+    available = "[🂿 Barren Pluto: sets the chips and multiplier of the High Card hand to 1,2♥,3♦,A♠]"
+    played = "[2♥]"
+    score = Score(available, played)
+    assert score.score == 3
+
+def test_score_jokers_earth_and_barren():
+    """Test Score with Earth and Barren jokers"""
+    available = "[🂿 Earth: multiplies by 2 the chips and multiplier of the Full House hand,🂿 Barren Earth: sets the chips and multiplier of the Full House hand to 1,2♥,2♦,2♠,3♦,3♠]"
+    played = "[2♥,2♦,2♠,3♦,3♠]"
+    score = Score(available, played)
+    assert score.score == 13
+    # Try also with the Barren Earth first
+    available = "[🂿 Barren Earth: sets the chips and multiplier of the Full House hand to 1,🂿 Earth: multiplies by 2 the chips and multiplier of the Full House hand,2♥,2♦,2♠,3♦,3♠]"
+    played = "[2♥,2♦,2♠,3♦,3♠]"
+    score = Score(available, played)
+    assert score.score == 28
+
 def test_score_asdict():
     available = [Card(txt="2♥"), Card(txt="3♦"), Card(txt="A♠")]
     played = [Card(txt="3♦")]

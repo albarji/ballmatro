@@ -278,3 +278,75 @@ class NeptuneShard(PlanetCard):
     target_hand = StraightFlush
     product = 1
     adder = 1
+
+class BarrenPluto(PlanetCard):
+    """Barren Pluto: sets the chips and multiplier of the High Card hand to 1"""
+    name = "Barren Pluto"
+    description = "Sets the chips and multiplier of the High Card hand to 1"
+    target_hand = HighCard
+    product = 0
+    adder = 1
+
+class BarrenMercury(PlanetCard):
+    """Barren Mercury: sets the chips and multiplier of the Pair hand to 1"""
+    name = "Barren Mercury"
+    description = "Sets the chips and multiplier of the Pair hand to 1"
+    target_hand = Pair
+    product = 0
+    adder = 1
+
+class BarrenUranus(PlanetCard):
+    """Barren Uranus: sets the chips and multiplier of the Two Pair hand to 1"""
+    name = "Barren Uranus"
+    description = "Sets the chips and multiplier of the Two Pair hand to 1"
+    target_hand = TwoPair
+    product = 0
+    adder = 1
+
+class BarrenVenus(PlanetCard):
+    """Barren Venus: sets the chips and multiplier of the Three of a Kind hand to 1"""
+    name = "Barren Venus"
+    description = "Sets the chips and multiplier of the Three of a Kind hand to 1"
+    target_hand = ThreeOfAKind
+    product = 0 
+    adder = 1
+
+class BarrenSaturn(PlanetCard):
+    """Barren Saturn: sets the chips and multiplier of the Straight hand to 1"""
+    name = "Barren Saturn"
+    description = "Sets the chips and multiplier of the Straight hand to 1"
+    target_hand = Straight
+    product = 0
+    adder = 1
+
+class BarrenJupiter(PlanetCard):
+    """Barren Jupiter: sets the chips and multiplier of the Flush hand to 1"""
+    name = "Barren Jupiter"
+    description = "Sets the chips and multiplier of the Flush hand to 1"
+    target_hand = Flush
+    product = 0
+    adder = 1
+
+class BarrenEarth(PlanetCard):
+    """Barren Earth: sets the chips and multiplier of the Full House hand to 1"""
+    name = "Barren Earth"
+    description = "Sets the chips and multiplier of the Full House hand to 1"
+    target_hand = FullHouse
+    product = 0
+    adder = 1
+
+class BarrenMars(PlanetCard):
+    """Barren Mars: sets the chips and multiplier of the Four of a Kind hand to 1"""
+    name = "Barren Mars"
+    description = "Sets the chips and multiplier of the Four of a Kind hand to 1"
+    target_hand = FourOfAKind
+    product = 0
+    adder = 1
+
+class BarrenNeptune(PlanetCard):
+    """Barren Neptune: sets the chips and multiplier of the Straight Flush hand to 1"""
+    name = "Barren Neptune"
+    description = "Sets the chips and multiplier of the Straight Flush hand to 1"
+    target_hand = StraightFlush
+    product = 0
+    adder = 1
