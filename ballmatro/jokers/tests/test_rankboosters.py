@@ -1,9 +1,10 @@
+"""Tests for the rank boosters in the jokers module."""
+
 import pytest
 from ballmatro.card import Card
 
-"""Tests for the rank boosters in the jokers module."""
 from ballmatro.jokers.rankboosters import (
-    DerankedJoker, DerankedTwo, DerankedThree, DerankedFour, DerankedFive,
+    DerankedTwo, DerankedThree, DerankedFour, DerankedFive,
     DerankedSix, DerankedSeven, DerankedEight, DerankedNine, DerankedTen,
     DerankedJack, DerankedQueen, DerankedKing, DerankedAce
 )
