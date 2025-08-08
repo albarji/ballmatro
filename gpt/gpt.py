@@ -65,6 +65,8 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str) -> list[s
         result = generation_pipeline(messages)[0]["generated_text"][-1]["content"]
         # Remove <think></think> section from the result, if present (Qwen 3 models)
         result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL).strip()
+        # Remove everything up to </think> mark from the result, if present (Qwen 3 Thinking models)
+        result = re.sub(r"^.*?</think>", "", result, flags=re.DOTALL).strip()
         # Remove analysis-assistantfinal section from the result, if present (gpt-oss models)
         result = re.sub(r"^analysis.*?assistantfinal", "", result, flags=re.DOTALL).strip()
         LOGGER.info(f"({i+1}/{len(dataset)}): {data['input']} -> {result}")
