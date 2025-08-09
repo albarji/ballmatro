@@ -7,6 +7,9 @@ from ballmatro.jokers.planets import PlutoPlus, MercuryPlus, UranusPlus, VenusPl
 from ballmatro.jokers.planets import MarsPlusPlus, VenusPlusPlus, JupiterPlusPlus, SaturnPlusPlus, UranusPlusPlus, MercuryPlusPlus, PlutoPlusPlus, EarthPlusPlus, NeptunePlusPlus
 from ballmatro.jokers.planets import PlutoShard, MercuryShard, UranusShard, VenusShard, SaturnShard, JupiterShard, EarthShard, MarsShard, NeptuneShard
 from ballmatro.jokers.planets import BarrenPluto, BarrenMercury, BarrenUranus, BarrenVenus, BarrenSaturn, BarrenJupiter, BarrenEarth, BarrenMars, BarrenNeptune 
+from ballmatro.jokers.rankboosters import DerankedTwo, DerankedThree, DerankedFour, DerankedFive, DerankedSix, DerankedSeven, DerankedEight, DerankedNine, DerankedTen, DerankedJack, DerankedQueen, DerankedKing, DerankedAce
+from ballmatro.jokers.rankboosters import EmpoweredTwo, EmpoweredThree, EmpoweredFour, EmpoweredFive, EmpoweredSix, EmpoweredSeven, EmpoweredEight, EmpoweredNine, EmpoweredTen, EmpoweredJack, EmpoweredQueen, EmpoweredKing, EmpoweredAce
+from ballmatro.jokers.rankboosters import EvenSteven, Oddity, Fibonacci, Populism, Monarchy, RoyalCourt
 
 JOKERS = [
     BlankJoker,         # 000
@@ -54,7 +57,39 @@ JOKERS = [
     BarrenJupiter,      # 042
     BarrenEarth,        # 043
     BarrenMars,         # 044
-    BarrenNeptune       # 045
+    BarrenNeptune,      # 045
+    DerankedTwo,        # 046
+    DerankedThree,      # 047
+    DerankedFour,       # 048
+    DerankedFive,       # 049
+    DerankedSix,        # 050
+    DerankedSeven,      # 051
+    DerankedEight,      # 052
+    DerankedNine,       # 053
+    DerankedTen,        # 054
+    DerankedJack,       # 055
+    DerankedQueen,      # 056
+    DerankedKing,       # 057
+    DerankedAce,        # 058
+    EmpoweredTwo,       # 059
+    EmpoweredThree,     # 060
+    EmpoweredFour,      # 061
+    EmpoweredFive,      # 062
+    EmpoweredSix,       # 063
+    EmpoweredSeven,     # 064
+    EmpoweredEight,     # 065
+    EmpoweredNine,      # 066
+    EmpoweredTen,       # 067
+    EmpoweredJack,      # 068
+    EmpoweredQueen,     # 069
+    EmpoweredKing,      # 070
+    EmpoweredAce,       # 071
+    EvenSteven,         # 072
+    Oddity,             # 073
+    Fibonacci,          # 074
+    Populism,           # 075
+    Monarchy,           # 076
+    RoyalCourt          # 077
 ]
 
 # Dictionary from joker names to their classes
