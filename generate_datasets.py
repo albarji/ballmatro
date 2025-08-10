@@ -4,11 +4,13 @@ import argparse
 from ballmatro.jokers.factory import JOKERS
 from ballmatro.generators import GENERATION_ALGORITHMS, add_jokers, add_optimal_plays, to_hf_dataset
 
-def main(algorithm: str, hand_size: int, n: int, rng: int, n_jokers: int, jokers_max_id: int):
+def main(algorithm: str, hand_size: int, n: int, rng: int, min_n_jokers: int, max_n_jokers: int, jokers_max_id: int):
     """Main function to generate datasets of Ballmatro hands and plays"""
     # Check inputs
     if algorithm not in GENERATION_ALGORITHMS:
         raise ValueError(f"Unknown algorithm: {algorithm}. Available algorithms: {list(GENERATION_ALGORITHMS.keys())}")
+    if min_n_jokers < 0 or max_n_jokers < min_n_jokers:
+        raise ValueError(f"Invalid joker range: {min_n_jokers} - {max_n_jokers}")
     # Adjust parameters
     if algorithm == "exhaustive":
         # For exhaustive generation, n is ignored and hand_size is used directly
@@ -18,8 +20,8 @@ def main(algorithm: str, hand_size: int, n: int, rng: int, n_jokers: int, jokers
     # Generate the dataset
     generator = GENERATION_ALGORITHMS[algorithm](**params)
     # Add jokers if specified
-    if n_jokers > 0:
-        generator = add_jokers(generator, n_jokers, jokers_max_id)
+    if min_n_jokers > 0:
+        generator = add_jokers(generator, min_n_jokers, max_n_jokers, jokers_max_id)
     generator = add_optimal_plays(generator)
     dataset = to_hf_dataset(generator)
 
@@ -36,7 +38,8 @@ if __name__ == "__main__":
     parser.add_argument("len", type=int, help="Maximum number of cards in the hands. For exhaustive generation, this is always the hand size.")
     parser.add_argument("n", type=int, help="Number of hands to generate. For exhaustive generation, this is ignored.")
     parser.add_argument("--rng", type=int, help="Random seed for reproducibility. For exhaustive generation, this is ignored.", default=42)
-    parser.add_argument("--n_jokers", type=int, help="Maximum number of jokers to add to each hand", default=0)
+    parser.add_argument("--min_n_jokers", type=int, help="Minimum number of jokers to add to each hand", default=0)
+    parser.add_argument("--max_n_jokers", type=int, help="Maximum number of jokers to add to each hand", default=0)
     parser.add_argument("--jokers_max_id", type=int, help="Limit range of jokers to include in the generation to include only jokers with IDs between 0 and the given number (inclusive).", default=len(JOKERS)-1)
     args = parser.parse_args()
-    main(args.alg, args.len, args.n, args.rng, args.n_jokers, args.jokers_max_id)
+    main(args.alg, args.len, args.n, args.rng, args.min_n_jokers, args.max_n_jokers, args.jokers_max_id)

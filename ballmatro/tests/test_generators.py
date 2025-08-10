@@ -151,7 +151,8 @@ def test_int2cards():
 def test_generate_jokers():
     """Test the generation of jokers"""
     for _ in range(10):  # Test multiple times to ensure randomness
-        jokers = _random_jokers(max_n_jokers=3, max_joker_id=2)
+        jokers = _random_jokers(min_n_jokers=1, max_n_jokers=3, max_joker_id=2)
+        assert len(jokers) >= 1
         assert len(jokers) <= 3
         for joker_card in jokers:
             assert joker_card.is_joker, "Generated card should be a joker"

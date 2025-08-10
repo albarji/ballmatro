@@ -46,12 +46,13 @@ def random_generator(max_hand_size: int, n: int, modifiers: List[str] = None, se
         # Generate a random hand
         yield int2cards(random.randint(1, max_id))
 
-def add_jokers(generator: Generator[List[Card], None, None], max_n_jokers: int, max_joker_id: int) -> Generator[List[Card], None, None]:
+def add_jokers(generator: Generator[List[Card], None, None], min_n_jokers: int, max_n_jokers: int, max_joker_id: int) -> Generator[List[Card], None, None]:
     """Add a random number of jokers to each hand in the generator.
 
     Args:
         generator (Generator[List[Card], None, None]): A generator that yields hands.
         available_joker_ids (List[int]): A list of available joker IDs to add.
+        min_n_jokers (int): The minimum number of jokers to generate.
         max_n_jokers (int): The maximum number of jokers to generate.
         max_joker_id (int): The maximum ID (included) of the joker to generate.
 
@@ -59,7 +60,7 @@ def add_jokers(generator: Generator[List[Card], None, None], max_n_jokers: int, 
         List[Card]: A list of cards representing the hand with added jokers.
     """
     for hand in generator:
-        jokers = _random_jokers(max_n_jokers, max_joker_id)
+        jokers = _random_jokers(min_n_jokers, max_n_jokers, max_joker_id)
         yield jokers + hand
 
 def add_optimal_plays(generator: Generator[List[Card], None, None]) -> Generator[Tuple[List[Card], Score], None, None]:
@@ -176,12 +177,13 @@ def _get_modifiers(modifiers: List[str] = None) -> List[str]:
             return [""] + modifiers
         return modifiers
 
-def _random_jokers(max_n_jokers: int, max_joker_id: int) -> List[Card]:
+def _random_jokers(min_n_jokers: int, max_n_jokers: int, max_joker_id: int) -> List[Card]:
     """Generate a random list of joker cards.
 
     The number of jokers is chosen from 0 to max_n_jokers, with equal probability for each number.
 
     Args:
+        min_n_jokers (int): The minimum number of jokers to generate.
         max_n_jokers (int): The maximum number of jokers to generate.
         max_joker_id (int): The maximum ID (included) of the joker to generate.
 
@@ -190,5 +192,5 @@ def _random_jokers(max_n_jokers: int, max_joker_id: int) -> List[Card]:
 
     Repeated jokers might appear.
     """
-    njokers = random.randint(0, max_n_jokers)
+    njokers = random.randint(min_n_jokers, max_n_jokers)
     return [JOKERS[random.randint(0, max_joker_id)]().to_card() for _ in range(njokers)]
