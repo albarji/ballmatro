@@ -15,7 +15,7 @@ from ballmatro.jokers.suitboosters import (
     (DesuitedSpade, "♠"),
     (DesuitedHeart, "♥"),
 ])
-def test_desuited_joker_on_target_rank(joker_cls, suit):
+def test_desuited_joker_on_target_suit(joker_cls, suit):
     joker = joker_cls()
     card = Card(f"2{suit}")
     chips, multiplier = joker.card_score_callback(card, chips=5, multiplier=2, added_chips=3, added_multiplier=4)

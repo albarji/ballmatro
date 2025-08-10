@@ -12,7 +12,7 @@ def brute_force_optimize(cards: List[Card]) -> Score:
     non_joker_cards = [card for card in cards if card.is_joker is False]
 
     best_score = -math.inf
-    for i in range(1, len(non_joker_cards) + 1):
+    for i in range(0, len(non_joker_cards) + 1):
         for hand in combinations(non_joker_cards, i):
             score_info = Score(cards, list(hand))
             if score_info.score > best_score:

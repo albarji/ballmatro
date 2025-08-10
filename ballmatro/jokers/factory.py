@@ -13,6 +13,10 @@ from ballmatro.jokers.rankboosters import EvenSteven, Oddity, Fibonacci, Populis
 from ballmatro.jokers.suitboosters import DesuitedClub, DesuitedDiamond, DesuitedSpade, DesuitedHeart
 from ballmatro.jokers.suitboosters import EmpoweredClub, EmpoweredDiamond, EmpoweredSpade, EmpoweredHeart
 from ballmatro.jokers.suitboosters import RedEmpire, BlackEmpire
+from ballmatro.jokers.playedchangers import BannedTwo, BannedThree, BannedFour, BannedFive, BannedSix, BannedSeven, BannedEight, BannedNine, BannedTen, BannedJack, BannedQueen, BannedKing, BannedAce
+from ballmatro.jokers.playedchangers import Republic, LandOfNumbers, LandOfLetters
+from ballmatro.jokers.playedchangers import BannedClub, BannedDiamond, BannedSpade, BannedHeart
+from ballmatro.jokers.playedchangers import BannedRed, BannedBlack
 
 JOKERS = [
     BlankJoker,         # 000
@@ -103,6 +107,28 @@ JOKERS = [
     EmpoweredHeart,     # 085
     RedEmpire,          # 086
     BlackEmpire,        # 087
+    BannedTwo,          # 088
+    BannedThree,        # 089
+    BannedFour,         # 090
+    BannedFive,         # 091
+    BannedSix,          # 092
+    BannedSeven,        # 093
+    BannedEight,        # 094
+    BannedNine,         # 095
+    BannedTen,          # 096
+    BannedJack,         # 097
+    BannedQueen,        # 098
+    BannedKing,         # 099
+    BannedAce,          # 100
+    Republic,           # 101
+    LandOfLetters,      # 102
+    LandOfNumbers,      # 103
+    BannedClub,         # 104
+    BannedDiamond,      # 105
+    BannedSpade,        # 106
+    BannedHeart,        # 107
+    BannedRed,          # 108
+    BannedBlack,        # 109
 ]
 
 # Dictionary from joker names to their classes

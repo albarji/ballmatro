@@ -59,6 +59,10 @@ All the played cards must form part of a poker hand, or equivalently, the set of
 
 > Example: [2♣, 2♦, 2♥, 6♠] ->  0 chips x 0 multiplier, as even though the first three cards form a Three of a Kind, an extra 6♠ card has been played that does not form part of the poker hand.
 
+If no cards are played ([]), the play is considered an Empty Hand, awarding 1 chip and 1 multiplier.
+
+> Example: [] -> 1 chip x 1 multiplier.
+
 ### Scoring hands
 
 After determining the poker hand that has been played, the total score is computed in three steps.

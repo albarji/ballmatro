@@ -40,6 +40,15 @@ class Joker:
         """
         return added_chips, added_multiplier
 
+    def played_cards_callback(self, played_cards: list[Card]) -> list[Card]:
+        """Callback that modifies the played cards when this joker is present.
+
+        Can be used to modify the played cards based on the joker's rules.
+
+        This method should be overridden by specific joker implementations.
+        """
+        return played_cards
+
     def __str__(self):
         return f"Joker(name={self.name})"
 

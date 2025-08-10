@@ -49,6 +49,14 @@ test_data = [
         [Card('2♥'), Card('3♥'), Card('4♥'), Card('5♠'), Card('5♥'), Card('6♥'), Card('7♠')],
         Score(input=[Card('2♥'), Card('3♥'), Card('4♥'), Card('5♠'), Card('5♥'), Card('6♥'), Card('7♠')], played=[Card('2♥'), Card('3♥'), Card('4♥'), Card('5♥'), Card('6♥')])
     ),
+    (
+        [],
+        Score(input=[], played=[])
+    ),
+    (
+        [Card("🂿 Banned Red: Played cards of red suit (♥, ♦) will be ignored in poker hand determination and scoring"), Card('2♥'), Card('3♥'), Card('4♥')],
+        Score(input=[Card("🂿 Banned Red: Played cards of red suit (♥, ♦) will be ignored in poker hand determination and scoring"), Card('2♥'), Card('3♥'), Card('4♥')], played=[])
+    )
 ]
 
 @pytest.mark.parametrize("cards, expected_score_info", test_data)

@@ -37,6 +37,9 @@ class Score:
             self.remaining = self._remaining_cards(self.input, self.played)
             # Find jokers in the remaining cards
             self.jokers = self._find_jokers()
+            # Apply the jokers to the played cards
+            for joker in self.jokers:
+                self.played = joker.played_cards_callback(self.played)
             # Find the hand that was played
             self.hand = find_hand(self.played)
             # Apply the jokers to the hand if any
@@ -44,7 +47,7 @@ class Score:
                 self.hand = joker.played_hand_callback(self.hand)
         except ValueError:
             self.remaining = None
-            self.hand = InvalidPlay
+            self.hand = InvalidPlay()
         # Score the played cards to compute the final score
         self._score_played()
 
@@ -137,7 +140,7 @@ class ScoreDataset:
         # Compute statistics
         self.total_score = sum(score.score for score in self.scores)
         self.total_normalized_score = sum(self.normalized_scores) / len(self.normalized_scores)
-        self.invalid_hands = sum(1 for score in self.scores if score.hand in [NoPokerHand, InvalidPlay])
+        self.invalid_hands = sum(1 for score in self.scores if isinstance(score.hand, (NoPokerHand, InvalidPlay)))
         self.normalized_invalid_hands = self.invalid_hands / len(self.scores)
 
     def __repr__(self):

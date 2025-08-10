@@ -151,6 +151,19 @@ class HighCard(PokerHand):
         return not hand[0].is_joker
     
 @dataclass
+class EmptyHand(PokerHand):
+    """Special PokerHand to represent an empty hand"""
+    ncards = 0
+    chips = 1
+    multiplier = 1
+    name = "Empty Hand"
+
+    @classmethod
+    def check_specific(cls, hand: List[Card]) -> bool:
+        """Any hand with 0 cards is an empty hand"""
+        return True
+
+@dataclass
 class NoPokerHand(PokerHand):
     """Special PokerHand to represent the played cards form no poker hand"""
     ncards = 0
@@ -166,7 +179,7 @@ class InvalidPlay(PokerHand):
     multiplier = 0
     name = "Invalid Play"
 
-POKER_HANDS = [StraightFlush, FourOfAKind, FullHouse, Flush, Straight, ThreeOfAKind, TwoPair, Pair, HighCard]
+POKER_HANDS = [StraightFlush, FourOfAKind, FullHouse, Flush, Straight, ThreeOfAKind, TwoPair, Pair, HighCard, EmptyHand]
 
 def find_hand(hand: List[Card]) -> PokerHand:
     """Find which poker hand has been played. Returns the PokerHand object or None if no hand is found"""

@@ -1,5 +1,5 @@
 from ballmatro.card import Card
-from ballmatro.hands import InvalidPlay
+from ballmatro.hands import InvalidPlay, EmptyHand, NoPokerHand
 from ballmatro.score import Score, ScoreDataset
 from datasets import Dataset
 
@@ -53,6 +53,14 @@ def test_score_four_of_a_kind():
 def test_score_straight_flush():
     available = played = [Card(txt="2♥"), Card(txt="3♥"), Card(txt="4♥"), Card(txt="5♥"), Card(txt="6♥")]
     assert Score(available, played).score == 960
+
+def test_score_empty_hand():
+    available = [Card(txt="3♥"), Card(txt="3♦"), Card(txt="3♠"), Card(txt="3♣")]
+    played = []
+    score = Score(available, played)
+    assert score.chips == 1
+    assert score.multiplier == 1
+    assert score.score == 1
 
 def test_score_card_two_hearts():
     card = Card(txt="2♥")
@@ -122,6 +130,18 @@ def test_score_jokers_earth_and_barren():
     played = "[2♥,2♦,2♠,3♦,3♠]"
     score = Score(available, played)
     assert score.score == 28
+
+def test_score_jokers_banned_red():
+    available = [Card("🂿 Banned Red"), Card('2♥'), Card('3♥'), Card('4♥')]
+    score = Score(input=available, played=[Card('2♥')])
+    assert score.score == 1
+    assert isinstance(score.hand, EmptyHand)
+
+def test_score_jokers_land_of_numbers():
+    available = [Card("🂿 Land Of Numbers"), Card('2♥'), Card('3♥'), Card('4♥'), Card('J♥'), Card('Q♥')]
+    score = Score(input=available, played=[Card('2♥'), Card('3♥'), Card('4♥'), Card('J♥'), Card('Q♥')])
+    assert score.score == 0
+    assert isinstance(score.hand, NoPokerHand)
 
 def test_score_asdict():
     available = [Card(txt="2♥"), Card(txt="3♦"), Card(txt="A♠")]
@@ -211,7 +231,7 @@ def test_scoredataset_with_invalid_play():
     assert score_dataset.normalized_score == 0.0
     assert score_dataset.invalid_hands == 1
     assert score_dataset.normalized_invalid_hands == 1.0
-    assert score_dataset.scores[0].hand == InvalidPlay
+    assert isinstance(score_dataset.scores[0].hand, InvalidPlay)
 
 def test_scoredataset_mixed_valid_invalid():
     data = {
@@ -228,7 +248,7 @@ def test_scoredataset_mixed_valid_invalid():
     assert score_dataset.invalid_hands == 1
     assert score_dataset.normalized_invalid_hands == 0.5
     assert score_dataset.total_normalized_score == 0.5
-    assert score_dataset.scores[1].hand == InvalidPlay
+    assert isinstance(score_dataset.scores[1].hand, InvalidPlay)
 
 def test_scoredataset_strings():
     """Test ScoreDataset with string inputs for plays."""
