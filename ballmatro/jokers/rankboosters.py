@@ -18,79 +18,79 @@ class DerankedJoker(Joker):
 class DerankedTwo(DerankedJoker):
     """A joker that changes the scoring of a rank 2 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Two"
-    description = "Cards with rank 2 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 2 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "2"
 
 class DerankedThree(DerankedJoker):
     """A joker that changes the scoring of a rank 3 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Three"
-    description = "Cards with rank 3 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 3 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "3"
 
 class DerankedFour(DerankedJoker):
     """A joker that changes the scoring of a rank 4 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Four"
-    description = "Cards with rank 4 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 4 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "4"
 
 class DerankedFive(DerankedJoker):
     """A joker that changes the scoring of a rank 5 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Five"
-    description = "Cards with rank 5 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 5 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "5"
 
 class DerankedSix(DerankedJoker):
     """A joker that changes the scoring of a rank 6 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Six"
-    description = "Cards with rank 6 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 6 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "6"
 
 class DerankedSeven(DerankedJoker):
     """A joker that changes the scoring of a rank 7 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Seven"
-    description = "Cards with rank 7 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 7 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "7"
 
 class DerankedEight(DerankedJoker):
     """A joker that changes the scoring of a rank 8 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Eight"
-    description = "Cards with rank 8 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 8 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "8"
 
 class DerankedNine(DerankedJoker):
     """A joker that changes the scoring of a rank 9 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Nine"
-    description = "Cards with rank 9 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 9 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "9"
 
 class DerankedTen(DerankedJoker):
     """A joker that changes the scoring of a rank 10 card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Ten"
-    description = "Cards with rank 10 give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank 10 give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "10"
 
 class DerankedJack(DerankedJoker):
     """A joker that changes the scoring of a rank J card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Jack"
-    description = "Cards with rank J give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank J give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "J"
 
 class DerankedQueen(DerankedJoker):
     """A joker that changes the scoring of a rank Q card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Queen"
-    description = "Cards with rank Q give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank Q give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "Q"
 
 class DerankedKing(DerankedJoker):
     """A joker that changes the scoring of a rank K card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked King"
-    description = "Cards with rank K give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank K give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "K"
 
 class DerankedAce(DerankedJoker):
     """A joker that changes the scoring of a rank A card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Deranked Ace"
-    description = "Cards with rank A give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with rank A give 1 chip and 0 multiplier. Modifiers are ignored."
     target_rank = "A"
 
 class PowerRankJoker(Joker):
@@ -184,19 +184,19 @@ class EmpoweredAce(PowerRankJoker):
 class EvenSteven(PowerRankJoker):
     """A joker that duplicates the chips and multiplier of a card if its rank is an even number."""
     name = "Even Steven"
-    description = "Double the chips and multiplier for cards with even rank (2, 4, 6, 8, 10)"
+    description = "Double the chips and multiplier for cards with even rank (2 4 6 8 10)"
     target_ranks = ["2", "4", "6", "8", "10"]
 
 class Oddity(PowerRankJoker):
     """A joker that duplicates the chips and multiplier of a card if its rank is an odd number."""
     name = "Oddity"
-    description = "Double the chips and multiplier for cards with odd rank (1, 3, 5, 7, 9)"
+    description = "Double the chips and multiplier for cards with odd rank (1 3 5 7 9)"
     target_ranks = ["1", "3", "5", "7", "9"]
 
 class Fibonacci(PowerRankJoker):
     """A joker that duplicates the chips and multiplier of a card if its rank is a Fibonacci number."""
     name = "Fibonacci"
-    description = "Double the chips and multiplier for cards with Fibonacci rank (1, 2, 3, 5, 8)"
+    description = "Double the chips and multiplier for cards with Fibonacci rank (1 2 3 5 8)"
     target_ranks = ["1", "2", "3", "5", "8"]
 
 class Populism(PowerRankJoker):
@@ -208,11 +208,11 @@ class Populism(PowerRankJoker):
 class Monarchy(PowerRankJoker):
     """A joker that duplicates the chips and multiplier of a card if its rank is a Queen or a King."""
     name = "Monarchy"
-    description = "Double the chips and multiplier for cards with figure rank (Q, K)"
+    description = "Double the chips and multiplier for cards with figure rank (Q K)"
     target_ranks = ["Q", "K"]
 
 class RoyalCourt(PowerRankJoker):
     """A joker that duplicates the chips and multiplier of a card if its rank is a Jack, a Queen or a King."""
     name = "Royal Court"
-    description = "Double the chips and multiplier for cards with figure rank (J, Q, K)"
+    description = "Double the chips and multiplier for cards with figure rank (J Q K)"
     target_ranks = ["J", "Q", "K"]

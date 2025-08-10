@@ -98,7 +98,7 @@ class Republic(BannedRankJoker):
 class LandOfNumbers(BannedRankJoker):
     """A joker that removes all non-numbered rank cards from the list of played cards"""
     name = "Land Of Numbers"
-    description = "Played cards with rank J, Q, K, and A will be ignored in poker hand determination and scoring"
+    description = "Played cards with ranks J to A will be ignored in poker hand determination and scoring"
     target_ranks = ["J", "Q", "K", "A"]
 
 class LandOfLetters(BannedRankJoker):
@@ -141,11 +141,11 @@ class BannedHeart(BannedSuitJoker):
 class BannedRed(BannedSuitJoker):
     """A joker that removes all red cards from the list of played cards"""
     name = "Banned Red"
-    description = "Played cards of red suit (♥, ♦) will be ignored in poker hand determination and scoring"
+    description = "Played cards of red suit (♥ ♦) will be ignored in poker hand determination and scoring"
     target_suits = ["♥", "♦"]
 
 class BannedBlack(BannedSuitJoker):
     """A joker that removes all black cards from the list of played cards"""
     name = "Banned Black"
-    description = "Played cards of black suit (♣, ♠) will be ignored in poker hand determination and scoring"
+    description = "Played cards of black suit (♣ ♠) will be ignored in poker hand determination and scoring"
     target_suits = ["♣", "♠"]
