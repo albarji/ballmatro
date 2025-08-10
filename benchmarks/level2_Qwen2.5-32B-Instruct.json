@@ -1,8 +1,8 @@
 {
-    "total_score": 45861,
-    "total_normalized_score": 0.7268393742189637,
-    "invalid_hands": 0,
-    "normalized_invalid_hands": 0.0,
+    "total_score": 45863,
+    "total_normalized_score": 0.7268560408856304,
+    "invalid_hands": 209,
+    "normalized_invalid_hands": 0.209,
     "scores": [
         {
             "input": [
@@ -8627,10 +8627,10 @@
                 "J\u2665x",
                 "J\u2666x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -9218,10 +9218,10 @@
                 "5\u2665x",
                 "J\u2665x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -16258,7 +16258,7 @@
         0.42857142857142855,
         1.0,
         1.0,
-        0.0,
+        0.0033333333333333335,
         0.0,
         1.0,
         0.0,
@@ -16296,7 +16296,7 @@
         1.0,
         0.9782608695652174,
         1.0,
-        0.0,
+        0.013333333333333334,
         1.0,
         1.0,
         0.23076923076923078,

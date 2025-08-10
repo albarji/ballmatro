@@ -1,8 +1,8 @@
 {
     "total_score": 48780,
     "total_normalized_score": 0.7703635357669598,
-    "invalid_hands": 5,
-    "normalized_invalid_hands": 0.005,
+    "invalid_hands": 173,
+    "normalized_invalid_hands": 0.173,
     "scores": [
         {
             "input": [

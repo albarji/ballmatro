@@ -1,8 +1,8 @@
 {
-    "total_score": 118208,
-    "total_normalized_score": 0.9800469431956932,
-    "invalid_hands": 3,
-    "normalized_invalid_hands": 0.003,
+    "total_score": 118209,
+    "total_normalized_score": 0.9800691654179154,
+    "invalid_hands": 12,
+    "normalized_invalid_hands": 0.012,
     "scores": [
         {
             "input": [
@@ -15807,10 +15807,10 @@
                 "J\u2660",
                 "3\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -20757,7 +20757,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        0.022222222222222223,
         1.0,
         1.0,
         1.0,

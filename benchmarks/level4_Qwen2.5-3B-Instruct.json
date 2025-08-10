@@ -1,8 +1,8 @@
 {
-    "total_score": 17954,
-    "total_normalized_score": 0.020329242222619844,
-    "invalid_hands": 186,
-    "normalized_invalid_hands": 0.186,
+    "total_score": 19214,
+    "total_normalized_score": 0.021000219234114093,
+    "invalid_hands": 957,
+    "normalized_invalid_hands": 0.957,
     "scores": [
         {
             "input": [
@@ -9710,10 +9710,10 @@
                 "4\u2663x",
                 "5\u2660x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 105,
+            "multiplier": 12,
+            "score": 1260
         },
         {
             "input": [
@@ -26520,7 +26520,7 @@
         0.0,
         0.0,
         0.0,
-        0.20833333333333334,
+        0.12931034482758622,
         0.0,
         0.0,
         0.0,
@@ -26611,7 +26611,7 @@
         0.0,
         0.0,
         0.0,
-        0.0,
+        0.75,
         0.0,
         0.0,
         0.0,

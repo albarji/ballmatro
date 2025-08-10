@@ -1,6 +1,6 @@
 {
-    "total_score": 1417,
-    "total_normalized_score": 0.6666666666666666,
+    "total_score": 1419,
+    "total_normalized_score": 0.6683760683760683,
     "invalid_hands": 24,
     "normalized_invalid_hands": 0.3076923076923077,
     "scores": [
@@ -36,10 +36,10 @@
             "remaining": [
                 "K\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -904,10 +904,10 @@
             "remaining": [
                 "K\u2666"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -974,7 +974,7 @@
     "normalized_scores": [
         1.0,
         0.0,
-        0.0,
+        0.06666666666666667,
         1.0,
         1.0,
         1.0,
@@ -1044,7 +1044,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        0.06666666666666667,
         1.0,
         1.0,
         0.0,

@@ -1,6 +1,6 @@
 {
-    "total_score": 2550,
-    "total_normalized_score": 0.9102564102564102,
+    "total_score": 2556,
+    "total_normalized_score": 0.9124182276621301,
     "invalid_hands": 1,
     "normalized_invalid_hands": 0.01282051282051282,
     "scores": [
@@ -38,10 +38,10 @@
             "remaining": [
                 "K\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -231,10 +231,10 @@
             "remaining": [
                 "9\u2660x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -348,10 +348,10 @@
             "remaining": [
                 "7\u2666x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -686,10 +686,10 @@
             "remaining": [
                 "6\u2663+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -829,10 +829,10 @@
             "remaining": [
                 "6\u2660+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -959,10 +959,10 @@
             "remaining": [
                 "K\u2660+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -1020,7 +1020,7 @@
     "normalized_scores": [
         1.0,
         1.0,
-        0.0,
+        0.06666666666666667,
         1.0,
         1.0,
         1.0,
@@ -1035,7 +1035,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        0.014285714285714285,
         1.0,
         1.0,
         1.0,
@@ -1044,16 +1044,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
+        0.016666666666666666,
         1.0,
         1.0,
         1.0,
@@ -1070,7 +1061,16 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.024390243902439025,
         1.0,
         1.0,
         1.0,
@@ -1081,7 +1081,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        0.024390243902439025,
         1.0,
         1.0,
         1.0,
@@ -1091,7 +1091,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        0.022222222222222223,
         1.0,
         1.0,
         1.0,

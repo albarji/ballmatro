@@ -1,8 +1,8 @@
 {
-    "total_score": 377527,
-    "total_normalized_score": 0.48410225348929536,
-    "invalid_hands": 7,
-    "normalized_invalid_hands": 0.007,
+    "total_score": 420788,
+    "total_normalized_score": 0.513616705725999,
+    "invalid_hands": 467,
+    "normalized_invalid_hands": 0.467,
     "scores": [
         {
             "input": [
@@ -55,10 +55,10 @@
                 "3\u2660x",
                 "4\u2663x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 150,
+            "multiplier": 8,
+            "score": 1200
         },
         {
             "input": [
@@ -111,10 +111,10 @@
                 "5\u2665",
                 "2\u2666"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 87,
+            "multiplier": 20,
+            "score": 1740
         },
         {
             "input": [
@@ -227,10 +227,10 @@
                 "4\u2666+",
                 "7\u2665x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 164,
+            "multiplier": 8,
+            "score": 1312
         },
         {
             "input": [
@@ -1365,10 +1365,10 @@
                 "3\u2663+",
                 "6\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 231,
+            "multiplier": 4,
+            "score": 924
         },
         {
             "input": [
@@ -2500,10 +2500,10 @@
                 "7\u2660x",
                 "5\u2660+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -4836,10 +4836,10 @@
                 "K\u2663",
                 "6\u2660+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 102,
+            "multiplier": 12,
+            "score": 1224
         },
         {
             "input": [
@@ -4924,10 +4924,10 @@
                 "J\u2665",
                 "3\u2663+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 138,
+            "multiplier": 16,
+            "score": 2208
         },
         {
             "input": [
@@ -6130,10 +6130,10 @@
                 "K\u2665+",
                 "8\u2665"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 138,
+            "multiplier": 8,
+            "score": 1104
         },
         {
             "input": [
@@ -6306,10 +6306,10 @@
                 "4\u2666x",
                 "A\u2660+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 163,
+            "multiplier": 8,
+            "score": 1304
         },
         {
             "input": [
@@ -7084,10 +7084,10 @@
                 "3\u2666+",
                 "10\u2665x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 123,
+            "multiplier": 12,
+            "score": 1476
         },
         {
             "input": [
@@ -7886,10 +7886,10 @@
                 "K\u2666+",
                 "7\u2660"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 116,
+            "multiplier": 12,
+            "score": 1392
         },
         {
             "input": [
@@ -8150,10 +8150,10 @@
                 "7\u2660x",
                 "9\u2665+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 93,
+            "multiplier": 16,
+            "score": 1488
         },
         {
             "input": [
@@ -9234,10 +9234,10 @@
                 "4\u2660+",
                 "9\u2665+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 174,
+            "multiplier": 8,
+            "score": 1392
         },
         {
             "input": [
@@ -10166,10 +10166,10 @@
                 "2\u2665x",
                 "J\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 166,
+            "multiplier": 8,
+            "score": 1328
         },
         {
             "input": [
@@ -11730,10 +11730,10 @@
                 "2\u2665",
                 "5\u2666+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 137,
+            "multiplier": 12,
+            "score": 1644
         },
         {
             "input": [
@@ -14258,10 +14258,10 @@
                 "A\u2660+",
                 "5\u2663x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 134,
+            "multiplier": 12,
+            "score": 1608
         },
         {
             "input": [
@@ -14720,10 +14720,10 @@
                 "A\u2663",
                 "5\u2665x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 120,
+            "multiplier": 12,
+            "score": 1440
         },
         {
             "input": [
@@ -15497,10 +15497,10 @@
                 "9\u2666",
                 "5\u2665"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 142,
+            "multiplier": 4,
+            "score": 568
         },
         {
             "input": [
@@ -16859,10 +16859,10 @@
                 "J\u2666+",
                 "Q\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 159,
+            "multiplier": 12,
+            "score": 1908
         },
         {
             "input": [
@@ -17489,10 +17489,10 @@
                 "2\u2663x",
                 "6\u2665+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 88,
+            "multiplier": 16,
+            "score": 1408
         },
         {
             "input": [
@@ -18397,10 +18397,10 @@
                 "3\u2665",
                 "5\u2666x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 92,
+            "multiplier": 12,
+            "score": 1104
         },
         {
             "input": [
@@ -18653,10 +18653,10 @@
                 "6\u2663+",
                 "3\u2660x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 214,
+            "multiplier": 12,
+            "score": 2568
         },
         {
             "input": [
@@ -21019,10 +21019,10 @@
                 "10\u2663",
                 "Q\u2665+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 89,
+            "multiplier": 12,
+            "score": 1068
         },
         {
             "input": [
@@ -22785,10 +22785,10 @@
                 "Q\u2663",
                 "10\u2663"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 128,
+            "multiplier": 16,
+            "score": 2048
         },
         {
             "input": [
@@ -22957,10 +22957,10 @@
                 "2\u2660x",
                 "8\u2666+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 108,
+            "multiplier": 4,
+            "score": 432
         },
         {
             "input": [
@@ -23423,10 +23423,10 @@
                 "Q\u2666",
                 "7\u2660x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 185,
+            "multiplier": 12,
+            "score": 2220
         },
         {
             "input": [
@@ -24297,10 +24297,10 @@
                 "2\u2660",
                 "7\u2666"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 140,
+            "multiplier": 8,
+            "score": 1120
         },
         {
             "input": [
@@ -25137,10 +25137,10 @@
                 "J\u2665+",
                 "A\u2665+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 105,
+            "multiplier": 12,
+            "score": 1260
         },
         {
             "input": [
@@ -26615,10 +26615,10 @@
                 "9\u2660+",
                 "Q\u2665"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 83,
+            "multiplier": 12,
+            "score": 996
         },
         {
             "input": [
@@ -27689,10 +27689,10 @@
                 "8\u2666+",
                 "K\u2663x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 132,
+            "multiplier": 8,
+            "score": 1056
         },
         {
             "input": [
@@ -28125,10 +28125,10 @@
                 "K\u2660x",
                 "2\u2666"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 108,
+            "multiplier": 16,
+            "score": 1728
         },
         {
             "input": [
@@ -28415,10 +28415,10 @@
                 "2\u2666+",
                 "5\u2665x"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Full House",
+            "chips": 124,
+            "multiplier": 8,
+            "score": 992
         },
         {
             "input": [
@@ -28979,13 +28979,13 @@
     ],
     "normalized_scores": [
         0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        1.0,
         0.0,
         1.0,
         0.0,
+        0.0,
+        1.0,
+        1.0,
         0.0,
         1.0,
         0.0,
@@ -29024,7 +29024,7 @@
         1.0,
         0.49333333333333335,
         1.0,
-        0.0,
+        1.0,
         1.0,
         1.0,
         1.0,
@@ -29063,7 +29063,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        0.0008928571428571428,
         1.0,
         1.0,
         1.0,
@@ -29094,7 +29094,7 @@
         0.0,
         1.0,
         1.0,
-        1.7142857142857142,
+        1.0,
         0.0,
         0.0,
         0.0,
@@ -29144,10 +29144,10 @@
         0.0,
         1.0,
         0.0,
-        0.0,
+        1.0,
         1.0,
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0,
         1.0,
@@ -29189,25 +29189,14 @@
         1.0,
         1.0,
         0.0,
-        0.0,
+        1.0,
         1.0,
         0.3181818181818182,
         1.0,
         1.0,
         1.0,
-        0.0,
-        1.0,
-        0.0,
         1.0,
         1.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
         0.0,
         1.0,
         1.0,
@@ -29215,6 +29204,17 @@
         0.0,
         0.0,
         1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
         1.0,
         1.0,
         1.0,
@@ -29222,7 +29222,7 @@
         1.0,
         0.0,
         0.0,
-        0.0,
+        1.0,
         1.0,
         0.0,
         1.0,
@@ -29250,16 +29250,16 @@
         0.0,
         0.0,
         0.88,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
         0.0,
         1.0,
         0.0,
         1.0,
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
         1.0,
         1.0,
         0.0,
@@ -29296,7 +29296,7 @@
         0.46,
         0.0,
         1.0,
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0,
@@ -29328,7 +29328,7 @@
         0.0,
         0.0,
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.9939759036144579,
         0.0,
@@ -29382,7 +29382,7 @@
         1.0,
         1.0,
         0.11363636363636363,
-        0.0,
+        1.0,
         0.0,
         1.0,
         1.0,
@@ -29470,29 +29470,11 @@
         0.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
         0.0,
         1.0,
         1.0,
         1.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0,
         0.0,
         0.0,
         1.0,
@@ -29500,10 +29482,12 @@
         1.0,
         1.0,
         0.0,
-        1.0,
-        1.0,
         0.0,
         1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
         1.0,
         1.0,
         1.0,
@@ -29513,7 +29497,23 @@
         0.0,
         1.0,
         1.0,
+        1.0,
+        1.0,
         0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
         0.0,
         0.0,
         1.0,
@@ -29560,7 +29560,7 @@
         0.0,
         1.0,
         0.09968354430379747,
-        0.0,
+        1.0,
         0.0,
         1.0,
         1.0,
@@ -29582,27 +29582,27 @@
         0.0,
         0.0,
         0.0,
-        0.0,
         1.0,
         1.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        0.0,
         1.0,
         0.0,
         0.0,
         1.0,
         0.0,
         0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
         1.0,
         1.0,
         0.0,
@@ -29613,7 +29613,7 @@
         0.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
         0.0,
         1.0,
         0.0,
@@ -29622,7 +29622,7 @@
         0.0,
         0.0,
         0.8363636363636363,
-        0.0,
+        1.0,
         1.0,
         0.25,
         1.0,
@@ -29632,7 +29632,7 @@
         0.0,
         0.05725190839694656,
         1.0,
-        1.0,
+        0.5901639344262295,
         0.0,
         0.0,
         1.0,
@@ -29703,7 +29703,7 @@
         0.0,
         0.0,
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0,
         1.0,
@@ -29764,13 +29764,13 @@
         1.0,
         1.0,
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
         0.0,
         1.0,
         0.0,
@@ -29786,24 +29786,24 @@
         1.0,
         0.0,
         0.0,
-        0.0,
         1.0,
         1.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
         1.0,
         1.0,
         0.0,
         0.0,
         0.0,
         1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
         1.0,
         1.0,
         0.0,
@@ -29816,7 +29816,7 @@
         1.0,
         0.0,
         1.0,
-        0.0,
+        1.0,
         0.0,
         0.9456521739130435,
         0.4,
@@ -29845,7 +29845,7 @@
         0.0,
         0.0,
         0.0,
-        0.0,
+        1.0,
         0.0,
         0.0,
         1.0,
@@ -29896,7 +29896,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
         1.0,
         1.0,
         1.0,
@@ -29933,7 +29933,7 @@
         0.0,
         1.0,
         1.0,
-        0.0,
+        0.6376811594202898,
         1.0,
         1.0,
         0.0,
@@ -29948,7 +29948,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
         1.0,
         0.0,
         0.7619047619047619,
@@ -29958,7 +29958,7 @@
         0.0,
         1.0,
         0.0,
-        0.0,
+        1.0,
         1.0,
         0.9908536585365854,
         0.0,
