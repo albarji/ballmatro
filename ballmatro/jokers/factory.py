@@ -10,6 +10,9 @@ from ballmatro.jokers.planets import BarrenPluto, BarrenMercury, BarrenUranus, B
 from ballmatro.jokers.rankboosters import DerankedTwo, DerankedThree, DerankedFour, DerankedFive, DerankedSix, DerankedSeven, DerankedEight, DerankedNine, DerankedTen, DerankedJack, DerankedQueen, DerankedKing, DerankedAce
 from ballmatro.jokers.rankboosters import EmpoweredTwo, EmpoweredThree, EmpoweredFour, EmpoweredFive, EmpoweredSix, EmpoweredSeven, EmpoweredEight, EmpoweredNine, EmpoweredTen, EmpoweredJack, EmpoweredQueen, EmpoweredKing, EmpoweredAce
 from ballmatro.jokers.rankboosters import EvenSteven, Oddity, Fibonacci, Populism, Monarchy, RoyalCourt
+from ballmatro.jokers.suitboosters import DesuitedClub, DesuitedDiamond, DesuitedSpade, DesuitedHeart
+from ballmatro.jokers.suitboosters import EmpoweredClub, EmpoweredDiamond, EmpoweredSpade, EmpoweredHeart
+from ballmatro.jokers.suitboosters import RedEmpire, BlackEmpire
 
 JOKERS = [
     BlankJoker,         # 000
@@ -89,7 +92,17 @@ JOKERS = [
     Fibonacci,          # 074
     Populism,           # 075
     Monarchy,           # 076
-    RoyalCourt          # 077
+    RoyalCourt,         # 077
+    DesuitedClub,       # 078
+    DesuitedDiamond,    # 079
+    DesuitedHeart,      # 080
+    DesuitedSpade,      # 081
+    EmpoweredClub,      # 082
+    EmpoweredDiamond,   # 083
+    EmpoweredSpade,     # 084
+    EmpoweredHeart,     # 085
+    RedEmpire,          # 086
+    BlackEmpire,        # 087
 ]
 
 # Dictionary from joker names to their classes
