@@ -4,7 +4,7 @@ import argparse
 import json
 
 from ballmatro.card import Card
-from ballmatro.hands import InvalidPlay, NoPokerHand
+from ballmatro.hands import InvalidPlay
 from ballmatro.score import Score
 from ballmatro.optimizer import brute_force_optimize
 
