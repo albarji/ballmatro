@@ -143,6 +143,7 @@ BaLLMatro datasets are available through [Hugging Face datasets](https://hugging
 |4|All inputs contain 1-8 cards. All poker hands are possible.|Brute-force search (`O(8!)`)|
 |5|All inputs contain 1-8 cards. All poker hands are possible. Each hand may include a joker from a pool of 10.|Unknown|
 |6|All inputs contain 1-8 cards. All poker hands are possible. Each hand may include up to 2 jokers from a pool of 37.|Unknown|
+|7|All inputs contain 1-9 cards. All poker hands are possible. Each hand includes from 1 to 3 from a pool of 110.|Unknown|
 
 All levels are provided as two folds, a train and a test fold. A fair use of this dataset involves using the test folds only for testing the LLM peformance, which means:
 * Not using test data to fine-tune the model in any way.
