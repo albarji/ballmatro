@@ -18,25 +18,25 @@ class DesuitedJoker(Joker):
 class DesuitedClub(DesuitedJoker):
     """A joker that changes the scoring of a club card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Desuited Club"
-    description = "Card with club suit give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with club suit give 1 chip and 0 multiplier, ignoring modifiers"
     target_suit = "♣"
 
 class DesuitedDiamond(DesuitedJoker):
     """A joker that changes the scoring of a diamond card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Desuited Diamond"
-    description = "Card with diamond suit give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with diamond suit give 1 chip and 0 multiplier, ignoring modifiers"
     target_suit = "♦"
 
 class DesuitedSpade(DesuitedJoker):
     """A joker that changes the scoring of a spade card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Desuited Spade"
-    description = "Card with spade suit give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with spade suit give 1 chip and 0 multiplier, ignoring modifiers"
     target_suit = "♠"
 
 class DesuitedHeart(DesuitedJoker):
     """A joker that changes the scoring of a heart card to 1 chip and 0 multiplier, ignoring possible modifiers."""
     name = "Desuited Heart"
-    description = "Card with heart suit give 1 chip and 0 multiplier, ignoring modifiers"
+    description = "Cards with heart suit give 1 chip and 0 multiplier, ignoring modifiers"
     target_suit = "♥"
 
 class PowerSuitJoker(Joker):
