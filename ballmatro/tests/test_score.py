@@ -80,6 +80,13 @@ def test_score_card_mult():
     chips, multiplier = score._score_card(card, 0, 1)
     assert (chips, multiplier) == (10, 5)
 
+def test_score_fullhouse():
+    available = [Card('6♥x'), Card('4♦x'), Card('6♣+'), Card('K♠+'), Card('A♠+'), Card('Q♠'), Card('Q♠+'), Card('Q♥x')]
+    played = [Card('Q♠'), Card('Q♠+'), Card('Q♥x'), Card('6♥x'), Card('6♣+')]
+    assert Score(input=available, played=played).score == 1704
+    played = [Card('6♥x'), Card('6♣+'), Card('Q♠'), Card('Q♠+'), Card('Q♥x')]
+    assert Score(input=available, played=played).score == 1704
+
 def test_score_string_input():
     """Test Score with string inputs for available and played cards."""
     available = "[2♥,3♦,A♠]"

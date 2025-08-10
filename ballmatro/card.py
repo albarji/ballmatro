@@ -85,6 +85,16 @@ class Card:
         """Return a string representation of the card"""
         return self.txt
 
+    def __eq__(self, value):
+        if not isinstance(value, Card):
+            return NotImplemented
+        return self.txt == value.txt
+
+    def __lt__(self, value):
+        if not isinstance(value, Card):
+            return NotImplemented
+        return self.txt < value.txt
+
 def parse_card_list(txt: str) -> List[Card]:
     """Transforms a list of cards in text form into a list of Card objects.
 

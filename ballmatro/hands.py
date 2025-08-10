@@ -65,7 +65,7 @@ class FullHouse(PokerHand):
     @classmethod
     def check_specific(cls, hand: List[Card]) -> bool:
         """Check the hand for a Full House"""
-        return list(Counter([card.rank for card in hand]).values()) == [3, 2]
+        return set(Counter([card.rank for card in hand]).values()) == {3, 2}
 
 @dataclass
 class Flush(PokerHand):
@@ -121,7 +121,7 @@ class TwoPair(PokerHand):
     @classmethod
     def check_specific(cls, hand: List[Card]) -> bool:
         """Check the hand for Two Pair"""
-        return list(Counter([card.rank for card in hand]).values()) == [2, 2]
+        return set(Counter([card.rank for card in hand]).values()) == {2, 2}
 
 @dataclass
 class Pair(PokerHand):

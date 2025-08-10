@@ -56,10 +56,19 @@ test_data = [
     (
         [Card("🂿 Banned Red: Played cards of red suit (♥, ♦) will be ignored in poker hand determination and scoring"), Card('2♥'), Card('3♥'), Card('4♥')],
         Score(input=[Card("🂿 Banned Red: Played cards of red suit (♥, ♦) will be ignored in poker hand determination and scoring"), Card('2♥'), Card('3♥'), Card('4♥')], played=[])
+    ),
+    (
+        [Card('6♥x'), Card('4♦x'), Card('6♣+'), Card('K♠+'), Card('A♠+'), Card('Q♠'), Card('Q♠+'), Card('Q♥x')],
+        Score(input=[Card('6♥x'), Card('4♦x'), Card('6♣+'), Card('K♠+'), Card('A♠+'), Card('Q♠'), Card('Q♠+'), Card('Q♥x')], played=[Card('Q♠'), Card('Q♠+'), Card('Q♥x'), Card('6♥x'), Card('6♣+')])
     )
 ]
 
 @pytest.mark.parametrize("cards, expected_score_info", test_data)
 def test_brute_force_optimize(cards, expected_score_info):
     """The brute force optimizer can find the best hand for a number of cards"""
-    assert brute_force_optimize(cards) == expected_score_info
+    opt = brute_force_optimize(cards)
+    assert opt.score == expected_score_info.score
+    assert opt.chips == expected_score_info.chips
+    assert opt.multiplier == expected_score_info.multiplier
+    assert sorted(opt.input) == sorted(expected_score_info.input)
+    assert sorted(opt.played) == sorted(expected_score_info.played)
