@@ -81,10 +81,13 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str, max_new_t
         result = generation_pipeline(messages)[0]["generated_text"][-1]["content"]
         # If thinking model but chain of thought is unfinished, continue generation forcing final response
         if _is_thinking_model(model_name) and not _thinking_finished(result):
-            LOGGER.warning(f"Model {model_name} did not finish thinking. Forcing generation to end.")
-            messages.append({"role": "assistant", "content": result + "\n" + _thinking_model_finisher(model_name)})
-            result = generation_pipeline(messages)[0]["generated_text"][-1]["content"]
-        # result = _generate_response(model, tokenizer, system_prompt, data["input"], max_new_tokens)
+            try:
+                LOGGER.warning(f"Model {model_name} did not finish thinking. Forcing generation to end.")
+                messages.append({"role": "assistant", "content": result + "\n" + _thinking_model_finisher(model_name)})
+                result = generation_pipeline(messages)[0]["generated_text"][-1]["content"]
+            except Exception as e:
+                LOGGER.error(f"Error occurred while forcing generation to end: {e}")
+                result = ""
         if _is_thinking_model(model_name):
             result = _remove_chain_of_thought(result)
         LOGGER.info(f"({i+1}/{len(dataset)}): {data['input']} -> {result}")
