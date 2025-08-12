@@ -58,9 +58,11 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str, max_new_t
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     # Load alternative chat template if it exists
-    if model_name in ALTERNATIVE_CHAT_TEMPLATES:
-        with open(ALTERNATIVE_CHAT_TEMPLATES[model_name], "r") as f:
-            tokenizer.template = f.read()
+    for registered_template_prefix in ALTERNATIVE_CHAT_TEMPLATES.keys():
+        if model_name.startswith(registered_template_prefix):
+            LOGGER.info(f"Using alternative chat template for model {model_name}")
+            with open(ALTERNATIVE_CHAT_TEMPLATES[registered_template_prefix], "r") as f:
+                tokenizer.template = f.read()
 
     generation_pipeline = pipeline(
         "text-generation",
