@@ -8,6 +8,7 @@ from ballmatro.score import ScoreDataset
 
 from openai import OpenAI
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from trl import SFTConfig, SFTTrainer
 
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
@@ -151,3 +152,45 @@ def markdown_to_sections(markdown: str) -> dict[str, str]:
     if current_title:
         sections[current_title] = "\n".join(current_content)
     return sections
+
+def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, **training_kwargs) -> AutoModelForCausalLM:
+    """Trains a Hugging Face model on a BaLLMatro dataset using Supervised Fine Tuning.
+
+    All parameters in **training_kwargs are passed to the TRL SFTConfig.
+
+    Returns the trained model.
+    """
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        device_map="auto",  # Automatically loads the model into the GPU, if one is available
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    # Adapt data to standard SFTTrainer format
+    formatted_train = dataset.map(
+        lambda example: {
+            "messages": [
+                {"role": "user", "content": example["input"]},  # User message contains the problem input
+                {"role": "assistant", "content": example["output"]}  # Assistant message containts the ideal output
+            ]
+        }
+    )
+
+    training_args = SFTConfig(
+        max_length=256,  # Maximum length (in tokens) of tokenized LLM inputs
+        logging_steps=25,  # Log training results every 25 steps
+        save_strategy="no",
+        **training_kwargs
+    )
+
+    trainer = SFTTrainer(
+        model,  # Base model to fine-tune
+        train_dataset=formatted_train,  # Training dataset
+        args=training_args,  # Previously prepared SFTConfig object
+    )
+    trainer.train()
+
+    model.save_pretrained(output_model_path)
+    tokenizer.save_pretrained(output_model_path)
+
+    return model
