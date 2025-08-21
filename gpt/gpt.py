@@ -4,11 +4,11 @@ import logging
 import os
 import re
 
-from ballmatro.score import ScoreDataset
+from ballmatro.score import Score, ScoreDataset
 
 from openai import OpenAI
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-from trl import SFTConfig, SFTTrainer
+from trl import GRPOConfig, GRPOTrainer, SFTConfig, SFTTrainer
 
 
 logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
@@ -188,6 +188,64 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
         train_dataset=formatted_train,  # Training dataset
         args=training_args,  # Previously prepared SFTConfig object
     )
+    trainer.train()
+
+    model.save_pretrained(output_model_path)
+    tokenizer.save_pretrained(output_model_path)
+
+    return model
+
+def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, **training_kwargs) -> AutoModelForCausalLM:
+    """Trains a Hugging Face model on a BaLLMatro dataset using Group Relative Policy Optimization.
+
+    All parameters in **training_kwargs are passed to the TRL GRPOConfig.
+
+    Returns the trained model.
+    """
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        device_map="auto",  # Automatically loads the model into the GPU, if one is available
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    # Adapt data to standard GRPOTrainer format
+    system_prompt = build_system_prompt()
+    formatted_train = dataset.map(
+        lambda example: {
+            "prompt": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": example["input"]}
+            ]
+        }
+    )
+
+    # Reward function
+    def ballmatro_reward(prompts, completions, score, **kwargs):
+        """Calculate the reward for each prompt-completion pair."""
+        return [
+            Score(prompt[0]["content"], _remove_chain_of_thought(completion[0]["content"])).score / s
+            for prompt, completion, s in zip(prompts, completions, score)
+        ]
+
+    training_args = GRPOConfig(
+        beta=0,  # Do not include a Kullback-Leibler divergence to reference model penalty. This way we reduce memory usage and promote exploration
+        logging_steps=25,  # Show logs every 25 steps
+        log_completions=True,  # Show sample completions in log
+        num_completions_to_print=10,  # Completions to sample on logging
+        max_completion_length=256,  # Generation completions of 256 tokens at most
+        num_train_epochs=5,  # Iterations over the training data
+        learning_rate=1e-5,  # Higher learning rate than default
+        save_strategy="no",
+        **training_kwargs
+    )
+
+    trainer = GRPOTrainer(
+        model=model,  # Base model to fine-tune
+        reward_funcs=ballmatro_reward,  # Reward functions
+        train_dataset=formatted_train,  # Training dataset
+        args=training_args,  # GPROConfig object prepared above
+    )
+
     trainer.train()
 
     model.save_pretrained(output_model_path)
