@@ -17,12 +17,12 @@ LOGGER = logging.getLogger(__name__)
 README_PATH = "README.md"
 
 THINKING_MODELS_FINISHERS = {
-    "Qwen/Qwen3": "</think>",
-    "openai/gpt-oss": "assistantfinal"
+    "Qwen3": "</think>",
+    "gpt-oss": "assistantfinal"
 }
 
 ALTERNATIVE_CHAT_TEMPLATES = {
-    "Qwen/Qwen3": "gpt/chat_templates/qwen3",
+    "Qwen3": "gpt/chat_templates/qwen3",
 }
 
 def gpt_attempt_ballmatro_dataset(dataset: list[dict], model: str = "gpt-4o") -> list[str]:
@@ -60,7 +60,7 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str, max_new_t
 
     # Load alternative chat template if it exists
     for registered_template_prefix in ALTERNATIVE_CHAT_TEMPLATES.keys():
-        if model_name.startswith(registered_template_prefix):
+        if registered_template_prefix in model_name:
             LOGGER.info(f"Using alternative chat template for model {model_name}")
             with open(ALTERNATIVE_CHAT_TEMPLATES[registered_template_prefix], "r") as f:
                 tokenizer.template = f.read()
@@ -98,14 +98,14 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str, max_new_t
 
 def _is_thinking_model(model_name: str) -> bool:
     """Tries to identify by its name if a Hugging Face model is a thinking model. Returns False for unknown models"""
-    return any(model_name.startswith(prefix) for prefix in THINKING_MODELS_FINISHERS.keys())
+    return any(prefix in model_name for prefix in THINKING_MODELS_FINISHERS.keys())
 
 def _thinking_model_finisher(model_name: str) -> str:
     """Return the string that marks the end of a chain of thought for the given model.
 
     Return empty string if the model is not a known thinking model"""
     for key, value in THINKING_MODELS_FINISHERS.items():
-        if model_name.startswith(key):
+        if key in model_name:
             return value
     return ""
 
@@ -232,7 +232,7 @@ def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model
         logging_steps=25,  # Show logs every 25 steps
         log_completions=True,  # Show sample completions in log
         num_completions_to_print=10,  # Completions to sample on logging
-        max_completion_length=256,  # Generation completions of 256 tokens at most
+        max_completion_length=16384,  # Generation completions of 16384 tokens at most (including chain of thought)
         num_train_epochs=5,  # Iterations over the training data
         learning_rate=1e-5,  # Higher learning rate than default
         save_strategy="no",
