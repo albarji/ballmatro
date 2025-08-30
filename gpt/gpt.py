@@ -176,12 +176,7 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
         }
     )
 
-    training_args = SFTConfig(
-        max_length=256,  # Maximum length (in tokens) of tokenized LLM inputs
-        logging_steps=25,  # Log training results every 25 steps
-        save_strategy="no",
-        **training_kwargs
-    )
+    training_args = SFTConfig(**training_kwargs)
 
     trainer = SFTTrainer(
         model,  # Base model to fine-tune
