@@ -26,6 +26,8 @@ def main(dataset: str, model: str, output: str = None, algorithm: str = None, co
                 lora_kwargs = json.load(f)
         except Exception as e:
             print(f"Error loading LoRA config file {lora_config_file}: {e}")
+    else:
+        lora_kwargs = None
 
     # Download the dataset from the Hugging Face Hub
     ds = load_dataset("albarji/ballmatro", dataset)

@@ -171,6 +171,7 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
     # Apply LoRA if lora_kwargs are provided
     if lora_kwargs:
         lora_cfg = LoraConfig(task_type=TaskType.CAUSAL_LM, **lora_kwargs)
+        LOGGER.info("Apply LoRA adapter to model with parameters %s", lora_cfg)
         model = get_peft_model(model, lora_cfg)
 
     # Adapt data to standard SFTTrainer format
@@ -184,6 +185,7 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
     )
 
     training_args = SFTConfig(**training_kwargs)
+    LOGGER.info("Supervised Fine-Tuning with parameters %s", training_args)
 
     trainer = SFTTrainer(
         model,  # Base model to fine-tune
