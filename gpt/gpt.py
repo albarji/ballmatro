@@ -23,6 +23,7 @@ THINKING_MODELS_FINISHERS = {
 }
 
 ALTERNATIVE_CHAT_TEMPLATES = {
+    "Qwen2.5": "gpt/chat_templates/qwen2.5",
     "Qwen3": "gpt/chat_templates/qwen3",
 }
 
@@ -58,13 +59,7 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str, max_new_t
         device_map="auto",  # Automatically loads the model into the GPU, if one is available
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-
-    # Load alternative chat template if it exists
-    for registered_template_prefix in ALTERNATIVE_CHAT_TEMPLATES.keys():
-        if registered_template_prefix in model_name:
-            LOGGER.info(f"Using alternative chat template for model {model_name}")
-            with open(ALTERNATIVE_CHAT_TEMPLATES[registered_template_prefix], "r") as f:
-                tokenizer.template = f.read()
+    tokenizer = _patch_chat_template(tokenizer)
 
     generation_pipeline = pipeline(
         "text-generation",
@@ -124,6 +119,19 @@ def _remove_chain_of_thought(result: str) -> str:
     result = re.sub(r"^analysis.*?assistantfinal", "", result, flags=re.DOTALL).strip()
     return result
 
+def _patch_chat_template(tokenizer: AutoTokenizer) -> AutoTokenizer:
+    """Patch the chat template for the tokenizer, if an alternative chat template has been declared.
+
+    Returns the update Tokenizer.
+    """
+    # Load the chat template
+    for registered_template_prefix in ALTERNATIVE_CHAT_TEMPLATES.keys():
+        if registered_template_prefix in tokenizer.name_or_path:
+            LOGGER.info(f"Using alternative chat template for model {tokenizer.name_or_path}")
+            with open(ALTERNATIVE_CHAT_TEMPLATES[registered_template_prefix], "r") as f:
+                tokenizer.chat_template = f.read()
+    return tokenizer
+
 def build_system_prompt() -> str:
     """Build the system prompt for the GPT model, making use of the README file."""
     # Read contents of the README file
@@ -167,6 +175,7 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
         device_map="auto",  # Automatically loads the model into the GPU, if one is available
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = _patch_chat_template(tokenizer)
 
     # Apply LoRA if lora_kwargs are provided
     if lora_kwargs:
@@ -175,9 +184,11 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
         model = get_peft_model(model, lora_cfg)
 
     # Adapt data to standard SFTTrainer format
+    system_prompt = build_system_prompt()
     formatted_train = dataset.map(
         lambda example: {
             "messages": [
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": example["input"]},  # User message contains the problem input
                 {"role": "assistant", "content": example["output"]}  # Assistant message containts the ideal output
             ]
@@ -191,6 +202,7 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
         model,  # Base model to fine-tune
         train_dataset=formatted_train,  # Training dataset
         args=training_args,  # Previously prepared SFTConfig object
+        processing_class=tokenizer,
     )
     trainer.train()
 
