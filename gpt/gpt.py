@@ -211,7 +211,7 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
 
     return model
 
-def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, **training_kwargs) -> AutoModelForCausalLM:
+def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, training_kwargs: dict, lora_kwargs: dict = None) -> AutoModelForCausalLM:
     """Trains a Hugging Face model on a BaLLMatro dataset using Group Relative Policy Optimization.
 
     All parameters in **training_kwargs are passed to the TRL GRPOConfig.
@@ -223,6 +223,12 @@ def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model
         device_map="auto",  # Automatically loads the model into the GPU, if one is available
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    # Apply LoRA if lora_kwargs are provided
+    if lora_kwargs:
+        lora_cfg = LoraConfig(task_type=TaskType.CAUSAL_LM, **lora_kwargs)
+        LOGGER.info("Apply LoRA adapter to model with parameters %s", lora_cfg)
+        model = get_peft_model(model, lora_cfg)
 
     # Adapt data to standard GRPOTrainer format
     system_prompt = build_system_prompt()
@@ -239,21 +245,12 @@ def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model
     def ballmatro_reward(prompts, completions, score, **kwargs):
         """Calculate the reward for each prompt-completion pair."""
         return [
-            Score(prompt[0]["content"], _remove_chain_of_thought(completion[0]["content"])).score / s
+            Score(prompt[-1]["content"], _remove_chain_of_thought(completion[-1]["content"])).score / s
             for prompt, completion, s in zip(prompts, completions, score)
         ]
 
-    training_args = GRPOConfig(
-        beta=0,  # Do not include a Kullback-Leibler divergence to reference model penalty. This way we reduce memory usage and promote exploration
-        logging_steps=25,  # Show logs every 25 steps
-        log_completions=True,  # Show sample completions in log
-        num_completions_to_print=10,  # Completions to sample on logging
-        max_completion_length=16384,  # Generation completions of 16384 tokens at most (including chain of thought)
-        num_train_epochs=5,  # Iterations over the training data
-        learning_rate=1e-5,  # Higher learning rate than default
-        save_strategy="no",
-        **training_kwargs
-    )
+    training_args = GRPOConfig(**training_kwargs)
+    LOGGER.info("Group Relative Policy Optimization with parameters %s", training_args)
 
     trainer = GRPOTrainer(
         model=model,  # Base model to fine-tune
