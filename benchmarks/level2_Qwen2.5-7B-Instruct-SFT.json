@@ -1,8 +1,8 @@
 {
-    "total_score": 61258,
-    "total_normalized_score": 0.9769157608695652,
-    "invalid_hands": 23,
-    "normalized_invalid_hands": 0.023,
+    "total_score": 63025,
+    "total_normalized_score": 0.999796442687747,
+    "invalid_hands": 0,
+    "normalized_invalid_hands": 0.0,
     "scores": [
         {
             "input": [
@@ -584,12 +584,16 @@
                 "2\u2660+",
                 "A\u2660"
             ],
-            "played": "[2\u2660+] A\u2660]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "2\u2660+"
+            ],
+            "remaining": [
+                "A\u2660"
+            ],
+            "hand": "High Card",
+            "chips": 37,
+            "multiplier": 1,
+            "score": 37
         },
         {
             "input": [
@@ -913,12 +917,16 @@
                 "K\u2660+",
                 "9\u2666"
             ],
-            "played": "[K\u2660+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2660+"
+            ],
+            "remaining": [
+                "9\u2666"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -1548,12 +1556,16 @@
                 "9\u2666+",
                 "A\u2665"
             ],
-            "played": "[9\u2666+] A\u2665]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "9\u2666+"
+            ],
+            "remaining": [
+                "A\u2665"
+            ],
+            "hand": "High Card",
+            "chips": 44,
+            "multiplier": 1,
+            "score": 44
         },
         {
             "input": [
@@ -1736,12 +1748,15 @@
                 "K\u2666x",
                 "K\u2660x"
             ],
-            "played": "[K\u2666x, K\u2660x] K\u2666x, K\u2660x",
+            "played": [
+                "K\u2666x",
+                "K\u2660x"
+            ],
             "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Pair",
+            "chips": 30,
+            "multiplier": 10,
+            "score": 300
         },
         {
             "input": [
@@ -2226,12 +2241,16 @@
                 "Q\u2665+",
                 "2\u2665x"
             ],
-            "played": "[Q\u2665+] 2\u2665x",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "Q\u2665+"
+            ],
+            "remaining": [
+                "2\u2665x"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -3115,14 +3134,14 @@
                 "4\u2666x"
             ],
             "played": [
-                "4\u2666x"
-            ],
-            "remaining": [
                 "K\u2666+"
             ],
+            "remaining": [
+                "4\u2666x"
+            ],
             "hand": "High Card",
-            "chips": 9,
-            "multiplier": 5,
+            "chips": 45,
+            "multiplier": 1,
             "score": 45
         },
         {
@@ -3306,12 +3325,16 @@
                 "4\u2666",
                 "K\u2666+"
             ],
-            "played": "[K\u2666+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2666+"
+            ],
+            "remaining": [
+                "4\u2666"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -3334,12 +3357,16 @@
                 "3\u2666+",
                 "K\u2660+"
             ],
-            "played": "[K\u2660+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2660+"
+            ],
+            "remaining": [
+                "3\u2666+"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -3619,15 +3646,15 @@
                 "J\u2660x"
             ],
             "played": [
-                "J\u2660x"
-            ],
-            "remaining": [
                 "A\u2660x"
             ],
+            "remaining": [
+                "J\u2660x"
+            ],
             "hand": "High Card",
-            "chips": 15,
+            "chips": 16,
             "multiplier": 5,
-            "score": 75
+            "score": 80
         },
         {
             "input": [
@@ -4168,12 +4195,16 @@
                 "K\u2663+",
                 "8\u2665"
             ],
-            "played": "[K\u2663+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2663+"
+            ],
+            "remaining": [
+                "8\u2665"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -4404,12 +4435,16 @@
                 "2\u2660x",
                 "K\u2663+"
             ],
-            "played": "[K\u2663+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2663+"
+            ],
+            "remaining": [
+                "2\u2660x"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -5118,10 +5153,10 @@
                 "K\u2665x"
             ],
             "played": [
-                "J\u2660x"
+                "K\u2665x"
             ],
             "remaining": [
-                "K\u2665x"
+                "J\u2660x"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -5294,10 +5329,10 @@
                 "10\u2666x"
             ],
             "played": [
-                "10\u2666x"
+                "Q\u2665x"
             ],
             "remaining": [
-                "Q\u2665x"
+                "10\u2666x"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -6213,10 +6248,10 @@
                 "K\u2665x"
             ],
             "played": [
-                "J\u2665x"
+                "K\u2665x"
             ],
             "remaining": [
-                "K\u2665x"
+                "J\u2665x"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -6414,12 +6449,16 @@
                 "3\u2663+",
                 "A\u2665"
             ],
-            "played": "[3\u2663+] A\u2665]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "3\u2663+"
+            ],
+            "remaining": [
+                "A\u2665"
+            ],
+            "hand": "High Card",
+            "chips": 38,
+            "multiplier": 1,
+            "score": 38
         },
         {
             "input": [
@@ -6745,12 +6784,16 @@
                 "5\u2663+",
                 "Q\u2660"
             ],
-            "played": "[5\u2663+] Q\u2660]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "5\u2663+"
+            ],
+            "remaining": [
+                "Q\u2660"
+            ],
+            "hand": "High Card",
+            "chips": 40,
+            "multiplier": 1,
+            "score": 40
         },
         {
             "input": [
@@ -7535,12 +7578,16 @@
                 "9\u2660+",
                 "A\u2666"
             ],
-            "played": "[9\u2660+] A\u2666]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "9\u2660+"
+            ],
+            "remaining": [
+                "A\u2666"
+            ],
+            "hand": "High Card",
+            "chips": 44,
+            "multiplier": 1,
+            "score": 44
         },
         {
             "input": [
@@ -8519,12 +8566,16 @@
                 "3\u2665",
                 "K\u2663+"
             ],
-            "played": "[K\u2663+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2663+"
+            ],
+            "remaining": [
+                "3\u2665"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -8690,12 +8741,15 @@
                 "J\u2665x",
                 "J\u2666x"
             ],
-            "played": "[J\u2665x, J\u2666x] J\u2665x and J\u2666x are J\u2665x and J\u2666x respectively. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x. J\u2665x and J\u2666x are both higher scores than J\u2665x and J\u2666x",
+            "played": [
+                "J\u2665x",
+                "J\u2666x"
+            ],
             "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Pair",
+            "chips": 30,
+            "multiplier": 10,
+            "score": 300
         },
         {
             "input": [
@@ -9653,12 +9707,16 @@
                 "4\u2660+",
                 "A\u2663"
             ],
-            "played": "[4\u2660+] A\u2663]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "4\u2660+"
+            ],
+            "remaining": [
+                "A\u2663"
+            ],
+            "hand": "High Card",
+            "chips": 39,
+            "multiplier": 1,
+            "score": 39
         },
         {
             "input": [
@@ -9970,10 +10028,10 @@
                 "10\u2665x"
             ],
             "played": [
-                "10\u2665x"
+                "Q\u2665x"
             ],
             "remaining": [
-                "Q\u2665x"
+                "10\u2665x"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -10177,12 +10235,16 @@
                 "5\u2666",
                 "K\u2663+"
             ],
-            "played": "[K\u2663+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2663+"
+            ],
+            "remaining": [
+                "5\u2666"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -11874,12 +11936,16 @@
                 "4\u2666",
                 "K\u2666+"
             ],
-            "played": "[K\u2666+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2666+"
+            ],
+            "remaining": [
+                "4\u2666"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -12078,12 +12144,16 @@
                 "2\u2666x",
                 "K\u2665+"
             ],
-            "played": "[K\u2665+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2665+"
+            ],
+            "remaining": [
+                "2\u2666x"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -12741,15 +12811,15 @@
                 "4\u2663x"
             ],
             "played": [
-                "4\u2663x"
-            ],
-            "remaining": [
                 "A\u2660+"
             ],
+            "remaining": [
+                "4\u2663x"
+            ],
             "hand": "High Card",
-            "chips": 9,
-            "multiplier": 5,
-            "score": 45
+            "chips": 46,
+            "multiplier": 1,
+            "score": 46
         },
         {
             "input": [
@@ -12837,15 +12907,15 @@
                 "A\u2665+"
             ],
             "played": [
-                "A\u2665+"
-            ],
-            "remaining": [
                 "J\u2660+"
             ],
+            "remaining": [
+                "A\u2665+"
+            ],
             "hand": "High Card",
-            "chips": 46,
+            "chips": 45,
             "multiplier": 1,
-            "score": 46
+            "score": 45
         },
         {
             "input": [
@@ -13362,12 +13432,16 @@
                 "6\u2660",
                 "K\u2663+"
             ],
-            "played": "[K\u2663+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2663+"
+            ],
+            "remaining": [
+                "6\u2660"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -13535,10 +13609,10 @@
                 "Q\u2666"
             ],
             "played": [
-                "Q\u2666"
+                "10\u2663"
             ],
             "remaining": [
-                "10\u2663"
+                "Q\u2666"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -13853,12 +13927,16 @@
                 "4\u2663",
                 "K\u2666+"
             ],
-            "played": "[K\u2666+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2666+"
+            ],
+            "remaining": [
+                "4\u2663"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -14518,12 +14596,15 @@
                 "J\u2663x",
                 "J\u2660x"
             ],
-            "played": "[J\u2663x, J\u2660x] J\u2663x and J\u2660x are both J\u2663x and J\u2660x respectively. They both qualify as J\u2663x and J\u2660x. Since they both qualify as J\u2663x and J\u2660x, they both qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence, the highest scoring hand is J\u2663x and J\u2660x. J\u2663x and J\u2660x qualify as J\u2663x and J\u2660x. Hence",
+            "played": [
+                "J\u2663x",
+                "J\u2660x"
+            ],
             "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "Pair",
+            "chips": 30,
+            "multiplier": 10,
+            "score": 300
         },
         {
             "input": [
@@ -14755,15 +14836,15 @@
                 "6\u2663x"
             ],
             "played": [
-                "6\u2663x"
-            ],
-            "remaining": [
                 "10\u2663+"
             ],
+            "remaining": [
+                "6\u2663x"
+            ],
             "hand": "High Card",
-            "chips": 11,
-            "multiplier": 5,
-            "score": 55
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -15274,12 +15355,16 @@
                 "2\u2663+",
                 "K\u2660+"
             ],
-            "played": "[K\u2660+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2660+"
+            ],
+            "remaining": [
+                "2\u2663+"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -15413,12 +15498,16 @@
                 "6\u2660",
                 "K\u2660+"
             ],
-            "played": "[K\u2660+]]",
-            "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "played": [
+                "K\u2660+"
+            ],
+            "remaining": [
+                "6\u2660"
+            ],
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -15854,7 +15943,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -15875,7 +15963,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -15915,7 +16002,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -15927,7 +16013,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -15958,7 +16043,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16026,9 +16110,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16046,7 +16128,6 @@
         1.0,
         1.0,
         1.0,
-        0.9375,
         1.0,
         1.0,
         1.0,
@@ -16081,7 +16162,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16096,7 +16176,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16223,7 +16302,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16244,7 +16322,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16294,7 +16371,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16356,7 +16432,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16367,7 +16442,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16428,7 +16502,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16461,7 +16534,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16568,7 +16640,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16581,7 +16652,31 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
         1.0,
         1.0,
         1.0,
@@ -16662,7 +16757,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16693,7 +16787,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16735,7 +16828,6 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
@@ -16747,6 +16839,7 @@
         1.0,
         1.0,
         1.0,
+        0.8181818181818182,
         1.0,
         1.0,
         1.0,
@@ -16783,16 +16876,12 @@
         1.0,
         1.0,
         1.0,
-        0.0,
         1.0,
         1.0,
         1.0,
         1.0,
         1.0,
         1.0,
-        1.0,
-        1.0,
-        0.0,
         1.0,
         1.0,
         1.0,

@@ -1,8 +1,8 @@
 {
-    "total_score": 2793,
-    "total_normalized_score": 0.9871794871794872,
-    "invalid_hands": 1,
-    "normalized_invalid_hands": 0.01282051282051282,
+    "total_score": 2838,
+    "total_normalized_score": 1.0,
+    "invalid_hands": 0,
+    "normalized_invalid_hands": 0.0,
     "scores": [
         {
             "input": [
@@ -957,12 +957,14 @@
             "input": [
                 "K\u2660+"
             ],
-            "played": "[K\u2660+][K\u2660+]",
+            "played": [
+                "K\u2660+"
+            ],
             "remaining": null,
-            "hand": "Invalid Play",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -1091,7 +1093,7 @@
         1.0,
         1.0,
         1.0,
-        0.0,
+        1.0,
         1.0,
         1.0,
         1.0,
