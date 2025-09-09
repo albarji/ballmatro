@@ -1,8 +1,8 @@
 {
-    "total_score": 119135,
-    "total_normalized_score": 0.9891682811584819,
-    "invalid_hands": 3,
-    "normalized_invalid_hands": 0.003,
+    "total_score": 117978,
+    "total_normalized_score": 0.9782859326362385,
+    "invalid_hands": 9,
+    "normalized_invalid_hands": 0.009,
     "scores": [
         {
             "input": [
@@ -212,17 +212,17 @@
                 "A\u2663x"
             ],
             "played": [
+                "2\u2660x",
+                "9\u2665x",
                 "A\u2663x"
             ],
             "remaining": [
-                "2\u2660x",
-                "8\u2665",
-                "9\u2665x"
+                "8\u2665"
             ],
-            "hand": "High Card",
-            "chips": 16,
-            "multiplier": 5,
-            "score": 80
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -233,16 +233,15 @@
             ],
             "played": [
                 "10\u2665",
-                "10\u2663+"
-            ],
-            "remaining": [
                 "7\u2663+",
+                "10\u2663+",
                 "7\u2660"
             ],
-            "hand": "Pair",
-            "chips": 60,
+            "remaining": null,
+            "hand": "Two Pair",
+            "chips": 114,
             "multiplier": 2,
-            "score": 120
+            "score": 228
         },
         {
             "input": [
@@ -592,17 +591,17 @@
                 "4\u2665x"
             ],
             "played": [
+                "2\u2666+"
+            ],
+            "remaining": [
+                "3\u2665+",
                 "4\u2666",
                 "4\u2665x"
             ],
-            "remaining": [
-                "2\u2666+",
-                "3\u2665+"
-            ],
-            "hand": "Pair",
-            "chips": 18,
-            "multiplier": 6,
-            "score": 108
+            "hand": "High Card",
+            "chips": 37,
+            "multiplier": 1,
+            "score": 37
         },
         {
             "input": [
@@ -952,17 +951,17 @@
                 "7\u2666x"
             ],
             "played": [
+                "7\u2665",
                 "7\u2666x"
             ],
             "remaining": [
                 "2\u2660x",
-                "A\u2666",
-                "7\u2665"
+                "A\u2666"
             ],
-            "hand": "High Card",
-            "chips": 12,
-            "multiplier": 5,
-            "score": 60
+            "hand": "Pair",
+            "chips": 24,
+            "multiplier": 6,
+            "score": 144
         },
         {
             "input": [
@@ -1172,17 +1171,17 @@
                 "9\u2663+"
             ],
             "played": [
-                "8\u2660x"
+                "9\u2663+"
             ],
             "remaining": [
                 "K\u2666",
                 "7\u2660x",
-                "9\u2663+"
+                "8\u2660x"
             ],
             "hand": "High Card",
-            "chips": 13,
-            "multiplier": 5,
-            "score": 65
+            "chips": 44,
+            "multiplier": 1,
+            "score": 44
         },
         {
             "input": [
@@ -1632,17 +1631,17 @@
                 "6\u2660"
             ],
             "played": [
-                "A\u2660"
+                "7\u2666x"
             ],
             "remaining": [
                 "3\u2663x",
-                "7\u2666x",
+                "A\u2660",
                 "6\u2660"
             ],
             "hand": "High Card",
-            "chips": 16,
-            "multiplier": 1,
-            "score": 16
+            "chips": 12,
+            "multiplier": 5,
+            "score": 60
         },
         {
             "input": [
@@ -2032,17 +2031,17 @@
                 "A\u2660+"
             ],
             "played": [
+                "Q\u2660",
                 "Q\u2663x"
             ],
             "remaining": [
-                "Q\u2660",
                 "5\u2666x",
                 "A\u2660+"
             ],
-            "hand": "High Card",
-            "chips": 15,
-            "multiplier": 5,
-            "score": 75
+            "hand": "Pair",
+            "chips": 30,
+            "multiplier": 6,
+            "score": 180
         },
         {
             "input": [
@@ -2211,17 +2210,17 @@
                 "2\u2663"
             ],
             "played": [
-                "9\u2665+"
+                "8\u2665x"
             ],
             "remaining": [
-                "8\u2665x",
+                "9\u2665+",
                 "A\u2665",
                 "2\u2663"
             ],
             "hand": "High Card",
-            "chips": 44,
-            "multiplier": 1,
-            "score": 44
+            "chips": 13,
+            "multiplier": 5,
+            "score": 65
         },
         {
             "input": [
@@ -2271,17 +2270,17 @@
                 "6\u2663+"
             ],
             "played": [
-                "5\u2665x",
-                "5\u2665"
+                "5\u2665x"
             ],
             "remaining": [
                 "J\u2666",
+                "5\u2665",
                 "6\u2663+"
             ],
-            "hand": "Pair",
-            "chips": 20,
-            "multiplier": 6,
-            "score": 120
+            "hand": "High Card",
+            "chips": 10,
+            "multiplier": 5,
+            "score": 50
         },
         {
             "input": [
@@ -2469,17 +2468,16 @@
                 "4\u2663"
             ],
             "played": [
-                "5\u2665x",
-                "5\u2660"
-            ],
-            "remaining": [
                 "4\u2660+",
+                "5\u2665x",
+                "5\u2660",
                 "4\u2663"
             ],
-            "hand": "Pair",
-            "chips": 20,
+            "remaining": null,
+            "hand": "Two Pair",
+            "chips": 68,
             "multiplier": 6,
-            "score": 120
+            "score": 408
         },
         {
             "input": [
@@ -2529,17 +2527,17 @@
                 "10\u2660"
             ],
             "played": [
-                "5\u2665x"
+                "J\u2665+"
             ],
             "remaining": [
-                "J\u2665+",
+                "5\u2665x",
                 "7\u2666",
                 "10\u2660"
             ],
             "hand": "High Card",
-            "chips": 10,
-            "multiplier": 5,
-            "score": 50
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -3389,17 +3387,16 @@
                 "K\u2660+"
             ],
             "played": [
-                "7\u2660x"
-            ],
-            "remaining": [
+                "7\u2660x",
                 "Q\u2663",
                 "10\u2665+",
                 "K\u2660+"
             ],
-            "hand": "High Card",
-            "chips": 12,
-            "multiplier": 5,
-            "score": 60
+            "remaining": null,
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -3489,17 +3486,17 @@
                 "A\u2663+"
             ],
             "played": [
-                "8\u2660+"
+                "A\u2663+"
             ],
             "remaining": [
                 "3\u2663",
-                "2\u2663+",
-                "A\u2663+"
+                "8\u2660+",
+                "2\u2663+"
             ],
             "hand": "High Card",
-            "chips": 43,
+            "chips": 46,
             "multiplier": 1,
-            "score": 43
+            "score": 46
         },
         {
             "input": [
@@ -3829,12 +3826,12 @@
                 "K\u2666+"
             ],
             "played": [
-                "K\u2666+"
+                "J\u2666+"
             ],
             "remaining": [
                 "3\u2665+",
-                "J\u2666+",
-                "8\u2660+"
+                "8\u2660+",
+                "K\u2666+"
             ],
             "hand": "High Card",
             "chips": 45,
@@ -4069,12 +4066,12 @@
                 "Q\u2663+"
             ],
             "played": [
-                "J\u2666+"
+                "Q\u2663+"
             ],
             "remaining": [
+                "J\u2666+",
                 "5\u2666",
-                "3\u2663",
-                "Q\u2663+"
+                "3\u2663"
             ],
             "hand": "High Card",
             "chips": 45,
@@ -4710,16 +4707,16 @@
             ],
             "played": [
                 "Q\u2660",
+                "K\u2666x",
                 "Q\u2663+"
             ],
             "remaining": [
-                "K\u2666x",
                 "7\u2660x"
             ],
-            "hand": "Pair",
-            "chips": 60,
-            "multiplier": 2,
-            "score": 120
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -4729,17 +4726,16 @@
                 "2\u2660"
             ],
             "played": [
+                "J\u2660",
+                "9\u2660+",
                 "2\u2660+",
                 "2\u2660"
             ],
-            "remaining": [
-                "J\u2660",
-                "9\u2660+"
-            ],
-            "hand": "Pair",
-            "chips": 44,
-            "multiplier": 2,
-            "score": 88
+            "remaining": null,
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -4888,17 +4884,17 @@
                 "7\u2660x"
             ],
             "played": [
-                "J\u2665+"
-            ],
-            "remaining": [
-                "4\u2660+",
-                "2\u2666+",
                 "7\u2660x"
             ],
+            "remaining": [
+                "J\u2665+",
+                "4\u2660+",
+                "2\u2666+"
+            ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
-            "score": 45
+            "chips": 12,
+            "multiplier": 5,
+            "score": 60
         },
         {
             "input": [
@@ -5247,17 +5243,17 @@
                 "2\u2665+"
             ],
             "played": [
-                "3\u2663x"
+                "2\u2665+"
             ],
             "remaining": [
                 "K\u2663",
-                "J\u2666",
-                "2\u2665+"
+                "3\u2663x",
+                "J\u2666"
             ],
             "hand": "High Card",
-            "chips": 8,
-            "multiplier": 5,
-            "score": 40
+            "chips": 37,
+            "multiplier": 1,
+            "score": 37
         },
         {
             "input": [
@@ -5267,17 +5263,17 @@
                 "K\u2666x"
             ],
             "played": [
-                "6\u2663+"
-            ],
-            "remaining": [
-                "5\u2666",
-                "9\u2660",
                 "K\u2666x"
             ],
+            "remaining": [
+                "6\u2663+",
+                "5\u2666",
+                "9\u2660"
+            ],
             "hand": "High Card",
-            "chips": 41,
-            "multiplier": 1,
-            "score": 41
+            "chips": 15,
+            "multiplier": 5,
+            "score": 75
         },
         {
             "input": [
@@ -5287,17 +5283,17 @@
                 "K\u2663+"
             ],
             "played": [
-                "Q\u2663+"
+                "2\u2660x"
             ],
             "remaining": [
-                "2\u2660x",
                 "7\u2666+",
+                "Q\u2663+",
                 "K\u2663+"
             ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
-            "score": 45
+            "chips": 7,
+            "multiplier": 5,
+            "score": 35
         },
         {
             "input": [
@@ -5586,18 +5582,17 @@
                 "6\u2663+",
                 "8\u2663+"
             ],
-            "played": [
-                "J\u2660+"
-            ],
+            "played": [],
             "remaining": [
+                "J\u2660+",
                 "4\u2665+",
                 "6\u2663+",
                 "8\u2663+"
             ],
-            "hand": "High Card",
-            "chips": 45,
+            "hand": "Empty Hand",
+            "chips": 1,
             "multiplier": 1,
-            "score": 45
+            "score": 1
         },
         {
             "input": [
@@ -5987,17 +5982,17 @@
                 "K\u2665"
             ],
             "played": [
-                "4\u2660+",
                 "4\u2660x"
             ],
             "remaining": [
                 "5\u2666+",
+                "4\u2660+",
                 "K\u2665"
             ],
-            "hand": "Pair",
-            "chips": 48,
-            "multiplier": 6,
-            "score": 288
+            "hand": "High Card",
+            "chips": 9,
+            "multiplier": 5,
+            "score": 45
         },
         {
             "input": [
@@ -6627,17 +6622,16 @@
                 "5\u2666x"
             ],
             "played": [
-                "Q\u2660x"
-            ],
-            "remaining": [
+                "Q\u2660x",
                 "9\u2663x",
                 "K\u2665x",
                 "5\u2666x"
             ],
-            "hand": "High Card",
-            "chips": 15,
-            "multiplier": 5,
-            "score": 75
+            "remaining": null,
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -6868,15 +6862,16 @@
             ],
             "played": [
                 "K\u2666+",
+                "K\u2665x"
+            ],
+            "remaining": [
                 "7\u2666x",
-                "K\u2665x",
                 "7\u2660"
             ],
-            "remaining": null,
-            "hand": "Two Pair",
-            "chips": 84,
-            "multiplier": 10,
-            "score": 840
+            "hand": "Pair",
+            "chips": 60,
+            "multiplier": 6,
+            "score": 360
         },
         {
             "input": [
@@ -7306,17 +7301,17 @@
                 "8\u2665+"
             ],
             "played": [
-                "6\u2665x"
+                "7\u2663x"
             ],
             "remaining": [
                 "A\u2665+",
-                "7\u2663x",
+                "6\u2665x",
                 "8\u2665+"
             ],
             "hand": "High Card",
-            "chips": 11,
+            "chips": 12,
             "multiplier": 5,
-            "score": 55
+            "score": 60
         },
         {
             "input": [
@@ -7506,17 +7501,17 @@
                 "3\u2660x"
             ],
             "played": [
-                "A\u2665+"
+                "3\u2660x"
             ],
             "remaining": [
                 "8\u2666+",
-                "2\u2665x",
-                "3\u2660x"
+                "A\u2665+",
+                "2\u2665x"
             ],
             "hand": "High Card",
-            "chips": 46,
-            "multiplier": 1,
-            "score": 46
+            "chips": 8,
+            "multiplier": 5,
+            "score": 40
         },
         {
             "input": [
@@ -7547,15 +7542,16 @@
             ],
             "played": [
                 "Q\u2666+",
+                "Q\u2666x"
+            ],
+            "remaining": [
                 "A\u2666",
-                "Q\u2666x",
                 "A\u2663"
             ],
-            "remaining": null,
-            "hand": "Two Pair",
-            "chips": 92,
+            "hand": "Pair",
+            "chips": 60,
             "multiplier": 6,
-            "score": 552
+            "score": 360
         },
         {
             "input": [
@@ -7965,17 +7961,17 @@
                 "K\u2660x"
             ],
             "played": [
-                "J\u2665x"
-            ],
-            "remaining": [
                 "K\u2666",
-                "5\u2660x",
                 "K\u2660x"
             ],
-            "hand": "High Card",
-            "chips": 15,
-            "multiplier": 5,
-            "score": 75
+            "remaining": [
+                "J\u2665x",
+                "5\u2660x"
+            ],
+            "hand": "Pair",
+            "chips": 30,
+            "multiplier": 6,
+            "score": 180
         },
         {
             "input": [
@@ -8265,17 +8261,17 @@
                 "10\u2665+"
             ],
             "played": [
-                "J\u2660+"
+                "9\u2663x"
             ],
             "remaining": [
-                "9\u2663x",
+                "J\u2660+",
                 "Q\u2666",
                 "10\u2665+"
             ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
-            "score": 45
+            "chips": 14,
+            "multiplier": 5,
+            "score": 70
         },
         {
             "input": [
@@ -8705,17 +8701,17 @@
                 "Q\u2666x"
             ],
             "played": [
-                "10\u2665+"
-            ],
-            "remaining": [
-                "3\u2665x",
-                "J\u2665+",
                 "Q\u2666x"
             ],
+            "remaining": [
+                "10\u2665+",
+                "3\u2665x",
+                "J\u2665+"
+            ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
-            "score": 45
+            "chips": 15,
+            "multiplier": 5,
+            "score": 75
         },
         {
             "input": [
@@ -9145,17 +9141,17 @@
                 "7\u2660+"
             ],
             "played": [
-                "K\u2663+"
+                "9\u2665x"
             ],
             "remaining": [
-                "9\u2665x",
                 "6\u2665+",
+                "K\u2663+",
                 "7\u2660+"
             ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
-            "score": 45
+            "chips": 14,
+            "multiplier": 5,
+            "score": 70
         },
         {
             "input": [
@@ -9865,17 +9861,17 @@
                 "7\u2663+"
             ],
             "played": [
-                "2\u2666+",
-                "10\u2665x"
-            ],
-            "remaining": [
                 "7\u2666",
                 "7\u2663+"
             ],
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": [
+                "2\u2666+",
+                "10\u2665x"
+            ],
+            "hand": "Pair",
+            "chips": 54,
+            "multiplier": 2,
+            "score": 108
         },
         {
             "input": [
@@ -10425,17 +10421,17 @@
                 "3\u2663"
             ],
             "played": [
-                "3\u2666",
-                "3\u2663"
+                "2\u2660+"
             ],
             "remaining": [
                 "9\u2665",
-                "2\u2660+"
+                "3\u2666",
+                "3\u2663"
             ],
-            "hand": "Pair",
-            "chips": 16,
-            "multiplier": 2,
-            "score": 32
+            "hand": "High Card",
+            "chips": 37,
+            "multiplier": 1,
+            "score": 37
         },
         {
             "input": [
@@ -10924,18 +10920,17 @@
                 "7\u2663",
                 "9\u2660"
             ],
-            "played": [
-                "10\u2666"
-            ],
+            "played": [],
             "remaining": [
+                "10\u2666",
                 "J\u2663",
                 "7\u2663",
                 "9\u2660"
             ],
-            "hand": "High Card",
-            "chips": 15,
+            "hand": "Empty Hand",
+            "chips": 1,
             "multiplier": 1,
-            "score": 15
+            "score": 1
         },
         {
             "input": [
@@ -11145,11 +11140,11 @@
                 "A\u2665"
             ],
             "played": [
-                "Q\u2660+"
+                "10\u2666+"
             ],
             "remaining": [
+                "Q\u2660+",
                 "4\u2666",
-                "10\u2666+",
                 "A\u2665"
             ],
             "hand": "High Card",
@@ -11446,16 +11441,16 @@
             ],
             "played": [
                 "4\u2660+",
-                "4\u2666x",
-                "4\u2663x"
+                "4\u2666x"
             ],
             "remaining": [
-                "6\u2660+"
+                "6\u2660+",
+                "4\u2663x"
             ],
-            "hand": "Three of a Kind",
-            "chips": 72,
-            "multiplier": 11,
-            "score": 792
+            "hand": "Pair",
+            "chips": 48,
+            "multiplier": 6,
+            "score": 288
         },
         {
             "input": [
@@ -11664,18 +11659,17 @@
                 "10\u2665",
                 "5\u2666+"
             ],
-            "played": [
-                "Q\u2666+"
-            ],
+            "played": [],
             "remaining": [
+                "Q\u2666+",
                 "3\u2660",
                 "10\u2665",
                 "5\u2666+"
             ],
-            "hand": "High Card",
-            "chips": 45,
+            "hand": "Empty Hand",
+            "chips": 1,
             "multiplier": 1,
-            "score": 45
+            "score": 1
         },
         {
             "input": [
@@ -12124,16 +12118,17 @@
                 "A\u2666x"
             ],
             "played": [
-                "K\u2666x",
-                "10\u2660+",
                 "A\u2663+",
                 "A\u2666x"
             ],
-            "remaining": null,
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": [
+                "K\u2666x",
+                "10\u2660+"
+            ],
+            "hand": "Pair",
+            "chips": 62,
+            "multiplier": 6,
+            "score": 372
         },
         {
             "input": [
@@ -12162,18 +12157,17 @@
                 "9\u2665x",
                 "5\u2660x"
             ],
-            "played": [
-                "K\u2666x"
-            ],
+            "played": [],
             "remaining": [
+                "K\u2666x",
                 "10\u2660",
                 "9\u2665x",
                 "5\u2660x"
             ],
-            "hand": "High Card",
-            "chips": 15,
-            "multiplier": 5,
-            "score": 75
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -12464,16 +12458,15 @@
             ],
             "played": [
                 "3\u2660x",
-                "3\u2660+"
-            ],
-            "remaining": [
                 "J\u2660+",
+                "3\u2660+",
                 "J\u2663"
             ],
-            "hand": "Pair",
-            "chips": 46,
+            "remaining": null,
+            "hand": "Two Pair",
+            "chips": 106,
             "multiplier": 6,
-            "score": 276
+            "score": 636
         },
         {
             "input": [
@@ -12743,17 +12736,17 @@
                 "2\u2660x"
             ],
             "played": [
-                "8\u2663x"
+                "7\u2665x"
             ],
             "remaining": [
-                "7\u2665x",
                 "Q\u2666+",
+                "8\u2663x",
                 "2\u2660x"
             ],
             "hand": "High Card",
-            "chips": 13,
+            "chips": 12,
             "multiplier": 5,
-            "score": 65
+            "score": 60
         },
         {
             "input": [
@@ -12843,17 +12836,16 @@
                 "J\u2666x"
             ],
             "played": [
-                "A\u2665x"
-            ],
-            "remaining": [
                 "10\u2660",
+                "A\u2665x",
                 "6\u2665",
                 "J\u2666x"
             ],
-            "hand": "High Card",
-            "chips": 16,
-            "multiplier": 5,
-            "score": 80
+            "remaining": null,
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -13103,17 +13095,16 @@
                 "10\u2665"
             ],
             "played": [
+                "K\u2665x",
                 "10\u2660+",
+                "8\u2666+",
                 "10\u2665"
             ],
-            "remaining": [
-                "K\u2665x",
-                "8\u2666+"
-            ],
-            "hand": "Pair",
-            "chips": 60,
-            "multiplier": 2,
-            "score": 120
+            "remaining": null,
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -13163,12 +13154,12 @@
                 "10\u2666x"
             ],
             "played": [
-                "10\u2666x"
+                "Q\u2663x"
             ],
             "remaining": [
-                "Q\u2663x",
                 "J\u2666x",
-                "3\u2660x"
+                "3\u2660x",
+                "10\u2666x"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -13344,15 +13335,16 @@
             ],
             "played": [
                 "7\u2666",
-                "J\u2666",
-                "2\u2665",
                 "7\u2665x"
             ],
-            "remaining": null,
-            "hand": "No Poker Hand",
-            "chips": 0,
-            "multiplier": 0,
-            "score": 0
+            "remaining": [
+                "J\u2666",
+                "2\u2665"
+            ],
+            "hand": "Pair",
+            "chips": 24,
+            "multiplier": 6,
+            "score": 144
         },
         {
             "input": [
@@ -13940,12 +13932,12 @@
                 "K\u2660"
             ],
             "played": [
-                "K\u2660"
+                "10\u2660"
             ],
             "remaining": [
                 "7\u2665",
-                "10\u2660",
-                "8\u2663"
+                "8\u2663",
+                "K\u2660"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -13980,16 +13972,16 @@
                 "4\u2665x"
             ],
             "played": [
-                "4\u2665x"
+                "K\u2660+"
             ],
             "remaining": [
-                "K\u2660+",
                 "2\u2660",
-                "10\u2665+"
+                "10\u2665+",
+                "4\u2665x"
             ],
             "hand": "High Card",
-            "chips": 9,
-            "multiplier": 5,
+            "chips": 45,
+            "multiplier": 1,
             "score": 45
         },
         {
@@ -14360,17 +14352,17 @@
                 "2\u2665x"
             ],
             "played": [
-                "Q\u2660+"
+                "6\u2665x"
             ],
             "remaining": [
-                "6\u2665x",
+                "Q\u2660+",
                 "K\u2660+",
                 "2\u2665x"
             ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
-            "score": 45
+            "chips": 11,
+            "multiplier": 5,
+            "score": 55
         },
         {
             "input": [
@@ -14601,16 +14593,16 @@
             ],
             "played": [
                 "K\u2666+",
-                "K\u2666+"
-            ],
-            "remaining": [
-                "Q\u2666x",
+                "K\u2666+",
                 "K\u2665+"
             ],
-            "hand": "Pair",
-            "chips": 90,
-            "multiplier": 2,
-            "score": 180
+            "remaining": [
+                "Q\u2666x"
+            ],
+            "hand": "Three of a Kind",
+            "chips": 150,
+            "multiplier": 3,
+            "score": 450
         },
         {
             "input": [
@@ -14700,17 +14692,17 @@
                 "9\u2666"
             ],
             "played": [
-                "7\u2666x"
+                "7\u2666x",
+                "4\u2666+"
             ],
             "remaining": [
                 "5\u2663x",
-                "4\u2666+",
                 "9\u2666"
             ],
-            "hand": "High Card",
-            "chips": 12,
-            "multiplier": 5,
-            "score": 60
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -15018,17 +15010,17 @@
                 "3\u2666"
             ],
             "played": [
-                "3\u2663x",
-                "3\u2666"
+                "10\u2660+"
             ],
             "remaining": [
-                "10\u2660+",
-                "2\u2665"
+                "3\u2663x",
+                "2\u2665",
+                "3\u2666"
             ],
-            "hand": "Pair",
-            "chips": 16,
-            "multiplier": 6,
-            "score": 96
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -15317,17 +15309,17 @@
                 "2\u2666x"
             ],
             "played": [
-                "7\u2663x"
+                "A\u2663+"
             ],
             "remaining": [
                 "8\u2663+",
-                "A\u2663+",
+                "7\u2663x",
                 "2\u2666x"
             ],
             "hand": "High Card",
-            "chips": 12,
-            "multiplier": 5,
-            "score": 60
+            "chips": 46,
+            "multiplier": 1,
+            "score": 46
         },
         {
             "input": [
@@ -15418,16 +15410,16 @@
             ],
             "played": [
                 "Q\u2663+",
-                "Q\u2666+"
+                "3\u2665x"
             ],
             "remaining": [
                 "2\u2665x",
-                "3\u2665x"
+                "Q\u2666+"
             ],
-            "hand": "Pair",
-            "chips": 90,
-            "multiplier": 2,
-            "score": 180
+            "hand": "No Poker Hand",
+            "chips": 0,
+            "multiplier": 0,
+            "score": 0
         },
         {
             "input": [
@@ -16876,17 +16868,17 @@
                 "3\u2665x"
             ],
             "played": [
-                "7\u2666x",
-                "7\u2665"
+                "A\u2665+"
             ],
             "remaining": [
-                "A\u2665+",
+                "7\u2666x",
+                "7\u2665",
                 "3\u2665x"
             ],
-            "hand": "Pair",
-            "chips": 24,
-            "multiplier": 6,
-            "score": 144
+            "hand": "High Card",
+            "chips": 46,
+            "multiplier": 1,
+            "score": 46
         },
         {
             "input": [
@@ -17036,12 +17028,12 @@
                 "10\u2665x"
             ],
             "played": [
-                "10\u2665x"
+                "K\u2666x"
             ],
             "remaining": [
-                "K\u2666x",
                 "7\u2666",
-                "2\u2660"
+                "2\u2660",
+                "10\u2665x"
             ],
             "hand": "High Card",
             "chips": 15,
@@ -17096,17 +17088,17 @@
                 "8\u2663x"
             ],
             "played": [
-                "8\u2663x"
+                "9\u2660"
             ],
             "remaining": [
                 "6\u2663",
-                "9\u2660",
-                "3\u2666x"
+                "3\u2666x",
+                "8\u2663x"
             ],
             "hand": "High Card",
-            "chips": 13,
-            "multiplier": 5,
-            "score": 65
+            "chips": 14,
+            "multiplier": 1,
+            "score": 14
         },
         {
             "input": [
@@ -17156,17 +17148,17 @@
                 "10\u2666"
             ],
             "played": [
-                "6\u2665+"
+                "4\u2663x"
             ],
             "remaining": [
-                "4\u2663x",
                 "J\u2665",
+                "6\u2665+",
                 "10\u2666"
             ],
             "hand": "High Card",
-            "chips": 41,
-            "multiplier": 1,
-            "score": 41
+            "chips": 9,
+            "multiplier": 5,
+            "score": 45
         },
         {
             "input": [
@@ -17775,17 +17767,17 @@
                 "2\u2663"
             ],
             "played": [
-                "2\u2666x",
-                "2\u2663"
+                "J\u2666+"
             ],
             "remaining": [
-                "J\u2666+",
-                "5\u2666"
+                "2\u2666x",
+                "5\u2666",
+                "2\u2663"
             ],
-            "hand": "Pair",
-            "chips": 14,
-            "multiplier": 6,
-            "score": 84
+            "hand": "High Card",
+            "chips": 45,
+            "multiplier": 1,
+            "score": 45
         },
         {
             "input": [
@@ -17855,16 +17847,17 @@
                 "8\u2663+"
             ],
             "played": [
-                "A\u2665",
                 "8\u2666x",
-                "A\u2660+",
                 "8\u2663+"
             ],
-            "remaining": null,
-            "hand": "Two Pair",
-            "chips": 118,
+            "remaining": [
+                "A\u2665",
+                "A\u2660+"
+            ],
+            "hand": "Pair",
+            "chips": 56,
             "multiplier": 6,
-            "score": 708
+            "score": 336
         },
         {
             "input": [
@@ -18253,17 +18246,17 @@
                 "J\u2663+"
             ],
             "played": [
-                "Q\u2660+"
+                "8\u2660x"
             ],
             "remaining": [
+                "Q\u2660+",
                 "5\u2663x",
-                "8\u2660x",
                 "J\u2663+"
             ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
-            "score": 45
+            "chips": 13,
+            "multiplier": 5,
+            "score": 65
         },
         {
             "input": [
@@ -18273,10 +18266,10 @@
                 "7\u2665+"
             ],
             "played": [
-                "10\u2663x"
+                "Q\u2666x"
             ],
             "remaining": [
-                "Q\u2666x",
+                "10\u2663x",
                 "5\u2666x",
                 "7\u2665+"
             ],
@@ -18993,17 +18986,17 @@
                 "4\u2666+"
             ],
             "played": [
-                "7\u2663x"
+                "9\u2665",
+                "9\u2663"
             ],
             "remaining": [
-                "9\u2665",
-                "9\u2663",
+                "7\u2663x",
                 "4\u2666+"
             ],
-            "hand": "High Card",
-            "chips": 12,
-            "multiplier": 5,
-            "score": 60
+            "hand": "Pair",
+            "chips": 28,
+            "multiplier": 2,
+            "score": 56
         },
         {
             "input": [
@@ -19153,16 +19146,16 @@
                 "10\u2666+"
             ],
             "played": [
-                "10\u2666+"
+                "4\u2666x"
             ],
             "remaining": [
                 "Q\u2663",
-                "4\u2666x",
-                "A\u2663"
+                "A\u2663",
+                "10\u2666+"
             ],
             "hand": "High Card",
-            "chips": 45,
-            "multiplier": 1,
+            "chips": 9,
+            "multiplier": 5,
             "score": 45
         },
         {
@@ -19293,8 +19286,8 @@
                 "8\u2660x"
             ],
             "played": [
-                "10\u2665x",
-                "10\u2666"
+                "10\u2666",
+                "10\u2665x"
             ],
             "remaining": [
                 "3\u2663",
@@ -19652,18 +19645,17 @@
                 "2\u2660x",
                 "4\u2666x"
             ],
-            "played": [
-                "8\u2660x"
-            ],
+            "played": [],
             "remaining": [
+                "8\u2660x",
                 "J\u2660+",
                 "2\u2660x",
                 "4\u2666x"
             ],
-            "hand": "High Card",
-            "chips": 13,
-            "multiplier": 5,
-            "score": 65
+            "hand": "Empty Hand",
+            "chips": 1,
+            "multiplier": 1,
+            "score": 1
         },
         {
             "input": [
@@ -19997,8 +19989,8 @@
         1.0,
         1.0,
         1.0,
+        0.0,
         1.0,
-        0.5263157894736842,
         1.0,
         1.0,
         1.0,
@@ -20016,6 +20008,7 @@
         1.0,
         1.0,
         1.0,
+        0.3425925925925926,
         1.0,
         1.0,
         1.0,
@@ -20034,61 +20027,8 @@
         1.0,
         1.0,
         1.0,
-        0.4166666666666667,
         1.0,
         1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.26666666666666666,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.4166666666666667,
         1.0,
         1.0,
         1.0,
@@ -20110,7 +20050,6 @@
         1.0,
         1.0,
         1.0,
-        0.29411764705882354,
         1.0,
         1.0,
         1.0,
@@ -20121,238 +20060,6 @@
         1.0,
         1.0,
         1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.9347826086956522,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.75,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.5466666666666666,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.9166666666666666,
         1.0,
         1.0,
         1.0,
@@ -20398,220 +20105,7 @@
         1.0,
         1.0,
         1.0,
-        1.0,
-        1.0,
-        0.6428571428571429,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.6,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.6428571428571429,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.8648648648648649,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        0.4339622641509434,
-        1.0,
+        0.9,
         1.0,
         1.0,
         1.0,
@@ -20705,7 +20199,6 @@
         1.0,
         1.0,
         1.0,
-        0.8181818181818182,
         1.0,
         1.0,
         1.0,
@@ -20717,11 +20210,12 @@
         1.0,
         1.0,
         1.0,
-        0.4,
         1.0,
         1.0,
         1.0,
         1.0,
+        0.0,
+        0.0,
         1.0,
         1.0,
         1.0,
@@ -20747,7 +20241,9 @@
         1.0,
         1.0,
         1.0,
+        0.925,
         1.0,
+        0.7777777777777778,
         1.0,
         1.0,
         1.0,
@@ -20762,6 +20258,7 @@
         1.0,
         1.0,
         1.0,
+        0.022222222222222223,
         1.0,
         1.0,
         1.0,
@@ -20781,6 +20278,7 @@
         1.0,
         1.0,
         1.0,
+        0.15625,
         1.0,
         1.0,
         1.0,
@@ -20812,6 +20310,7 @@
         1.0,
         1.0,
         1.0,
+        0.0,
         1.0,
         1.0,
         1.0,
@@ -20823,6 +20322,7 @@
         1.0,
         1.0,
         1.0,
+        0.42857142857142855,
         1.0,
         1.0,
         1.0,
@@ -20845,7 +20345,6 @@
         1.0,
         1.0,
         1.0,
-        0.9111111111111111,
         1.0,
         1.0,
         1.0,
@@ -20855,7 +20354,9 @@
         1.0,
         1.0,
         1.0,
+        0.8695652173913043,
         1.0,
+        0.6521739130434783,
         1.0,
         1.0,
         1.0,
@@ -20900,7 +20401,6 @@
         1.0,
         1.0,
         1.0,
-        0.6923076923076923,
         1.0,
         1.0,
         1.0,
@@ -20971,6 +20471,498 @@
         1.0,
         1.0,
         1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.06666666666666667,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.36363636363636365,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.022222222222222223,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.013333333333333334,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9230769230769231,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.46875,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7666666666666667,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.3194444444444444,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.2153846153846154,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5357142857142857,
+        1.0,
+        1.0,
+        1.0,
+        0.4745762711864407,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9333333333333333,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.015384615384615385,
         1.0,
         1.0,
         1.0,
