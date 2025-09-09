@@ -17,15 +17,24 @@ LOGGER = logging.getLogger(__name__)
 
 README_PATH = "README.md"
 
-THINKING_MODELS_FINISHERS = {
-    "Qwen3": "</think>",
-    "gpt-oss": "assistantfinal"
-}
-
-ALTERNATIVE_CHAT_TEMPLATES = {
-    "Qwen2.5": "gpt/chat_templates/qwen2.5",
-    "Qwen3": "gpt/chat_templates/qwen3",
-}
+ADAPTED_MODELS = [
+    # Qwen 2.5 models
+    {
+        "regex": "^Qwen/Qwen2.5.*$",
+        "template": "gpt/chat_templates/qwen2.5"
+    },
+    # Qwen 3 Thinking models
+    {
+        "regex": "^Qwen/Qwen3-4B-(?!Instruct).*$",
+        "thinking_finisher": "</think>",
+        "template": "gpt/chat_templates/qwen3"
+    },
+    # gpt-oss models
+    {
+        "regex": "^openai/gpt-oss-.*$",
+        "thinking_finisher": "assistantfinal"
+    },
+]
 
 def gpt_attempt_ballmatro_dataset(dataset: list[dict], model: str = "gpt-4o") -> list[str]:
     """Use a GPT model to attempt to solve a Ballmatro dataset.
@@ -92,22 +101,31 @@ def hf_attempt_ballmatro_dataset(dataset: list[dict], model_name: str, max_new_t
         responses.append(result)
     return ScoreDataset(dataset, responses)
 
+def _get_adapted_model_info(model_name: str) -> dict:
+    """Check if the model is in the list of adapted models, and return its info if so."""
+    for adapted_model in ADAPTED_MODELS:
+        if re.match(adapted_model["regex"], model_name):
+            return adapted_model
+    return None
+
 def _is_thinking_model(model_name: str) -> bool:
     """Tries to identify by its name if a Hugging Face model is a thinking model. Returns False for unknown models"""
-    return any(prefix in model_name for prefix in THINKING_MODELS_FINISHERS.keys())
+    model_info = _get_adapted_model_info(model_name)
+    return model_info is not None and "thinking_finisher" in model_info
 
 def _thinking_model_finisher(model_name: str) -> str:
     """Return the string that marks the end of a chain of thought for the given model.
 
     Return empty string if the model is not a known thinking model"""
-    for key, value in THINKING_MODELS_FINISHERS.items():
-        if key in model_name:
-            return value
+    model_info = _get_adapted_model_info(model_name)
+    if model_info is not None and "thinking_finisher" in model_info:
+        return model_info["thinking_finisher"]
     return ""
 
 def _thinking_finished(model_output: str) -> bool:
     """Check if the thinking process has finished based on the model output."""
-    return any(finisher in model_output for finisher in THINKING_MODELS_FINISHERS.values())
+    finishers = [info["thinking_finisher"] for info in ADAPTED_MODELS if "thinking_finisher" in info]
+    return any(finisher in model_output for finisher in finishers)
 
 def _remove_chain_of_thought(result: str) -> str:
     """Removes the chaing of thought part from the output, returning only the final LLM response"""
@@ -125,11 +143,11 @@ def _patch_chat_template(tokenizer: AutoTokenizer) -> AutoTokenizer:
     Returns the update Tokenizer.
     """
     # Load the chat template
-    for registered_template_prefix in ALTERNATIVE_CHAT_TEMPLATES.keys():
-        if registered_template_prefix in tokenizer.name_or_path:
-            LOGGER.info(f"Using alternative chat template for model {tokenizer.name_or_path}")
-            with open(ALTERNATIVE_CHAT_TEMPLATES[registered_template_prefix], "r") as f:
-                tokenizer.chat_template = f.read()
+    model_info = _get_adapted_model_info(tokenizer.name_or_path)
+    if model_info is not None and "template" in model_info:
+        LOGGER.info(f"Using alternative chat template for model {tokenizer.name_or_path}")
+        with open(model_info["template"], "r") as f:
+            tokenizer.chat_template = f.read()
     return tokenizer
 
 def build_system_prompt() -> str:
