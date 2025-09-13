@@ -12,6 +12,7 @@ def test_is_thinking_model():
     """Test the _is_thinking_model function."""
     assert _is_thinking_model("Qwen/Qwen3-4B-Instruct-2507") is False
     assert _is_thinking_model("Qwen/Qwen3-4B-Thinking-2507") is True
+    assert _is_thinking_model("Qwen/Qwen3-8B") is True
     assert _is_thinking_model("openai/gpt-oss-20b") is True
     assert _is_thinking_model("openai/gpt-oss-120b") is True
     assert _is_thinking_model("Qwen/Qwen2.5-0.5B") is False

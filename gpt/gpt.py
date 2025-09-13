@@ -25,9 +25,14 @@ ADAPTED_MODELS = [
     },
     # Qwen 3 Thinking models
     {
-        "regex": "^Qwen/Qwen3-4B-(?!Instruct).*$",
+        "regex": "^Qwen/Qwen3-[0-9]+B(-A[0-9]+B)*(?!-Instruct).*$",
         "thinking_finisher": "</think>",
-        "template": "gpt/chat_templates/qwen3"
+        "template": "gpt/chat_templates/qwen3-think"
+    },
+    # Qwen 3 Instruct models
+    {
+        "regex": "^Qwen/Qwen3-.*-Instruct.*$",
+        "template": "gpt/chat_templates/qwen3-instruct"
     },
     # gpt-oss models
     {
