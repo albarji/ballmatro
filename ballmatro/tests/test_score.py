@@ -235,7 +235,7 @@ def test_scoredataset_with_invalid_play():
     ]
     score_dataset = ScoreDataset(dataset=ds, plays=plays)
     assert score_dataset.total_score == 0
-    assert score_dataset.normalized_score == 0.0
+    assert score_dataset.total_normalized_score == 0.0
     assert score_dataset.invalid_hands == 1
     assert score_dataset.normalized_invalid_hands == 1.0
     assert isinstance(score_dataset.scores[0].hand, InvalidPlay)

@@ -125,7 +125,7 @@ class ScoreDataset:
     plays: List[Union[str, List[Card]]]  # List of plays (hands) carried out for the dataset
     scores: List[Score] = None  # Detailed Score objects for each play
     total_score: int = 0  # Total score of the plays over the whole dataset
-    normalized_score: float = 0.0  # Normalized score [0,1] of the plays over the whole dataset
+    total_normalized_score: float = 0.0  # Normalized score [0,1] of the plays over the whole dataset
     invalid_hands: int = 0  # Number of invalid hands played
     normalized_invalid_hands: float = 0.0  # Fraction of invalid hands played [0,1]
 
