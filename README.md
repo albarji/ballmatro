@@ -6,11 +6,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/albarji/ballmatro/badge.svg?branch=master)](https://coveralls.io/github/albarji/ballmatro?branch=master)
 ![Ruff](https://img.shields.io/badge/Ruff-passing-success?logo=ruff&logoColor=white)
 
-A challenging task for LLMs in which they need to create high-scoring Ballatro-like hands.
+A challenging task for LLMs in which they need to create high-scoring Balatro-like hands.
 
 ## What is BaLLMatro?
 
-BaLLMatro is a portmanteu of "LLM" (Large Language Model) and "Ballatro", the critically acclaimed [videogame](https://www.playbalatro.com/). Inspired by the layers of complexity of such game, this project provides datasets and tools to test the ability of LLMs in finding high-scoring "augmented" poker hands, under increasingly complex scoring rules. Thus, the objective of the project is to find the generalization abilities of LLMs, in a task where both humans and AI models can measure their performance.
+BaLLMatro is a portmanteu of "LLM" (Large Language Model) and "Balatro", the critically acclaimed [videogame](https://www.playbalatro.com/). Inspired by the layers of complexity of such game, this project provides datasets and tools to test the ability of LLMs in finding high-scoring "augmented" poker hands, under increasingly complex scoring rules. Thus, the objective of the project is to find the generalization abilities of LLMs, in a task where both humans and AI models can measure their performance.
 
 ## The rules of BaLLMatro
 
