@@ -8,7 +8,7 @@ from ballmatro.score import Score, ScoreDataset
 
 from openai import OpenAI
 from peft import LoraConfig, get_peft_model, TaskType
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
 from trl import GRPOConfig, GRPOTrainer, SFTConfig, SFTTrainer
 
 
@@ -234,16 +234,19 @@ def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_
 
     return model
 
-def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, training_kwargs: dict, lora_kwargs: dict = None) -> AutoModelForCausalLM:
+def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, training_kwargs: dict, lora_kwargs: dict = None, quantization_kwargs: dict = None) -> AutoModelForCausalLM:
     """Trains a Hugging Face model on a BaLLMatro dataset using Group Relative Policy Optimization.
 
     All parameters in **training_kwargs are passed to the TRL GRPOConfig.
+    If lora_kwargs are provided, a LoRA adapter is applied to the model, using the given parameters.
+    If quantization_kwargs are provided, the model is loaded in quantized mode, using the given parameters.
 
     Returns the trained model.
     """
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         device_map="auto",  # Automatically loads the model into the GPU, if one is available
+        quantization_config=BitsAndBytesConfig(**quantization_kwargs) if quantization_kwargs else None
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 

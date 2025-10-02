@@ -11,7 +11,7 @@ TRAINING_ALGORITHMS = {
     "grpo": hf_grpo_ballmatro_dataset
 }
 
-def main(dataset: str, model: str, output: str = None, algorithm: str = None, config_file: str = None, lora_config_file: str = None):
+def main(dataset: str, model: str, output: str = None, algorithm: str = None, config_file: str = None, lora_config_file: str = None, quantization_config_file: str = None):
     """Main function to test an LLM against a Ballmatro dataset."""
 
     # Load configuration files
@@ -28,13 +28,21 @@ def main(dataset: str, model: str, output: str = None, algorithm: str = None, co
             print(f"Error loading LoRA config file {lora_config_file}: {e}")
     else:
         lora_kwargs = None
+    if quantization_config_file is not None:
+        try:
+            with open(quantization_config_file, "r") as f:
+                quantization_kwargs = json.load(f)
+        except Exception as e:
+            print(f"Error loading quantization config file {quantization_config_file}: {e}")
+    else:
+        quantization_kwargs = None
 
     # Download the dataset from the Hugging Face Hub
     ds = load_dataset("albarji/ballmatro", dataset)
     if "train" not in ds:
         raise ValueError(f"Dataset {dataset} does not contain a 'train' partition.")
 
-    TRAINING_ALGORITHMS[algorithm](ds["train"], model, output, training_kwargs=training_kwargs, lora_kwargs=lora_kwargs)
+    TRAINING_ALGORITHMS[algorithm](ds["train"], model, output, training_kwargs=training_kwargs, lora_kwargs=lora_kwargs, quantization_kwargs=quantization_kwargs)
 
 
 if __name__ == "__main__":
@@ -45,5 +53,6 @@ if __name__ == "__main__":
     parser.add_argument("config_file", type=str, help="Path to the JSON configuration file with training arguments.")
     parser.add_argument("output", type=str, help="Folder to save the trained model to.")
     parser.add_argument("--lora_config", type=str, default=None, help="Path to the LoRA configuration file (optional).")
+    parser.add_argument("--quantization_config", type=str, default=None, help="Path to the quantization configuration file (optional).")
     args = parser.parse_args()
-    main(args.dataset, args.model, args.output, algorithm=args.algorithm, config_file=args.config_file, lora_config_file=args.lora_config)
+    main(args.dataset, args.model, args.output, algorithm=args.algorithm, config_file=args.config_file, lora_config_file=args.lora_config, quantization_config_file=args.quantization_config)

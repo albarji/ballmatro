@@ -14,7 +14,7 @@
     "warmup_ratio": 0.03,
     "weight_decay": 0.01,
     "max_grad_norm": 0.5,
-    "beta": 0,
+    "beta": 0.1,
     "log_completions": true,
     "num_completions_to_print": 3,
     "max_completion_length": 16384

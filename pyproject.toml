@@ -25,6 +25,7 @@ trl = "^0.21.0"
 peft = "^0.17.1"
 rich = "^14.1.0"
 kaleido = "^1.1.0"
+bitsandbytes = "^0.48.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
