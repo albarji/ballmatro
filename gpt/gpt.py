@@ -185,11 +185,12 @@ def markdown_to_sections(markdown: str) -> dict[str, str]:
         sections[current_title] = "\n".join(current_content)
     return sections
 
-def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, training_kwargs: dict, lora_kwargs: dict = None) -> AutoModelForCausalLM:
+def hf_stf_ballmatro_dataset(dataset: list[dict], model_name: str, output_model_path: str, training_kwargs: dict, lora_kwargs: dict = None, quantization_kwargs: dict = None) -> AutoModelForCausalLM:
     """Trains a Hugging Face model on a BaLLMatro dataset using Supervised Fine Tuning.
 
     All parameters in training_kwargs are passed to the TRL SFTConfig.
     If lora_kwargs are provided, a LoRA adapter is applied to the model, using the given parameters.
+    quantization_kwargs is currently ignored.
 
     Returns the trained model.
     """
@@ -248,6 +249,8 @@ def hf_grpo_ballmatro_dataset(dataset: list[dict], model_name: str, output_model
         device_map="auto",  # Automatically loads the model into the GPU, if one is available
         quantization_config=BitsAndBytesConfig(**quantization_kwargs) if quantization_kwargs else None
     )
+    model.config.use_cache = False  # We need to disable the cache for training
+    model.config.attn_impl = "flash_attention_2"  # Try to use flash attention if available
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     # Apply LoRA if lora_kwargs are provided
